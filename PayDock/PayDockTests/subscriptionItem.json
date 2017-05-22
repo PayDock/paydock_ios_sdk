@@ -1,0 +1,57 @@
+{
+            "created_at": "2015-07-24T11:51:30.211Z",
+            "updated_at": "2015-07-24T11:51:30.211Z",
+            "user_id": "559241db556cc23c1ed3770a",
+            "company_id": "559241db556cc23c1ed3770b",
+            "amount": 10,
+            "description": "Custom description",
+            "reference": "Custom reference",
+            "status": "active",
+            "_id": "55b226c273065f9423a45d8d",
+            "archived": false,
+            "customer": {
+                "customer_id": "55b226c173065f9423a45d8b",
+                "first_name": "Test_first_name",
+                "last_name": "Test_last_name",
+                "email": "test@test.com",
+                "reference": "CustomReference",
+                "payment_source": {
+                    "gateway_name": "Ezidebit label",
+                    "gateway_type": "Ezidebit",
+                    "gateway_mode": "test",
+                    "updated_at": "2015-07-24T11:51:30.207Z",
+                    "address_line1": "Testline1",
+                    "address_line2": "Testline2",
+                    "address_city": "Testcity",
+                    "address_state": "Teststate",
+                    "address_country": "AU",
+                    "address_postcode": "1234",
+                    "gateway_id": "5592499f556cc23c1ed37710",
+                    "account_name": "Test",
+                    "account_bsb": 32000,
+                    "account_number": "XXXX00",
+                    "ref_token": "762958",
+                    "status": "active",
+                    "created_at": "2015-07-24T11:51:30.205Z",
+                    "_id": "55b226c273065f9423a45d8c",
+                    "type": "bsb"
+                }
+            },
+            "statistics": {
+                "total_collected_amount": 0,
+                "successful_transactions": 0
+            },
+            "schedule": {
+                "interval": "day",
+                "start_date": "2015-07-25T00:00:00.000Z",
+                "end_date": "2016-08-25T00:00:00.000Z",
+                "next_assessment": "2015-07-25T00:00:00.000Z",
+                "first_assessment": "2015-07-25T00:00:00.000Z",
+                "status": "inprogress",
+                "locked": false,
+                "completed_count": 0,
+                "retry_count": 0,
+                "frequency": 1
+            },
+            "currency": "AUD"
+        }

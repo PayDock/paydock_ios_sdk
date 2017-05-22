@@ -1,0 +1,48 @@
+{
+      "_id": "585ba514e45b75bc368087a8",
+      "created_at": "2016-12-22T10:04:06.418Z",
+      "updated_at": "2016-12-22T10:04:06.418Z",
+      "status": "active",
+      "default_source": "585ba516e45b75bc368087a9",
+      "first_name": "Oleg",
+      "last_name": "cCdekrigin",
+      "email": "chcsviginolegsdsd12f@gmail.com",
+      "phone": "+123451678910",
+      "__v": 0,
+      "payment_sources": [
+        {
+          "updated_at": "2016-12-22T10:04:06.417Z",
+          "vault_token": "26338ebc-cc76-4eaa-a189-b0c3c27d0a69",
+          "address_line1": "Testline1",
+          "address_line2": "Testline2",
+          "address_city": "Testcity",
+          "address_state": "Teststate",
+          "address_country": "AU",
+          "address_postcode": "3000",
+          "gateway_id": "5853e89c2bd79538605a3fb6",
+          "card_name": "Test User",
+          "expire_month": 10,
+          "expire_year": 2020,
+          "card_number_last4": "1111",
+          "card_scheme": "visa",
+          "ref_token": "70b234c5-3af7-41b5-9992-96a014eab056",
+          "status": "active",
+          "created_at": "2016-12-22T10:04:06.370Z",
+          "_id": "585ba516e45b75bc368087a9",
+          "type": "card"
+        }
+      ],
+      "statistics": {
+        "currency": {
+          "AUD": {
+            "count": 2,
+            "total_amount": 27
+          }
+        },
+        "total_collected_amount": 27,
+        "successful_transactions": 2
+      },
+      "_service": {
+        "default_gateway_id": "5853e89c2bd79538605a3fb6"
+      }
+    }

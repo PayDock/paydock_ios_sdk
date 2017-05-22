@@ -1,0 +1,187 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Errors.swift",
+      "line": 19,
+      "symbol": "Errors.urlInitFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Errors.swift",
+      "line": 20,
+      "symbol": "Errors.networkError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Errors.swift",
+      "line": 21,
+      "symbol": "Errors.serverError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Errors.swift",
+      "line": 22,
+      "symbol": "Errors.parsingFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Errors.swift",
+      "line": 23,
+      "symbol": "Errors.invalidJsonFormat",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Errors.swift",
+      "line": 44,
+      "symbol": "urlInitFailedReason.couldNotEncodeParameter",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Errors.swift",
+      "line": 45,
+      "symbol": "urlInitFailedReason.couldNotCreateUrlWithGivenString",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Errors.swift",
+      "line": 55,
+      "symbol": "networkErrorReason.noResponse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Errors.swift",
+      "line": 56,
+      "symbol": "networkErrorReason.unacceptableStatusCode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Errors.swift",
+      "line": 57,
+      "symbol": "networkErrorReason.noDataRecived",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Address.swift",
+      "line": 38,
+      "symbol": "Address.init(line1:line2:city:postcode:state:country:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Parameters/ListParameters.swift",
+      "line": 34,
+      "symbol": "ListParameters.init(skip:limit:subscription_id:gateway_id:company_id:createdAtFrom:createdAtTo:search:status:isArchived:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Parameters/SubscriptionRequest.swift",
+      "line": 45,
+      "symbol": "SubscriptionRequest.customerId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Parameters/TokenRequest.swift",
+      "line": 21,
+      "symbol": "TokenRequest.init(customer:address:paymentSource:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Payment Sources/BSB.swift",
+      "line": 11,
+      "symbol": "BSB",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Payment Sources/BankAccount.swift",
+      "line": 11,
+      "symbol": "BankAccount",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Payment Sources/Card.swift",
+      "line": 11,
+      "symbol": "Card",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Payment Sources/Payment Source.swift",
+      "line": 19,
+      "symbol": "PaymentSource.card",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Payment Sources/Payment Source.swift",
+      "line": 20,
+      "symbol": "PaymentSource.bankAccount",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Payment Sources/Payment Source.swift",
+      "line": 21,
+      "symbol": "PaymentSource.bsb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Subscription/Schedule.swift",
+      "line": 50,
+      "symbol": "Schedule.init(interval:frequency:startDate:endDate:endAmountAfter:endAmountBefore:endAmountTotal:endTransactions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Transaction/Refund.swift",
+      "line": 12,
+      "symbol": "Refund",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Transaction/Sale.swift",
+      "line": 12,
+      "symbol": "Sale",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Transaction/Transaction.swift",
+      "line": 18,
+      "symbol": "Transaction.sale",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/Models/Transaction/Transaction.swift",
+      "line": 19,
+      "symbol": "Transaction.refund",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/PayDock.swift",
+      "line": 13,
+      "symbol": "PayDock.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/admin/Documents/bitbucket/PayDock/PayDock"
+}

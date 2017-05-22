@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Getting Started  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+
+    <a title="Getting Started  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          PayDock Docs
+        </a>
+        
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">PayDock Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Getting Started  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="getting-started.html">Getting Started</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PayDock.html">PayDock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/Errors.html">Errors</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/PaymentSource.html">PaymentSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums.html#/s:O7PayDock11Transaction">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums.html#/s:O7PayDock18networkErrorReason">networkErrorReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums.html#/s:O7PayDock19urlInitFailedReason">urlInitFailedReason</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Parameterable.html">Parameterable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/PayDockNetwork.html">PayDockNetwork</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Address.html">Address</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Charge.html">Charge</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ChargeRequest.html">ChargeRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Customer.html">Customer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CustomerRequest.html">CustomerRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ListParameters.html">ListParameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Schedule.html">Schedule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Subscription.html">Subscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SubscriptionRequest.html">SubscriptionRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TokenRequest.html">TokenRequest</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <p><img src="https://paydock.com/wp-content/uploads/2016/08/logo_v3.png" alt="PayDock iOS SDK"></p>
+
+<p>PaydDock iOS SDK is a framework to work with client side features of PayDock in iOS applications.</p>
+
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+</ul>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>installation</h2>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>CocoaPods</h3>
+
+<p>To integrate PayDock into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
+<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'10.0'</span>
+<span class="n">use_frameworks!</span>
+
+<span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
+    <span class="n">pod</span> <span class="s1">'PayDock'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>Then, run the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>pod install
+</code></pre>
+
+<p>then, add the following code in your AppDelegate&rsquo;s application didFinishLaunchingWithOptions</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="nf">setSecretKey</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"{{your secret key}}"</span><span class="p">)</span>
+<span class="kt">PayDock</span><span class="o">.</span><span class="nf">setPublicKey</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"{{your public key}}"</span><span class="p">)</span>
+</code></pre>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
+
+<ul>
+<li><a href="#token">Token</a></li>
+<li><a href="#charge">Charge</a></li>
+<li><a href="#customer">Customer</a></li>
+<li><a href="#subscription">Subscription</a></li>
+<li><a href="#paymentsource">PaymentSource</a></li>
+<li><a href="#address">Address</a></li>
+<li><a href="#custom-network">Custom Network</a></li>
+</ul>
+
+<p>all models in PayDock SDK have a properties name rawJSON. you can access the raw json which paydock returned from api from this property.</p>
+<a href='#token' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='token'>Token</h4>
+
+<p>One-time token represents payment source information including Credit Сards or Direct Debit account details. It is a disposable token for creating charges/subscriptions/customers or updating customers</p>
+
+<ul>
+<li><a href="#create-one-time-token">Create One-Time Token</a></li>
+<li><a href="#create-a-tokenrequest">Create A TokenRequest</a></li>
+</ul>
+<a href='#create-one-time-token' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='create-one-time-token'>Create One-Time Token</h6>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">create</span><span class="p">(</span><span class="nv">token</span><span class="p">:</span> <span class="kt">TokenRequest</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">tokenResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">tokenString</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">tokenResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#create-a-tokenrequest' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='create-a-tokenrequest'>Create A TokenRequest</h6>
+
+<p>a TokenRequest instance is needed for getting a one-time token from PayDock.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">tokenRequest</span> <span class="o">=</span> <span class="kt">TokenRequest</span><span class="p">(</span><span class="nv">customer</span><span class="p">:</span> <span class="kt">CustomerRequest</span><span class="p">?,</span> <span class="nv">address</span><span class="p">:</span> <span class="kt">Address</span><span class="p">?,</span> <span class="nv">paymentSource</span><span class="p">:</span> <span class="kt">PaymentSource</span><span class="p">)</span>
+</code></pre>
+<a href='#charge' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='charge'>Charge</h4>
+
+<p>You can create a charge using which can be created from PaymentSource init:</p>
+
+<ul>
+<li>one-time token</li>
+<li>credit card details</li>
+<li>direct debit details, using bank account or BSB</li>
+<li>an existing customer</li>
+<li>an existing customer with non-default payment source</li>
+</ul>
+
+<p>For a one time charge, payments are made using a one-time token, credit card or direct debit. Otherwise if you are making a payment for an existing customer, it’s simpler to store the payment source with the customer and make a payment using the customer ID.</p>
+
+<ul>
+<li><a href="#add-charge">Add Charge</a></li>
+<li><a href="#get-charge-item-detail">Get Charge Item Detail</a></li>
+<li><a href="#get-charge-list">Get Charge List</a></li>
+<li><a href="#refund-a-charge">Refund A Charge</a></li>
+<li><a href="#archive-a-charge">Archive A Charge</a></li>
+<li><a href="#create-a-chargerequest">Create A ChargeRequest</a></li>
+</ul>
+<a href='#add-charge' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='add-charge'>Add Charge</h6>
+
+<p>to add a charge you can use following code. <a href="#create-a-chargerequest">ChargeRequest</a> is a parameter Model which have different init for different types of charges.</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">charge</span><span class="p">:</span> <span class="kt">ChargeRequest</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">chargeResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">createdCharge</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">chargeResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#get-charge-item-detail' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='get-charge-item-detail'>Get Charge Item Detail</h6>
+
+<p>get a charge item detail with charge&rsquo;s id</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getCharge</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="p">{{</span><span class="n">id</span><span class="p">}})</span> <span class="p">{</span> <span class="p">(</span><span class="n">chargeResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">charge</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">chargeResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#get-charge-list' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='get-charge-list'>Get Charge List</h6>
+
+<p>get a list of charges with parameter. use nil for ListParameters to get default first 100 charges</p>
+<pre class="highlight swift"><code> <span class="k">let</span> <span class="nv">listParameters</span> <span class="o">=</span> <span class="kt">ListParameters</span><span class="p">(</span><span class="nv">skip</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">subscription_id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">gateway_id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">company_id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">createdAtFrom</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="nv">createdAtTo</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="nv">search</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">isArchived</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?)</span>
+<span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getCharges</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">listParameters</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">chargesResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">chargeList</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">chargesResponse</span><span class="p">()</span>
+
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#refund-a-charge' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='refund-a-charge'>Refund A Charge</h6>
+
+<p>refund a charge for specific amount.</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">refundCharge</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="p">{{</span><span class="n">id</span><span class="p">}},</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">chargeResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">refundedCharge</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">chargeResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#archive-a-charge' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='archive-a-charge'>Archive A Charge</h6>
+
+<p>archive a charge using it&rsquo;s id</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">archiveCharge</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="p">{{</span><span class="n">id</span><span class="p">}})</span> <span class="p">{</span> <span class="p">(</span><span class="n">chargeResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">refundedCharge</span> <span class="o">=</span> <span class="nf">chargeResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#create-a-chargerequest' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='create-a-chargerequest'>Create A ChargeRequest</h6>
+
+<p>a ChargeRequest instance is needed for adding charge to PayDock.</p>
+<pre class="highlight swift"><code><span class="c1">// creating ChargeRequest for Charging with Credit Card or BankAccount</span>
+<span class="k">let</span> <span class="nv">withCreditCardOrBankAcc</span> <span class="o">=</span> <span class="kt">ChargeRequest</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="s">"AUD"</span><span class="p">,</span> <span class="nv">reference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">customer</span><span class="p">:</span> <span class="kt">CustomerRequest</span><span class="p">)</span>
+<span class="c1">// creating ChargeRequest for Charging with PayDock Customer ID</span>
+<span class="k">let</span> <span class="nv">withCustomerId</span> <span class="o">=</span> <span class="kt">ChargeRequest</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="s">"AUD"</span><span class="p">,</span> <span class="nv">reference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">customerId</span><span class="p">:</span> <span class="p">{{</span><span class="kt">Paydock</span> <span class="kt">Customer</span> <span class="kt">ID</span><span class="p">}})</span>
+<span class="c1">// creating ChargeRequest for Charging with non-default payment source</span>
+<span class="k">let</span> <span class="nv">withNonDefaultPaymentSource</span> <span class="o">=</span> <span class="kt">ChargeRequest</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="s">"AUD"</span><span class="p">,</span> <span class="nv">reference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">customerId</span><span class="p">:</span> <span class="p">{{</span> <span class="kt">Paydock</span> <span class="kt">Customer</span> <span class="kt">ID</span> <span class="p">}},</span> <span class="nv">paymentSourceId</span><span class="p">:</span> <span class="p">{{</span> <span class="kt">Payment</span> <span class="kt">Source</span> <span class="kt">ID</span><span class="p">}})</span>
+<span class="c1">// creating ChargeRequest for Charging with one-time token</span>
+<span class="k">let</span> <span class="nv">withOneTimeToken</span> <span class="o">=</span> <span class="kt">ChargeRequest</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="s">"AUD"</span><span class="p">,</span> <span class="nv">token</span><span class="p">:</span> <span class="p">{{</span> <span class="n">one</span><span class="o">-</span><span class="n">time</span> <span class="n">token</span> <span class="p">}},</span> <span class="nv">reference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span>
+</code></pre>
+<a href='#customer' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='customer'>Customer</h4>
+
+<p>A customer represents an individual who can make payments. Through the use of vaulted tokens, Customers can be store one or more payment sources, so that payment information doesn’t need to be collected again. Customers can also be associated with Subscriptions and can have Charges added against them.</p>
+
+<p>A customer must have at least one payment source (eg. credit card) that can be used for payment.</p>
+
+<ul>
+<li><a href="#add-a-customer">Add A Customer</a></li>
+<li><a href="#get-a-customer-item-detail">Get A Customer Item Detail</a></li>
+<li><a href="#get-customer-list">Get Customer List</a></li>
+<li><a href="#update-a-customer">Update A Customer</a></li>
+<li><a href="#archive-a-customer">Archive A Customer</a></li>
+<li><a href="#create-a-customerrequest">Create A CustomerRequest</a></li>
+</ul>
+
+<p>You can create a customer using which can be created from PaymentSource init:</p>
+
+<ul>
+<li>one-time token</li>
+<li>credit card details</li>
+<li>direct debit details, using bank account or BSB</li>
+</ul>
+<a href='#add-a-customer' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='add-a-customer'>Add A Customer</h6>
+
+<p>to add a customer you can use following code. <a href="#create-a-customerrequest">CustomerRequest</a> is a parameter Model which have different init for different types of customers.</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">customer</span><span class="p">:</span> <span class="kt">CustomerRequest</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">customerResponse</span><span class="p">)</span> <span class="k">in</span>
+   <span class="k">do</span> <span class="p">{</span>
+       <span class="k">let</span> <span class="nv">addedCustomer</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">customerResponse</span><span class="p">()</span>
+   <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+       <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#get-a-customer-item-detail' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='get-a-customer-item-detail'>Get A Customer Item Detail</h6>
+
+<p>gets a customer item detail with customer&rsquo;s id</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getCustomer</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="p">{{</span><span class="n">id</span><span class="p">}})</span> <span class="p">{</span> <span class="p">(</span><span class="n">customerResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">customer</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">customerResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#get-customer-list' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='get-customer-list'>Get Customer List</h6>
+
+<p>gets a list of customers with parameter. use nil for ListParameters to get default first 100 charges</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">listParameters</span> <span class="o">=</span> <span class="kt">ListParameters</span><span class="p">(</span><span class="nv">skip</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">subscription_id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">gateway_id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">company_id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">createdAtFrom</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="nv">createdAtTo</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="nv">search</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">isArchived</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?)</span>
+<span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getCustomers</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">listParameters</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">customersResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">customerList</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">customersResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#update-a-customer' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='update-a-customer'>Update A Customer</h6>
+
+<p>updates existing customer on PayDock</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">update</span><span class="p">(</span><span class="nv">customer</span><span class="p">:</span> <span class="kt">CustomerRequest</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="p">{{</span><span class="n">id</span><span class="p">}})</span> <span class="p">{</span> <span class="p">(</span><span class="n">customerResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">updatedCustomer</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">customerResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#archive-a-customer' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='archive-a-customer'>Archive A Customer</h6>
+
+<p>archives existing customer on PayDock.</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">archiveCustomer</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="p">{{</span><span class="n">id</span><span class="p">}})</span> <span class="p">{</span> <span class="p">(</span><span class="n">chargeResponse</span><span class="p">)</span> <span class="k">in</span>
+  <span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">archivedCharge</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">chargeResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+      <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#create-a-customerrequest' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='create-a-customerrequest'>Create A CustomerRequest</h6>
+
+<p>a CustomerRequest instance is needed for adding customer to PayDock.</p>
+<pre class="highlight swift"><code><span class="c1">// add customer with default payment source</span>
+<span class="k">let</span> <span class="nv">withPaymentSource</span> <span class="o">=</span> <span class="kt">CustomerRequest</span><span class="p">(</span><span class="nv">firstName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">lastName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">reference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">phone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">paymentSource</span><span class="p">:</span> <span class="kt">PaymentSource</span><span class="p">)</span>
+<span class="c1">// add customer with one-time token</span>
+<span class="k">let</span> <span class="nv">withOneTimeToken</span> <span class="o">=</span> <span class="kt">CustomerRequest</span><span class="p">(</span><span class="nv">firstName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">lastName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">reference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">phone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+</code></pre>
+<a href='#subscription' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='subscription'>Subscription</h4>
+
+<p>Subscriptions are recurring billing events. These can be set up to take scheduled payments from a customer without having to re-enter the billing details.</p>
+
+<p>In order to charge for a recurring subscription, it can be added with:</p>
+
+<ul>
+<li>credit card details or a bank account. This will also create a customer</li>
+<li>a customer id</li>
+<li>a one-time token. This will also create a customer</li>
+<li>Subscriptions can run on different intervals (ie daily, weekly, monthly etc) and frequencies (ie &lsquo;every X days’). You can also control the start date for a subscription.</li>
+</ul>
+
+<p>Subscriptions can also be configured to end after:</p>
+
+<ul>
+<li>a certain number of transactions</li>
+<li>an amount (eg end before reaching $1000 or end after reaching $1000)</li>
+<li>a date</li>
+</ul>
+
+<p>If a subscription is created without a customer ID, a new customer will be created and the customer ID will be returned in the response.</p>
+
+<ul>
+<li><a href="#add-a-customer">Add Subscription</a></li>
+<li><a href="#get-a-customer-item-detail">Get A Subscription Item Detail</a></li>
+<li><a href="#get-customer-list">Get Subscription List</a></li>
+<li><a href="#update-a-customer">Update Subscription</a></li>
+<li><a href="#archive-a-customer">Delete Subscription</a></li>
+<li><a href="#create-a-subscriptionrequest">Create A SubscriptionRequest</a></li>
+</ul>
+<a href='#add-subscription' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='add-subscription'>Add Subscription</h6>
+
+<p>to add a subscription you can use following code. <a href="#create-a-subscriptionrequest">SubscriptionRequest</a> is a parameter Model which have different init for different types of subscriptions.</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">subscription</span><span class="p">:</span> <span class="kt">SubscriptionRequest</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">subscriptionResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">createdSubscription</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">subscriptionResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#get-a-subscription-item-detail' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='get-a-subscription-item-detail'>Get A Subscription Item Detail</h6>
+
+<p>gets a subscription item detail with subscription&rsquo;s id</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getSubscription</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="p">{{</span><span class="n">id</span><span class="p">}})</span> <span class="p">{</span> <span class="p">(</span><span class="n">subscriptionResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">subscription</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">subscriptionResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#get-subscription-list' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='get-subscription-list'>Get Subscription List</h6>
+
+<p>gets a list of subscriptions with parameter. use nil for ListParameters to get default first 100 charges</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">listParameters</span> <span class="o">=</span> <span class="kt">ListParameters</span><span class="p">(</span><span class="nv">skip</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">subscription_id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">gateway_id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">company_id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">createdAtFrom</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="nv">createdAtTo</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="nv">search</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">isArchived</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?)</span>
+<span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">getsubscriptions</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">listParameters</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">subscriptionsResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">subscriptinList</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">subscriptionsResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#update-subscription' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='update-subscription'>Update Subscription</h6>
+
+<p>updates existing subscription on PayDock</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">update</span><span class="p">(</span><span class="nv">subscription</span><span class="p">:</span> <span class="kt">SubscriptionRequest</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="p">{{</span><span class="n">id</span><span class="p">}})</span> <span class="p">{</span> <span class="p">(</span><span class="n">subscriptionResponse</span><span class="p">)</span> <span class="k">in</span>
+   <span class="k">do</span> <span class="p">{</span>
+       <span class="k">let</span> <span class="nv">updatedSubscription</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">subscriptionResponse</span><span class="p">()</span>
+   <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+       <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#delete-subscription' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='delete-subscription'>Delete Subscription</h6>
+
+<p>cancels existing subscription on PayDock</p>
+<pre class="highlight swift"><code><span class="kt">PayDock</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">deleteSubscription</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="p">{{</span><span class="n">id</span><span class="p">}})</span> <span class="p">{</span> <span class="p">(</span><span class="n">subscriptionResponse</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">deletedSubscription</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">subscriptionResponse</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#create-a-subscriptionrequest' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='create-a-subscriptionrequest'>Create A SubscriptionRequest</h6>
+
+<p>a SubscriptionRequest instance is needed for adding customer to PayDock.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">schedule</span> <span class="o">=</span> <span class="kt">Schedule</span><span class="p">(</span><span class="nv">interval</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">frequency</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">startDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="nv">endDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="nv">endAmountAfter</span><span class="p">:</span> <span class="kt">Float</span><span class="p">?,</span> <span class="nv">endAmountBefore</span><span class="p">:</span> <span class="kt">Float</span><span class="p">?,</span> <span class="nv">endAmountTotal</span><span class="p">:</span> <span class="kt">Float</span><span class="p">?,</span> <span class="nv">endTransactions</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?)</span>
+<span class="c1">// with CustomerRequest and PaymentSource inside CustomerRequest</span>
+<span class="k">let</span> <span class="nv">withPaymentSource</span> <span class="o">=</span> <span class="kt">SubscriptionRequest</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">reference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">customer</span><span class="p">:</span> <span class="kt">CustomerRequest</span><span class="p">,</span> <span class="nv">schedule</span><span class="p">:</span> <span class="n">schedule</span><span class="p">)</span>
+<span class="c1">// with Customer ID</span>
+<span class="k">let</span> <span class="nv">withCustomerId</span> <span class="o">=</span> <span class="kt">SubscriptionRequest</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">reference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">customerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">schedule</span><span class="p">:</span> <span class="n">schedule</span><span class="p">)</span>
+<span class="c1">// with one-time token</span>
+<span class="k">let</span> <span class="nv">withOneTimeToken</span> <span class="o">=</span> <span class="kt">SubscriptionRequest</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">reference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">schedule</span><span class="p">:</span> <span class="n">schedule</span><span class="p">)</span>
+<span class="c1">// for updating a existing subscription</span>
+<span class="k">let</span> <span class="nv">forUpdate</span> <span class="o">=</span> <span class="kt">SubscriptionRequest</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">reference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">schedule</span><span class="p">:</span> <span class="n">schedule</span><span class="p">)</span>
+</code></pre>
+<a href='#paymentsource' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='paymentsource'>PaymentSource</h4>
+
+<p>PaymentSource is a Parameter Model which is Used to Create CustomerRequest and TokenRequest. PaymentSources can be CreditCards or BankAccount o BSB.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">creditCard</span> <span class="o">=</span> <span class="kt">Card</span><span class="p">(</span><span class="nv">gatewayId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">number</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">expireMonth</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">expireYear</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">ccv</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">address</span><span class="p">:</span> <span class="kt">Address</span><span class="p">?)</span>
+<span class="k">let</span> <span class="nv">paymentSource</span> <span class="o">=</span> <span class="kt">PaymentSource</span><span class="o">.</span><span class="nf">card</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">creditCard</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">bankAccount</span> <span class="o">=</span> <span class="kt">BankAccount</span><span class="p">(</span><span class="nv">gatewayId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accountNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">accountName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">bankName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">accountRouting</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">holderType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">address</span><span class="p">:</span> <span class="kt">Address</span><span class="p">?,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span>
+<span class="k">let</span> <span class="nv">paymentSource</span> <span class="o">=</span> <span class="kt">PaymentSource</span><span class="o">.</span><span class="nf">bankAccount</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">bankAccount</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">bsb</span> <span class="o">=</span> <span class="kt">BSB</span><span class="p">(</span><span class="nv">gatewayId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accountNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">accountName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">accountBSB</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">paymentSource</span> <span class="o">=</span> <span class="kt">PaymentSource</span><span class="o">.</span><span class="nf">bsb</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">bsb</span><span class="p">)</span>
+</code></pre>
+<a href='#address' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='address'>Address</h4>
+
+<p>Address is a Parameter Model which is used in PaymentSource and specify customer&rsquo;s address</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">address</span> <span class="o">=</span> <span class="kt">Address</span><span class="p">(</span><span class="nv">line1</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">city</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">postcode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">country</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span>
+</code></pre>
+<a href='#custom-network' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='custom-network'>Custom Network</h4>
+
+<p>PayDock SDK support can be used with other network pods and class. all you have to do is create a class that adopts PayDockNetwork protocol. and use a new instance of PayDock class which accepts a PayDockNetwork as a parameter</p>
+<pre class="highlight swift"><code> <span class="k">let</span> <span class="nv">customNetworkPayDock</span> <span class="o">=</span> <span class="kt">PayDock</span><span class="p">(</span><span class="nv">network</span><span class="p">:</span> <span class="kt">PayDockNetwork</span><span class="p">)</span>
+</code></pre>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="http://roundtableapps.com" target="_blank" rel="external">RoundTableApps</a>. All rights reserved. (Last updated: 2017-05-07)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jFf-k2-tHR">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gh3-vx-w6d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jFf-k2-tHR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="72B-fM-qQZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BKH-a9-KEb" kind="relationship" relationship="rootViewController" id="eBd-f1-VEc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5FO-cF-OgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.80000000000001" y="691.304347826087"/>
+        </scene>
+        <!--PayDock SDK-->
+        <scene sceneID="XqM-Cf-3zd">
+            <objects>
+                <tableViewController id="BKH-a9-KEb" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tf5-Fd-x6T">
+                        <rect key="frame" x="0.0" y="64" width="320" height="1136"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="FDW-EN-fIS">
+                            <rect key="frame" x="0.0" y="816" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="Charges" id="n63-nT-4dk">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="w1o-6B-9Wf">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1o-6B-9Wf" id="8aC-G0-cUa">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Charges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y2-e3-W70">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2y2-e3-W70" firstAttribute="leading" secondItem="8aC-G0-cUa" secondAttribute="leadingMargin" constant="8" id="jB6-uJ-Vym"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2y2-e3-W70" secondAttribute="trailing" constant="8" id="uI6-fr-O8d"/>
+                                                <constraint firstItem="2y2-e3-W70" firstAttribute="centerY" secondItem="8aC-G0-cUa" secondAttribute="centerY" id="vBP-Rc-CEu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Sc7-f6-WkF">
+                                        <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sc7-f6-WkF" id="ZHy-PI-Wjk">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Charges List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxb-4s-jPn">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yxb-4s-jPn" secondAttribute="trailing" constant="8" id="3pc-1I-XCH"/>
+                                                <constraint firstItem="yxb-4s-jPn" firstAttribute="leading" secondItem="ZHy-PI-Wjk" secondAttribute="leadingMargin" constant="8" id="gU9-Jv-BaZ"/>
+                                                <constraint firstItem="yxb-4s-jPn" firstAttribute="centerY" secondItem="ZHy-PI-Wjk" secondAttribute="centerY" id="zNk-ED-pe2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="g4d-jd-V0d">
+                                        <rect key="frame" x="0.0" y="116" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g4d-jd-V0d" id="uo9-1K-qdb">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Charges List With Parameters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDe-Iq-xD7">
+                                                    <rect key="frame" x="16" y="5" width="255" height="34"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FDe-Iq-xD7" firstAttribute="leading" secondItem="uo9-1K-qdb" secondAttribute="leadingMargin" constant="8" id="OLN-7l-na3"/>
+                                                <constraint firstItem="FDe-Iq-xD7" firstAttribute="centerY" secondItem="uo9-1K-qdb" secondAttribute="centerY" id="mBs-wp-TSG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FDe-Iq-xD7" secondAttribute="trailing" constant="8" id="v0g-ud-OgW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3ZW-Pm-liz">
+                                        <rect key="frame" x="0.0" y="160" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3ZW-Pm-liz" id="hVV-F0-Lt8">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Single Charge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSl-IL-0FC">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wSl-IL-0FC" secondAttribute="trailing" constant="8" id="3T3-up-x6d"/>
+                                                <constraint firstItem="wSl-IL-0FC" firstAttribute="leading" secondItem="hVV-F0-Lt8" secondAttribute="leadingMargin" constant="8" id="YG8-Dd-gNY"/>
+                                                <constraint firstItem="wSl-IL-0FC" firstAttribute="centerY" secondItem="hVV-F0-Lt8" secondAttribute="centerY" id="fC9-BL-uX5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sgi-U1-cL2">
+                                        <rect key="frame" x="0.0" y="204" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sgi-U1-cL2" id="gHg-MM-nq6">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refund Charge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vq9-Km-AfV">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Vq9-Km-AfV" secondAttribute="trailing" constant="8" id="Dyx-VK-HhJ"/>
+                                                <constraint firstItem="Vq9-Km-AfV" firstAttribute="centerY" secondItem="gHg-MM-nq6" secondAttribute="centerY" id="dr4-0Z-bN7"/>
+                                                <constraint firstItem="Vq9-Km-AfV" firstAttribute="leading" secondItem="gHg-MM-nq6" secondAttribute="leadingMargin" constant="8" id="fLR-NB-kFm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Customers" id="PMg-xC-3d8">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="n5h-Ps-AXd">
+                                        <rect key="frame" x="0.0" y="276" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n5h-Ps-AXd" id="7kb-oJ-lGs">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Customers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTs-8Z-1dw">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yTs-8Z-1dw" firstAttribute="leading" secondItem="7kb-oJ-lGs" secondAttribute="leadingMargin" constant="8" id="8Ra-gG-sDK"/>
+                                                <constraint firstItem="yTs-8Z-1dw" firstAttribute="centerY" secondItem="7kb-oJ-lGs" secondAttribute="centerY" id="Idy-4B-Dnk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yTs-8Z-1dw" secondAttribute="trailing" constant="8" id="yty-Ql-KZi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YKJ-fr-gcD">
+                                        <rect key="frame" x="0.0" y="320" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKJ-fr-gcD" id="keQ-kp-rPa">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Customers List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg2-o3-a1Q">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qg2-o3-a1Q" firstAttribute="centerY" secondItem="keQ-kp-rPa" secondAttribute="centerY" id="BXY-5v-Gj6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qg2-o3-a1Q" secondAttribute="trailing" constant="8" id="MCh-gL-9Ip"/>
+                                                <constraint firstItem="qg2-o3-a1Q" firstAttribute="leading" secondItem="keQ-kp-rPa" secondAttribute="leadingMargin" constant="8" id="NeR-ho-yBm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1WF-jR-yG3">
+                                        <rect key="frame" x="0.0" y="364" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1WF-jR-yG3" id="6hg-iw-6Sj">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Customer List With Parameters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFf-59-O8c">
+                                                    <rect key="frame" x="16" y="5" width="255" height="34"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bFf-59-O8c" firstAttribute="centerY" secondItem="6hg-iw-6Sj" secondAttribute="centerY" id="9fM-q8-YHQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bFf-59-O8c" secondAttribute="trailing" constant="8" id="Zcm-Ts-SnX"/>
+                                                <constraint firstItem="bFf-59-O8c" firstAttribute="leading" secondItem="6hg-iw-6Sj" secondAttribute="leadingMargin" constant="8" id="nAc-f1-wWT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nLi-LC-fYw">
+                                        <rect key="frame" x="0.0" y="408" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nLi-LC-fYw" id="F8e-dr-4nM">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Customer Item Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQk-g7-87g">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KQk-g7-87g" firstAttribute="leading" secondItem="F8e-dr-4nM" secondAttribute="leadingMargin" constant="8" id="8NM-8H-I8K"/>
+                                                <constraint firstItem="KQk-g7-87g" firstAttribute="centerY" secondItem="F8e-dr-4nM" secondAttribute="centerY" id="AYl-Jc-zUH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KQk-g7-87g" secondAttribute="trailing" constant="8" id="aRm-bq-TDz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lDj-Qj-DUy">
+                                        <rect key="frame" x="0.0" y="452" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lDj-Qj-DUy" id="2ZW-sF-qHI">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Customer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnO-Xa-IMf">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xnO-Xa-IMf" firstAttribute="leading" secondItem="2ZW-sF-qHI" secondAttribute="leadingMargin" constant="8" id="6Ac-oD-pbB"/>
+                                                <constraint firstItem="xnO-Xa-IMf" firstAttribute="centerY" secondItem="2ZW-sF-qHI" secondAttribute="centerY" id="7kc-uJ-Z0d"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xnO-Xa-IMf" secondAttribute="trailing" constant="8" id="eLB-BG-VGx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Subscriptions" id="EOx-d2-2wz">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tro-hs-dDu">
+                                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tro-hs-dDu" id="PAV-Qj-KMX">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Subscription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9W-ru-dfU">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="L9W-ru-dfU" secondAttribute="trailing" constant="8" id="MT5-sB-h61"/>
+                                                <constraint firstItem="L9W-ru-dfU" firstAttribute="centerY" secondItem="PAV-Qj-KMX" secondAttribute="centerY" id="zrZ-Ec-BN6"/>
+                                                <constraint firstItem="L9W-ru-dfU" firstAttribute="leading" secondItem="PAV-Qj-KMX" secondAttribute="leadingMargin" constant="8" id="zv7-0E-f2O"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Tow-1f-sQH">
+                                        <rect key="frame" x="0.0" y="568" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tow-1f-sQH" id="kzM-Th-Zvh">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Subscription Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVC-dG-dfd">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VVC-dG-dfd" firstAttribute="centerY" secondItem="kzM-Th-Zvh" secondAttribute="centerY" id="6iB-4j-MMK"/>
+                                                <constraint firstItem="VVC-dG-dfd" firstAttribute="leading" secondItem="kzM-Th-Zvh" secondAttribute="leadingMargin" constant="8" id="euw-kV-opW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VVC-dG-dfd" secondAttribute="trailing" constant="8" id="vPt-gs-YVJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="95t-DO-F44">
+                                        <rect key="frame" x="0.0" y="612" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="95t-DO-F44" id="Xh9-7h-Vdu">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Subscription List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aU-Rh-ACV">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7aU-Rh-ACV" firstAttribute="leading" secondItem="Xh9-7h-Vdu" secondAttribute="leadingMargin" constant="8" id="G9s-mP-wm7"/>
+                                                <constraint firstItem="7aU-Rh-ACV" firstAttribute="centerY" secondItem="Xh9-7h-Vdu" secondAttribute="centerY" id="OrY-mr-CmU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7aU-Rh-ACV" secondAttribute="trailing" constant="8" id="uxN-6a-n1P"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="S0i-FF-6a8">
+                                        <rect key="frame" x="0.0" y="656" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S0i-FF-6a8" id="Jt2-6k-9et">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Subscription List With Parameters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olm-Ls-s7z">
+                                                    <rect key="frame" x="16" y="5" width="255" height="34"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="olm-Ls-s7z" firstAttribute="centerY" secondItem="Jt2-6k-9et" secondAttribute="centerY" id="Eav-6o-fX9"/>
+                                                <constraint firstItem="olm-Ls-s7z" firstAttribute="leading" secondItem="Jt2-6k-9et" secondAttribute="leadingMargin" constant="8" id="jPA-p6-XPb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="olm-Ls-s7z" secondAttribute="trailing" constant="8" id="noP-fX-G8f"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Gof-du-ASr">
+                                        <rect key="frame" x="0.0" y="700" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gof-du-ASr" id="0f6-ZH-1SM">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Subscription Item Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVS-3P-UjZ">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vVS-3P-UjZ" firstAttribute="centerY" secondItem="0f6-ZH-1SM" secondAttribute="centerY" id="JQl-FE-gPB"/>
+                                                <constraint firstItem="vVS-3P-UjZ" firstAttribute="leading" secondItem="0f6-ZH-1SM" secondAttribute="leadingMargin" constant="8" id="Z8m-w8-9n6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vVS-3P-UjZ" secondAttribute="trailing" constant="8" id="pA7-n2-aOr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Token" id="mCP-9P-iyG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uAk-2f-LdW">
+                                        <rect key="frame" x="0.0" y="772" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uAk-2f-LdW" id="7Hk-ci-sOX">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create One-Time Token" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adT-qe-l5u">
+                                                    <rect key="frame" x="16" y="13.5" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                                    <color key="textColor" red="0.4609348774" green="0.50777745249999995" blue="0.61989098789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="adT-qe-l5u" firstAttribute="leading" secondItem="7Hk-ci-sOX" secondAttribute="leadingMargin" constant="8" id="Yv9-UR-qvd"/>
+                                                <constraint firstItem="adT-qe-l5u" firstAttribute="centerY" secondItem="7Hk-ci-sOX" secondAttribute="centerY" id="ejl-Gx-5Xk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="adT-qe-l5u" secondAttribute="trailing" constant="8" id="rKV-Ul-VsO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="BKH-a9-KEb" id="ytE-6W-PoA"/>
+                            <outlet property="delegate" destination="BKH-a9-KEb" id="2j7-Xl-LGI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="PayDock SDK" id="Na2-2h-MTb"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="1200"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VkZ-PO-J6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="691"/>
+        </scene>
+    </scenes>
+</document>

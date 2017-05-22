@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8400093C1EAE1C6000877866 /* chargeList.json in Resources */ = {isa = PBXBuildFile; fileRef = 840009391EAE1C6000877866 /* chargeList.json */; };
+		8400093D1EAE1C6000877866 /* chargeInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093A1EAE1C6000877866 /* chargeInfo.json */; };
+		8400093E1EAE1C6000877866 /* chargeAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093B1EAE1C6000877866 /* chargeAdd.json */; };
+		840009421EAE226F00877866 /* customerItem.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093F1EAE226F00877866 /* customerItem.json */; };
+		840009431EAE226F00877866 /* customerAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 840009401EAE226F00877866 /* customerAdd.json */; };
+		840009441EAE226F00877866 /* customerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 840009411EAE226F00877866 /* customerList.json */; };
+		840009461EB0748100877866 /* TokenIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840009451EB0748100877866 /* TokenIntegrationTest.swift */; };
+		840009481EB0768D00877866 /* SubscriptionIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840009471EB0768D00877866 /* SubscriptionIntegrationTest.swift */; };
+		8400094D1EB08C4600877866 /* subscriptionAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 840009491EB08C4600877866 /* subscriptionAdd.json */; };
+		8400094E1EB08C4600877866 /* subscriptionItem.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400094A1EB08C4600877866 /* subscriptionItem.json */; };
+		8400094F1EB08C4600877866 /* subscriptionList.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400094B1EB08C4600877866 /* subscriptionList.json */; };
+		840009501EB08C4600877866 /* subscriptionUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400094C1EB08C4600877866 /* subscriptionUpdate.json */; };
+		8418A44D1EAB42F6007FBC13 /* CustomerServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A44C1EAB42F6007FBC13 /* CustomerServices.swift */; };
+		8418A44F1EAB5372007FBC13 /* CustomerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A44E1EAB5372007FBC13 /* CustomerRequest.swift */; };
+		8418A4591EACA766007FBC13 /* Mapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A4581EACA766007FBC13 /* Mapable.swift */; };
+		8418A45B1EADC012007FBC13 /* CustomerIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A45A1EADC012007FBC13 /* CustomerIntegrationTests.swift */; };
+		8426B8761EA5F85A0038AC39 /* Parameterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8751EA5F85A0038AC39 /* Parameterable.swift */; };
+		8426B8781EA601870038AC39 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8771EA601870038AC39 /* Constants.swift */; };
+		8426B87A1EA606A80038AC39 /* ChargeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8791EA606A80038AC39 /* ChargeServices.swift */; };
+		8426B8841EA61CAD0038AC39 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8831EA61CAD0038AC39 /* Customer.swift */; };
+		8426B8861EA737380038AC39 /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8851EA737380038AC39 /* Charge.swift */; };
+		8426B8891EA7483A0038AC39 /* ListParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8881EA7483A0038AC39 /* ListParameters.swift */; };
+		8426B88D1EA75E930038AC39 /* Payment Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B88C1EA75E930038AC39 /* Payment Source.swift */; };
+		8426B88F1EA75F200038AC39 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B88E1EA75F200038AC39 /* Card.swift */; };
+		8426B8911EA75F450038AC39 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8901EA75F450038AC39 /* BankAccount.swift */; };
+		8426B8931EA75F590038AC39 /* BSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8921EA75F590038AC39 /* BSB.swift */; };
+		8426B8951EA763200038AC39 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8941EA763200038AC39 /* Address.swift */; };
+		8426B8981EA77D970038AC39 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8971EA77D970038AC39 /* Transaction.swift */; };
+		8426B89A1EA77DB30038AC39 /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8991EA77DB30038AC39 /* Sale.swift */; };
+		8426B89C1EA77DD80038AC39 /* Refund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B89B1EA77DD80038AC39 /* Refund.swift */; };
+		8435D07C1E9B49E300AE0BAA /* PayDock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8435D0721E9B49E300AE0BAA /* PayDock.framework */; };
+		8435D0811E9B49E300AE0BAA /* ChargeIntergrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435D0801E9B49E300AE0BAA /* ChargeIntergrationTests.swift */; };
+		8435D0831E9B49E300AE0BAA /* PayDock.h in Headers */ = {isa = PBXBuildFile; fileRef = 8435D0751E9B49E300AE0BAA /* PayDock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		847745FC1E9B4B0400435EFD /* PayDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847745FB1E9B4B0400435EFD /* PayDock.swift */; };
+		84D4B61C1EA20456003433F0 /* PayDockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4B61B1EA20456003433F0 /* PayDockNetwork.swift */; };
+		84D4B61E1EA206F2003433F0 /* PayDockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4B61D1EA206F2003433F0 /* PayDockSession.swift */; };
+		84D4B6201EA2219E003433F0 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4B61F1EA2219E003433F0 /* Errors.swift */; };
+		84DEA9CD1EAB21EA00A001E8 /* ChargeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEA9CC1EAB21EA00A001E8 /* ChargeRequest.swift */; };
+		84F3DC421EB46140001101C7 /* ModelMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3DC411EB46140001101C7 /* ModelMapTests.swift */; };
+		84F3DC441EB46767001101C7 /* PayDockSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3DC431EB46767001101C7 /* PayDockSessionTests.swift */; };
+		A553C8BB1EA75BF500E3E872 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8BA1EA75BF500E3E872 /* Subscription.swift */; };
+		A553C8BF1EA75D1700E3E872 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8BE1EA75D1700E3E872 /* Schedule.swift */; };
+		A553C8C11EA77CD100E3E872 /* SubscriptionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8C01EA77CD100E3E872 /* SubscriptionServices.swift */; };
+		A5FEF5581EAB28AB00AD1B44 /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF5571EAB28AB00AD1B44 /* TokenRequest.swift */; };
+		A5FEF55A1EAB3FB400AD1B44 /* TokenServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF5591EAB3FB400AD1B44 /* TokenServices.swift */; };
+		A5FEF55D1EAB659C00AD1B44 /* SubscriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF55C1EAB659C00AD1B44 /* SubscriptionRequest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8435D07D1E9B49E300AE0BAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8435D0691E9B49E200AE0BAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8435D0711E9B49E200AE0BAA;
+			remoteInfo = PayDock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		840009391EAE1C6000877866 /* chargeList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeList.json; sourceTree = "<group>"; };
+		8400093A1EAE1C6000877866 /* chargeInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeInfo.json; sourceTree = "<group>"; };
+		8400093B1EAE1C6000877866 /* chargeAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeAdd.json; sourceTree = "<group>"; };
+		8400093F1EAE226F00877866 /* customerItem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customerItem.json; sourceTree = "<group>"; };
+		840009401EAE226F00877866 /* customerAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customerAdd.json; sourceTree = "<group>"; };
+		840009411EAE226F00877866 /* customerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customerList.json; sourceTree = "<group>"; };
+		840009451EB0748100877866 /* TokenIntegrationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenIntegrationTest.swift; sourceTree = "<group>"; };
+		840009471EB0768D00877866 /* SubscriptionIntegrationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionIntegrationTest.swift; sourceTree = "<group>"; };
+		840009491EB08C4600877866 /* subscriptionAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subscriptionAdd.json; sourceTree = "<group>"; };
+		8400094A1EB08C4600877866 /* subscriptionItem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subscriptionItem.json; sourceTree = "<group>"; };
+		8400094B1EB08C4600877866 /* subscriptionList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subscriptionList.json; sourceTree = "<group>"; };
+		8400094C1EB08C4600877866 /* subscriptionUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subscriptionUpdate.json; sourceTree = "<group>"; };
+		8418A44C1EAB42F6007FBC13 /* CustomerServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerServices.swift; path = Services/CustomerServices.swift; sourceTree = "<group>"; };
+		8418A44E1EAB5372007FBC13 /* CustomerRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerRequest.swift; path = Models/Parameters/CustomerRequest.swift; sourceTree = "<group>"; };
+		8418A4581EACA766007FBC13 /* Mapable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mapable.swift; path = Mapper/Mapable.swift; sourceTree = "<group>"; };
+		8418A45A1EADC012007FBC13 /* CustomerIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerIntegrationTests.swift; sourceTree = "<group>"; };
+		8426B8751EA5F85A0038AC39 /* Parameterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parameterable.swift; path = Models/Parameters/Parameterable.swift; sourceTree = "<group>"; };
+		8426B8771EA601870038AC39 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8426B8791EA606A80038AC39 /* ChargeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChargeServices.swift; path = Services/ChargeServices.swift; sourceTree = "<group>"; };
+		8426B8831EA61CAD0038AC39 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Customer.swift; path = Models/Customer/Customer.swift; sourceTree = "<group>"; };
+		8426B8851EA737380038AC39 /* Charge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Charge.swift; path = Models/Charge/Charge.swift; sourceTree = "<group>"; };
+		8426B8881EA7483A0038AC39 /* ListParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListParameters.swift; path = Models/Parameters/ListParameters.swift; sourceTree = "<group>"; };
+		8426B88C1EA75E930038AC39 /* Payment Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Payment Source.swift"; path = "Models/Payment Sources/Payment Source.swift"; sourceTree = "<group>"; };
+		8426B88E1EA75F200038AC39 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = "Models/Payment Sources/Card.swift"; sourceTree = "<group>"; };
+		8426B8901EA75F450038AC39 /* BankAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BankAccount.swift; path = "Models/Payment Sources/BankAccount.swift"; sourceTree = "<group>"; };
+		8426B8921EA75F590038AC39 /* BSB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BSB.swift; path = "Models/Payment Sources/BSB.swift"; sourceTree = "<group>"; };
+		8426B8941EA763200038AC39 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Models/Address.swift; sourceTree = "<group>"; };
+		8426B8971EA77D970038AC39 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = Models/Transaction/Transaction.swift; sourceTree = "<group>"; };
+		8426B8991EA77DB30038AC39 /* Sale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sale.swift; path = Models/Transaction/Sale.swift; sourceTree = "<group>"; };
+		8426B89B1EA77DD80038AC39 /* Refund.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Refund.swift; path = Models/Transaction/Refund.swift; sourceTree = "<group>"; };
+		8435D0721E9B49E300AE0BAA /* PayDock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PayDock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8435D0751E9B49E300AE0BAA /* PayDock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayDock.h; sourceTree = "<group>"; };
+		8435D0761E9B49E300AE0BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8435D07B1E9B49E300AE0BAA /* PayDockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayDockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8435D0801E9B49E300AE0BAA /* ChargeIntergrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeIntergrationTests.swift; sourceTree = "<group>"; };
+		8435D0821E9B49E300AE0BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847745FB1E9B4B0400435EFD /* PayDock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayDock.swift; sourceTree = "<group>"; };
+		84D4B61B1EA20456003433F0 /* PayDockNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayDockNetwork.swift; path = Networking/PayDockNetwork.swift; sourceTree = "<group>"; };
+		84D4B61D1EA206F2003433F0 /* PayDockSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayDockSession.swift; path = Networking/PayDockSession.swift; sourceTree = "<group>"; };
+		84D4B61F1EA2219E003433F0 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		84DEA9CC1EAB21EA00A001E8 /* ChargeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChargeRequest.swift; path = Models/Parameters/ChargeRequest.swift; sourceTree = "<group>"; };
+		84F3DC411EB46140001101C7 /* ModelMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMapTests.swift; sourceTree = "<group>"; };
+		84F3DC431EB46767001101C7 /* PayDockSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayDockSessionTests.swift; sourceTree = "<group>"; };
+		A553C8BA1EA75BF500E3E872 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = Models/Subscription/Subscription.swift; sourceTree = "<group>"; };
+		A553C8BE1EA75D1700E3E872 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Schedule.swift; path = Models/Subscription/Schedule.swift; sourceTree = "<group>"; };
+		A553C8C01EA77CD100E3E872 /* SubscriptionServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionServices.swift; path = Services/SubscriptionServices.swift; sourceTree = "<group>"; };
+		A5FEF5571EAB28AB00AD1B44 /* TokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenRequest.swift; path = Models/Parameters/TokenRequest.swift; sourceTree = "<group>"; };
+		A5FEF5591EAB3FB400AD1B44 /* TokenServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenServices.swift; path = Services/TokenServices.swift; sourceTree = "<group>"; };
+		A5FEF55C1EAB659C00AD1B44 /* SubscriptionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionRequest.swift; path = Models/Parameters/SubscriptionRequest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8435D06E1E9B49E200AE0BAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8435D0781E9B49E300AE0BAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8435D07C1E9B49E300AE0BAA /* PayDock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		840009381EAE1C4700877866 /* Jsons */ = {
+			isa = PBXGroup;
+			children = (
+				840009391EAE1C6000877866 /* chargeList.json */,
+				8400093A1EAE1C6000877866 /* chargeInfo.json */,
+				8400093B1EAE1C6000877866 /* chargeAdd.json */,
+				8400093F1EAE226F00877866 /* customerItem.json */,
+				840009401EAE226F00877866 /* customerAdd.json */,
+				840009411EAE226F00877866 /* customerList.json */,
+				840009491EB08C4600877866 /* subscriptionAdd.json */,
+				8400094A1EB08C4600877866 /* subscriptionItem.json */,
+				8400094B1EB08C4600877866 /* subscriptionList.json */,
+				8400094C1EB08C4600877866 /* subscriptionUpdate.json */,
+			);
+			name = Jsons;
+			sourceTree = "<group>";
+		};
+		8418A4571EACA751007FBC13 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				8418A4581EACA766007FBC13 /* Mapable.swift */,
+			);
+			name = Mapper;
+			sourceTree = "<group>";
+		};
+		8426B8871EA748150038AC39 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				8426B8751EA5F85A0038AC39 /* Parameterable.swift */,
+				84DEA9CC1EAB21EA00A001E8 /* ChargeRequest.swift */,
+				8418A44E1EAB5372007FBC13 /* CustomerRequest.swift */,
+				A5FEF55C1EAB659C00AD1B44 /* SubscriptionRequest.swift */,
+				A5FEF5571EAB28AB00AD1B44 /* TokenRequest.swift */,
+				8426B8881EA7483A0038AC39 /* ListParameters.swift */,
+			);
+			name = Parameters;
+			sourceTree = "<group>";
+		};
+		8426B88A1EA7501F0038AC39 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8426B8791EA606A80038AC39 /* ChargeServices.swift */,
+				A553C8C01EA77CD100E3E872 /* SubscriptionServices.swift */,
+				8418A44C1EAB42F6007FBC13 /* CustomerServices.swift */,
+				A5FEF5591EAB3FB400AD1B44 /* TokenServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		8426B88B1EA75E610038AC39 /* Payment Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8426B88C1EA75E930038AC39 /* Payment Source.swift */,
+				8426B88E1EA75F200038AC39 /* Card.swift */,
+				8426B8901EA75F450038AC39 /* BankAccount.swift */,
+				8426B8921EA75F590038AC39 /* BSB.swift */,
+			);
+			name = "Payment Sources";
+			sourceTree = "<group>";
+		};
+		8426B8961EA77D780038AC39 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				8426B8971EA77D970038AC39 /* Transaction.swift */,
+				8426B8991EA77DB30038AC39 /* Sale.swift */,
+				8426B89B1EA77DD80038AC39 /* Refund.swift */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
+		8435D0681E9B49E200AE0BAA = {
+			isa = PBXGroup;
+			children = (
+				8435D0741E9B49E300AE0BAA /* PayDock */,
+				8435D07F1E9B49E300AE0BAA /* PayDockTests */,
+				8435D0731E9B49E300AE0BAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8435D0731E9B49E300AE0BAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8435D0721E9B49E300AE0BAA /* PayDock.framework */,
+				8435D07B1E9B49E300AE0BAA /* PayDockTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8435D0741E9B49E300AE0BAA /* PayDock */ = {
+			isa = PBXGroup;
+			children = (
+				8435D0751E9B49E300AE0BAA /* PayDock.h */,
+				847745FB1E9B4B0400435EFD /* PayDock.swift */,
+				8426B8771EA601870038AC39 /* Constants.swift */,
+				84D4B61F1EA2219E003433F0 /* Errors.swift */,
+				84A457EE1E9B5A3C00F32CB5 /* Models */,
+				84D4B61A1EA203E5003433F0 /* Networking */,
+				8418A4571EACA751007FBC13 /* Mapper */,
+				8426B88A1EA7501F0038AC39 /* Services */,
+				8435D0761E9B49E300AE0BAA /* Info.plist */,
+			);
+			path = PayDock;
+			sourceTree = "<group>";
+		};
+		8435D07F1E9B49E300AE0BAA /* PayDockTests */ = {
+			isa = PBXGroup;
+			children = (
+				840009381EAE1C4700877866 /* Jsons */,
+				8435D0801E9B49E300AE0BAA /* ChargeIntergrationTests.swift */,
+				8418A45A1EADC012007FBC13 /* CustomerIntegrationTests.swift */,
+				840009471EB0768D00877866 /* SubscriptionIntegrationTest.swift */,
+				840009451EB0748100877866 /* TokenIntegrationTest.swift */,
+				84F3DC431EB46767001101C7 /* PayDockSessionTests.swift */,
+				84F3DC411EB46140001101C7 /* ModelMapTests.swift */,
+				8435D0821E9B49E300AE0BAA /* Info.plist */,
+			);
+			path = PayDockTests;
+			sourceTree = "<group>";
+		};
+		844419851EB4922D00CD572C /* Charge */ = {
+			isa = PBXGroup;
+			children = (
+				8426B8851EA737380038AC39 /* Charge.swift */,
+			);
+			name = Charge;
+			sourceTree = "<group>";
+		};
+		844419861EB4923A00CD572C /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				8426B8831EA61CAD0038AC39 /* Customer.swift */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		84A457EE1E9B5A3C00F32CB5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				844419851EB4922D00CD572C /* Charge */,
+				844419861EB4923A00CD572C /* Customer */,
+				A5226A3E1EA79730004F1EF1 /* Subscription */,
+				8426B88B1EA75E610038AC39 /* Payment Sources */,
+				8426B8961EA77D780038AC39 /* Transaction */,
+				8426B8871EA748150038AC39 /* Parameters */,
+				8426B8941EA763200038AC39 /* Address.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		84D4B61A1EA203E5003433F0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				84D4B61B1EA20456003433F0 /* PayDockNetwork.swift */,
+				84D4B61D1EA206F2003433F0 /* PayDockSession.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		A5226A3E1EA79730004F1EF1 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				A553C8BA1EA75BF500E3E872 /* Subscription.swift */,
+				A553C8BE1EA75D1700E3E872 /* Schedule.swift */,
+			);
+			name = Subscription;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8435D06F1E9B49E200AE0BAA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8435D0831E9B49E300AE0BAA /* PayDock.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8435D0711E9B49E200AE0BAA /* PayDock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8435D0861E9B49E300AE0BAA /* Build configuration list for PBXNativeTarget "PayDock" */;
+			buildPhases = (
+				8435D06D1E9B49E200AE0BAA /* Sources */,
+				8435D06E1E9B49E200AE0BAA /* Frameworks */,
+				8435D06F1E9B49E200AE0BAA /* Headers */,
+				8435D0701E9B49E200AE0BAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PayDock;
+			productName = PayDock;
+			productReference = 8435D0721E9B49E300AE0BAA /* PayDock.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8435D07A1E9B49E300AE0BAA /* PayDockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8435D0891E9B49E300AE0BAA /* Build configuration list for PBXNativeTarget "PayDockTests" */;
+			buildPhases = (
+				8435D0771E9B49E300AE0BAA /* Sources */,
+				8435D0781E9B49E300AE0BAA /* Frameworks */,
+				8435D0791E9B49E300AE0BAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8435D07E1E9B49E300AE0BAA /* PBXTargetDependency */,
+			);
+			name = PayDockTests;
+			productName = PayDockTests;
+			productReference = 8435D07B1E9B49E300AE0BAA /* PayDockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8435D0691E9B49E200AE0BAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = RoundTableApps;
+				TargetAttributes = {
+					8435D0711E9B49E200AE0BAA = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 2W4U2P3K99;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					8435D07A1E9B49E300AE0BAA = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 2W4U2P3K99;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8435D06C1E9B49E200AE0BAA /* Build configuration list for PBXProject "PayDock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8435D0681E9B49E200AE0BAA;
+			productRefGroup = 8435D0731E9B49E300AE0BAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8435D0711E9B49E200AE0BAA /* PayDock */,
+				8435D07A1E9B49E300AE0BAA /* PayDockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8435D0701E9B49E200AE0BAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8435D0791E9B49E300AE0BAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840009431EAE226F00877866 /* customerAdd.json in Resources */,
+				8400094E1EB08C4600877866 /* subscriptionItem.json in Resources */,
+				8400093C1EAE1C6000877866 /* chargeList.json in Resources */,
+				8400093D1EAE1C6000877866 /* chargeInfo.json in Resources */,
+				840009441EAE226F00877866 /* customerList.json in Resources */,
+				840009421EAE226F00877866 /* customerItem.json in Resources */,
+				8400094D1EB08C4600877866 /* subscriptionAdd.json in Resources */,
+				8400093E1EAE1C6000877866 /* chargeAdd.json in Resources */,
+				8400094F1EB08C4600877866 /* subscriptionList.json in Resources */,
+				840009501EB08C4600877866 /* subscriptionUpdate.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8435D06D1E9B49E200AE0BAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D4B6201EA2219E003433F0 /* Errors.swift in Sources */,
+				8426B8841EA61CAD0038AC39 /* Customer.swift in Sources */,
+				A553C8C11EA77CD100E3E872 /* SubscriptionServices.swift in Sources */,
+				8418A44F1EAB5372007FBC13 /* CustomerRequest.swift in Sources */,
+				8426B8981EA77D970038AC39 /* Transaction.swift in Sources */,
+				8426B89A1EA77DB30038AC39 /* Sale.swift in Sources */,
+				84D4B61E1EA206F2003433F0 /* PayDockSession.swift in Sources */,
+				8426B8761EA5F85A0038AC39 /* Parameterable.swift in Sources */,
+				A5FEF5581EAB28AB00AD1B44 /* TokenRequest.swift in Sources */,
+				A553C8BB1EA75BF500E3E872 /* Subscription.swift in Sources */,
+				A553C8BF1EA75D1700E3E872 /* Schedule.swift in Sources */,
+				8426B8781EA601870038AC39 /* Constants.swift in Sources */,
+				A5FEF55A1EAB3FB400AD1B44 /* TokenServices.swift in Sources */,
+				A5FEF55D1EAB659C00AD1B44 /* SubscriptionRequest.swift in Sources */,
+				8426B87A1EA606A80038AC39 /* ChargeServices.swift in Sources */,
+				8426B8911EA75F450038AC39 /* BankAccount.swift in Sources */,
+				84D4B61C1EA20456003433F0 /* PayDockNetwork.swift in Sources */,
+				8426B88F1EA75F200038AC39 /* Card.swift in Sources */,
+				8426B8891EA7483A0038AC39 /* ListParameters.swift in Sources */,
+				8426B8951EA763200038AC39 /* Address.swift in Sources */,
+				847745FC1E9B4B0400435EFD /* PayDock.swift in Sources */,
+				8426B8861EA737380038AC39 /* Charge.swift in Sources */,
+				8426B89C1EA77DD80038AC39 /* Refund.swift in Sources */,
+				8418A44D1EAB42F6007FBC13 /* CustomerServices.swift in Sources */,
+				84DEA9CD1EAB21EA00A001E8 /* ChargeRequest.swift in Sources */,
+				8426B88D1EA75E930038AC39 /* Payment Source.swift in Sources */,
+				8418A4591EACA766007FBC13 /* Mapable.swift in Sources */,
+				8426B8931EA75F590038AC39 /* BSB.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8435D0771E9B49E300AE0BAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840009481EB0768D00877866 /* SubscriptionIntegrationTest.swift in Sources */,
+				8435D0811E9B49E300AE0BAA /* ChargeIntergrationTests.swift in Sources */,
+				84F3DC441EB46767001101C7 /* PayDockSessionTests.swift in Sources */,
+				84F3DC421EB46140001101C7 /* ModelMapTests.swift in Sources */,
+				840009461EB0748100877866 /* TokenIntegrationTest.swift in Sources */,
+				8418A45B1EADC012007FBC13 /* CustomerIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8435D07E1E9B49E300AE0BAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8435D0711E9B49E200AE0BAA /* PayDock */;
+			targetProxy = 8435D07D1E9B49E300AE0BAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8435D0841E9B49E300AE0BAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8435D0851E9B49E300AE0BAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8435D0871E9B49E300AE0BAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2W4U2P3K99;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PayDock/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.roundtableapps.PayDock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8435D0881E9B49E300AE0BAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2W4U2P3K99;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PayDock/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.roundtableapps.PayDock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8435D08A1E9B49E300AE0BAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2W4U2P3K99;
+				INFOPLIST_FILE = PayDockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.roundtableapps.PayDockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8435D08B1E9B49E300AE0BAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2W4U2P3K99;
+				INFOPLIST_FILE = PayDockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.roundtableapps.PayDockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8435D06C1E9B49E200AE0BAA /* Build configuration list for PBXProject "PayDock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8435D0841E9B49E300AE0BAA /* Debug */,
+				8435D0851E9B49E300AE0BAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8435D0861E9B49E300AE0BAA /* Build configuration list for PBXNativeTarget "PayDock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8435D0871E9B49E300AE0BAA /* Debug */,
+				8435D0881E9B49E300AE0BAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8435D0891E9B49E300AE0BAA /* Build configuration list for PBXNativeTarget "PayDockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8435D08A1E9B49E300AE0BAA /* Debug */,
+				8435D08B1E9B49E300AE0BAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8435D0691E9B49E200AE0BAA /* Project object */;
+}

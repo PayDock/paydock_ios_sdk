@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/admin/Documents/bitbucket/PayDock/PayDock/build/Release-iphoneos/PayDock.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "PayDock-Swift.h",
+          'external-contents': "/Users/admin/Documents/bitbucket/PayDock/PayDock/build/Release-iphoneos/PayDock.framework/Headers/PayDock-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "PayDock.h",
+          'external-contents': "/Users/admin/Documents/bitbucket/PayDock/PayDock/PayDock/PayDock.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/admin/Documents/bitbucket/PayDock/PayDock/build/Release-iphoneos/PayDock.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/admin/Documents/bitbucket/PayDock/PayDock/build/PayDock.build/Release-iphoneos/PayDock.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+framework module PayDock {
+  umbrella header "PayDock.h"
+
+  export *
+  module * { export * }
+}
+
+module PayDock.Swift {
+    header "PayDock-Swift.h"
+}

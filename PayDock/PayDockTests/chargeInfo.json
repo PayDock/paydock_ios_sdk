@@ -1,0 +1,66 @@
+{
+      "_id": "585ba834e45b75bc368087b3",
+      "created_at": "2016-12-22T10:17:24.504Z",
+      "updated_at": "2016-12-22T10:17:41.072Z",
+      "company_id": "582d930808277de017a2a3f4",
+      "user_id": "582d930808277de017a2a3f3",
+      "amount": 17,
+      "currency": "AUD",
+      "subscription_id": "585ba520e45b75bc368087ab",
+      "reference": "Custom reference",
+      "description": "Custom description",
+      "__v": 1,
+      "external_id": "ec4592bc-77e4-40c0-82f7-6c6637efe6df",
+      "transactions": [
+        {
+          "created_at": "2016-12-22T10:17:24.495Z",
+          "amount": 17,
+          "currency": "AUD",
+          "_id": "585ba834e45b75bc368087b4",
+          "service_logs": [
+            {
+              "req": {
+                "account_id": "70b234c5-3af7-41b5-9992-96a014eab056",
+                "amount": 1700,
+                "zip": "3000",
+                "email": "chcsviginolegsdsd12f@gmail.com",
+                "currency": "AUD",
+                "country": "AUS",
+                "retain_account": "true"
+              },
+              "response_body": "{\"charges\":{\"id\":\"ec4592bc-77e4-40c0-82f7-6c6637efe6df\",\"name\":\"Charge ec4592bc-77e4-40c0-82f7-6c6637efe6df\",\"created_at\":\"2016-12-22T10:17:27.108Z\",\"updated_at\":\"2016-12-22T10:17:33.275Z\",\"state\":\"completed\",\"buyer_fees\":0,\"seller_fees\":0,\"credit_card_fee\":0,\"status\":22500,\"amount\":1700,\"custom_data\":null,\"account_id\":\"70b234c5-3af7-41b5-9992-96a014eab056\",\"account_type\":\"credit card\",\"promisepay_fee\":89,\"currency\":\"AUD\",\"payment_method\":\"charge\",\"buyer_name\":\"Oleg cCdekrigin\",\"buyer_email\":\"chcsviginolegsdsd12f@gmail.com\",\"buyer_zip\":\"3000\",\"buyer_country\":\"AUS\",\"related\":{\"buyers\":\"950074ce-bf25-4a8f-ac61-d4c3394ea14a\",\"sellers\":\"5fbeeee6fb58c2519703b115cde28573\"},\"links\":{\"self\":\"/charges/ec4592bc-77e4-40c0-82f7-6c6637efe6df\",\"buyers\":\"/charges/ec4592bc-77e4-40c0-82f7-6c6637efe6df/buyers\",\"sellers\":\"/charges/ec4592bc-77e4-40c0-82f7-6c6637efe6df/sellers\",\"status\":\"/charges/ec4592bc-77e4-40c0-82f7-6c6637efe6df/status\",\"fees\":\"/charges/ec4592bc-77e4-40c0-82f7-6c6637efe6df/fees\",\"transactions\":\"/charges/ec4592bc-77e4-40c0-82f7-6c6637efe6df/transactions\",\"batch_transactions\":\"/charges/ec4592bc-77e4-40c0-82f7-6c6637efe6df/batch_transactions\"}}}",
+              "created_at": "2016-12-22T10:17:41.041Z",
+              "statusCode": 0,
+              "_id": "585ba845e45b75bc368087b5"
+            }
+          ],
+          "status": "complete",
+          "type": "sale"
+        }
+      ],
+      "one_off": false,
+      "archived": false,
+      "customer": {
+        "customer_id": "585ba514e45b75bc368087a8",
+        "first_name": "Oleg",
+        "last_name": "cCdekrigin",
+        "email": "chcsviginolegsdsd12f@gmail.com",
+        "phone": "+123451678910",
+        "payment_source": {
+          "type": "card",
+          "card_name": "Test User",
+          "card_number_last4": "1111",
+          "card_scheme": "visa",
+          "expire_month": 10,
+          "expire_year": 2020,
+          "address_line1": "Testline1",
+          "address_line2": "Testline2",
+          "address_city": "Testcity",
+          "address_postcode": "3000",
+          "address_state": "Teststate",
+          "address_country": "AU",
+          "gateway_id": "5853e89c2bd79538605a3fb6"
+        }
+      },
+      "status": "complete"
+    }

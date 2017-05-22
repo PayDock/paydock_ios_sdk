@@ -1,0 +1,39 @@
+{
+
+            "__v": 0,
+            "created_at": "2015-11-10T11:27:44.504Z",
+            "updated_at": "2015-11-10T11:27:44.504Z",
+            "amount": 10,
+            "description": "Custom subscription description",
+            "reference": "Custom subscription reference",
+            "status": "active",
+            "_id": "55b2213073065f9423a45d78",
+            "archived": false,
+            "_service": {
+                "customer_default_gateway_id": "551bb4af43daf16f355ab259",
+                "tags": "test_first_name test_last_name test@test.com"
+            },
+            "customer": {
+                "customer_id": "55b2212f73065f9423a45d76",
+                "first_name": "Test_first_name",
+                "last_name": "Test_last_name",
+                "email": "test@test.com"
+            },
+            "statistics": {
+                "total_collected_amount": 0,
+                "successful_transactions": 0
+            },
+            "schedule": {
+                "interval": "month",
+                "start_date": "2015-11-10T11:27:43.743Z",
+                "end_date": "2016-01-10T00:00:00.000Z",
+                "next_assessment": "2015-12-10T11:27:43.743Z",
+                "first_assessment": "2015-11-10T11:27:43.743Z",
+                "status": "inprogress",
+                "locked": false,
+                "completed_count": 0,
+                "retry_count": 0,
+                "frequency": 1
+            },
+            "currency": "AUD"
+        }

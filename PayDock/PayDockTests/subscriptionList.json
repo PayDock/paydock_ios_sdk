@@ -1,0 +1,74 @@
+[{
+                "_id": "56d84e98815b245d242b4996",
+                "amount": 10.70,
+                "company_id": "56a5e4e6489dc5402557d9b7",
+                "created_at": "2016-03-03T14:47:52.834Z",
+                "status": "expired",
+                "updated_at": "2016-03-03T14:48:00.579Z",
+                "user_id": "56a5e4e6489dc5402557d9b6",
+                "archived": false,
+                "customer": {
+                    "customer_id": "56d84e97815b245d242b4991",
+                    "first_name": "TEST_NEW_SUB55",
+                    "last_name": "Number",
+                    "email": "test@test.com",
+                    "reference": "CustomReference"
+                },
+                "statistics": {
+                    "total_collected_amount": 10.59,
+                    "successful_transactions": 1
+                },
+                "schedule": {
+                    "end_amount_total": 10.70,
+                    "first_assessment": "2016-03-03T14:47:51.739Z",
+                    "interval": "day",
+                    "last_assessment": "2016-03-03T14:48:00.576Z",
+                    "next_assessment": "2016-03-03T14:47:51.739Z",
+                    "start_date": "2016-03-03T14:47:51.739Z",
+                    "status": "complete",
+                    "locked": false,
+                    "completed_count": 1,
+                    "retry_count": 0,
+                    "frequency": 1
+                },
+                "currency": "AUD",
+                "gateway_type": "Stripe",
+                "gateway_name": "strp",
+                "gateway_mode": "test"
+            }, {
+                "_id": "56d84e7b815b245d242b494b",
+                "amount": 12.00,
+                "company_id": "56a5e4e6489dc5402557d9b7",
+                "created_at": "2016-03-03T14:47:23.051Z",
+                "status": "expired",
+                "updated_at": "2016-03-03T14:47:30.590Z",
+                "user_id": "56a5e4e6489dc5402557d9b6",
+                "archived": false,
+                "customer": {
+                    "customer_id": "56d84e79815b245d242b4949",
+                    "first_name": "TEST_NEW_SUB55",
+                    "last_name": "Number",
+                    "email": "test@test.com"
+                },
+                "statistics": {
+                    "total_collected_amount": 10.59,
+                    "successful_transactions": 1
+                },
+                "schedule": {
+                    "end_amount_total": 12.00,
+                    "first_assessment": "2016-03-03T14:47:21.805Z",
+                    "interval": "day",
+                    "last_assessment": "2016-03-03T14:47:30.588Z",
+                    "next_assessment": "2016-03-03T14:47:21.805Z",
+                    "start_date": "2016-03-03T14:47:21.805Z",
+                    "status": "complete",
+                    "locked": false,
+                    "completed_count": 1,
+                    "retry_count": 0,
+                    "frequency": 1
+                },
+                "currency": "AUD",
+                "gateway_type": "Stripe",
+                "gateway_name": "strp",
+                "gateway_mode": "test"
+            }]

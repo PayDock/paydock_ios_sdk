@@ -1,0 +1,43 @@
+{
+      "external_id": "ea1210e2-7be9-44b2-a9cb-f1d0c94ae646",
+      "__v": 1,
+      "_id": "585a65fe0daa499b1553c623",
+      "amount": 7750,
+      "company_id": "582d930808277de017a2a3f4",
+      "created_at": "2016-12-21T11:22:38.520Z",
+      "currency": "AUD",
+      "reference": "Custom user reference",
+      "updated_at": "2016-12-21T11:22:49.322Z",
+      "user_id": "582d930808277de017a2a3f3",
+      "transactions": [
+        {
+          "_id": "585a65fe0daa499b1553c624",
+          "amount": 7750,
+          "created_at": "2016-12-21T11:22:38.516Z",
+          "currency": "AUD",
+          "status": "complete",
+          "type": "sale"
+        }
+      ],
+      "one_off": true,
+      "archived": false,
+      "customer": {
+        "first_name": "",
+        "last_name": "Promise last name",
+        "email": "maybik87@gmail.com",
+        "reference": "AUS",
+        "payment_source": {
+          "type": "card",
+          "card_name": "Test User",
+          "card_number_last4": "1111",
+          "expire_month": 4,
+          "expire_year": 2020,
+          "address_postcode": "3000",
+          "gateway_id": "5853d3974f76d26c24e69165",
+          "card_scheme": "visa",
+          "gateway_name": "Promose Pay way",
+          "gateway_type": "PromisePay"
+        }
+      },
+      "status": "complete"
+    }

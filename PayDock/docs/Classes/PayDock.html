@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PayDock Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/PayDock" class="dashAnchor"></a>
+
+    <a title="PayDock Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          PayDock Docs
+        </a>
+        
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">PayDock Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      PayDock Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../getting-started.html">Getting Started</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PayDock.html">PayDock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Errors.html">Errors</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PaymentSource.html">PaymentSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums.html#/s:O7PayDock11Transaction">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums.html#/s:O7PayDock18networkErrorReason">networkErrorReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums.html#/s:O7PayDock19urlInitFailedReason">urlInitFailedReason</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Parameterable.html">Parameterable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PayDockNetwork.html">PayDockNetwork</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Address.html">Address</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Charge.html">Charge</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ChargeRequest.html">ChargeRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Customer.html">Customer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CustomerRequest.html">CustomerRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ListParameters.html">ListParameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Schedule.html">Schedule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Subscription.html">Subscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SubscriptionRequest.html">SubscriptionRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/TokenRequest.html">TokenRequest</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>PayDock</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PayDock</span></code></pre>
+
+                </div>
+              </div>
+            <p>PayDock is an open-source SDK for iOS and a solution for collecting and handling payment sources in secure way through PayDock.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7PayDock7PayDock9secretKeySS"></a>
+                    <a name="//apple_ref/swift/Property/secretKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7PayDock7PayDock9secretKeySS">secretKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>instance variable for secret key</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">secretKey</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7PayDock7PayDock9publicKeySS"></a>
+                    <a name="//apple_ref/swift/Property/publicKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7PayDock7PayDock9publicKeySS">publicKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>instance variable for public key</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">publicKey</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7PayDock7PayDock9isSandboxSb"></a>
+                    <a name="//apple_ref/swift/Property/isSandbox" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7PayDock7PayDock9isSandboxSb">isSandbox</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>framework is used for sandbox or prodocution. it will change the base url. default is false.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isSandbox</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDockcFT7networkPS_14PayDockNetwork__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(network:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDockcFT7networkPS_14PayDockNetwork__S0_">init(network:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>init PayDock class with a custom PayDockNetwork</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">network</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PayDockNetwork.html">PayDockNetwork</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>network</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Custom Network Class for PayDock to use</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7PayDock7PayDock12setSecretKeyFT3keySS_T_"></a>
+                    <a name="//apple_ref/swift/Method/setSecretKey(key:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7PayDock7PayDock12setSecretKeyFT3keySS_T_">setSecretKey(key:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>set secret key for all instance of the PayDock</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">setSecretKey</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>secrete key from paydock</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7PayDock7PayDock12setPublicKeyFT3keySS_T_"></a>
+                    <a name="//apple_ref/swift/Method/setPublicKey(key:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7PayDock7PayDock12setPublicKeyFT3keySS_T_">setPublicKey(key:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>set public key for all instance of the PayDock</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">setPublicKey</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>public key from paydock</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock3addFT6chargeVS_13ChargeRequest10completionFFzT_VS_6ChargeT__T_"></a>
+                    <a name="//apple_ref/swift/Method/add(charge:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock3addFT6chargeVS_13ChargeRequest10completionFFzT_VS_6ChargeT__T_">add(charge:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create Charge request. ChargeRequest init will define which type of add-charge request is created. see ChargeRequest inits for more information.</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.add(charge: ChargeRequest) { (chargeResponse) in
+            do {
+                let createdCharge = try chargeResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">charge</span><span class="p">:</span> <span class="kt"><a href="../Structs/ChargeRequest.html">ChargeRequest</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span>
+        <span class="nv">chargeResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Charge.html">Charge</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>charge</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ChargeRequest for charging</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>result on creating charge</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chargeResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a charge filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock9getChargeFT4withSS10completionFFzT_VS_6ChargeT__T_"></a>
+                    <a name="//apple_ref/swift/Method/getCharge(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock9getChargeFT4withSS10completionFFzT_VS_6ChargeT__T_">getCharge(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get specific charge detail</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.getCharge(with: {{id}}) { (chargeResponse) in
+            do {
+                let charge = try chargeResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getCharge</span><span class="p">(</span><span class="n">with</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">chargeResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Charge.html">Charge</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Charge identifier</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>returns a clouser which returns charge or throws error</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chargeResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a charge filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock10getChargesFT4withGSqVS_14ListParameters_10completionFFzT_GSaVS_6Charge_T__T_"></a>
+                    <a name="//apple_ref/swift/Method/getCharges(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock10getChargesFT4withGSqVS_14ListParameters_10completionFFzT_GSaVS_6Charge_T__T_">getCharges(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get list of charges with parameter options. nil parameters will returns all charges for the account, limited to 100 records.</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.getCharges(with: ListParameters) { (chargesResponse) in
+            do {
+                let chargeList = try chargesResponse()
+
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getCharges</span><span class="p">(</span><span class="n">with</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt"><a href="../Structs/ListParameters.html">ListParameters</a></span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">chargesResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Charge.html">Charge</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional parameters for filtering result</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>returns a clouser which returns charges or throws error</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chargesResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an array instance of charges filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock12refundChargeFT4withSS6amountSf10completionFFzT_VS_6ChargeT__T_"></a>
+                    <a name="//apple_ref/swift/Method/refundCharge(with:amount:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock12refundChargeFT4withSS6amountSf10completionFFzT_VS_6ChargeT__T_">refundCharge(with:amount:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>request to refund a charge</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.refundCharge(with: {{id}}, amount: Float) { (chargeResponse) in
+            do {
+                let refundedCharge = try chargeResponse()
+            } catch let error {
+                print(error)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">refundCharge</span><span class="p">(</span><span class="n">with</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">chargeResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Charge.html">Charge</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Charge identifier</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>amount of money to refund</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>returns a clouser which returns charge or throws error</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chargeResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a charge filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock13archiveChargeFT4withSS10completionFFzT_VS_6ChargeT__T_"></a>
+                    <a name="//apple_ref/swift/Method/archiveCharge(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock13archiveChargeFT4withSS10completionFFzT_VS_6ChargeT__T_">archiveCharge(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Archive Charge to hide it it from charges list. You can still retrieve archived charges, see [Get charges list with parameters</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.archiveCharge(with: {{id}}) { (chargeResponse) in
+            do {
+                let archivedCharge = try chargeResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">archiveCharge</span><span class="p">(</span><span class="n">with</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">chargeResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Charge.html">Charge</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Charge identifier</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>returns a clouser which returns charge or throws error</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chargeResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a charge filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock3addFT8customerVS_15CustomerRequest10completionFFzT_VS_8CustomerT__T_"></a>
+                    <a name="//apple_ref/swift/Method/add(customer:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock3addFT8customerVS_15CustomerRequest10completionFFzT_VS_8CustomerT__T_">add(customer:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>add a customer with defualt payment source</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.add(customer: CustomerRequest) { (customerResponse) in
+            do {
+                let addedCustomer = try customerResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">customer</span><span class="p">:</span> <span class="kt"><a href="../Structs/CustomerRequest.html">CustomerRequest</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">customerResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Customer.html">Customer</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>customer request instance</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>returns a clouser which returns customer or throws error</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customerResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a Customer filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock11getCustomerFT4withSS10completionFFzT_VS_8CustomerT__T_"></a>
+                    <a name="//apple_ref/swift/Method/getCustomer(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock11getCustomerFT4withSS10completionFFzT_VS_8CustomerT__T_">getCustomer(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>get details for a customer</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.getCustomer(with: {{id}}) { (customerResponse) in
+            do {
+                let customer = try customerResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getCustomer</span><span class="p">(</span><span class="n">with</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">customerResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Customer.html">Customer</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>customer’s id</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>returns a clouser which returns customer or throws error</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customerResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a Customer filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock12getCustomersFT4withGSqVS_14ListParameters_10completionFFzT_GSaVS_8Customer_T__T_"></a>
+                    <a name="//apple_ref/swift/Method/getCustomers(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock12getCustomersFT4withGSqVS_14ListParameters_10completionFFzT_GSaVS_8Customer_T__T_">getCustomers(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>get list of customers from server</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.getCustomers(with: ListParameters) { (customersResponse) in
+            do {
+                let customerList = try customersResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getCustomers</span><span class="p">(</span><span class="n">with</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt"><a href="../Structs/ListParameters.html">ListParameters</a></span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">customersResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Customer.html">Customer</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>filter properties</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>returns a clouser which returns customers or throws error</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customersResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an array instance of Customers filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock6updateFT8customerVS_15CustomerRequest3forSS10completionFFzT_VS_8CustomerT__T_"></a>
+                    <a name="//apple_ref/swift/Method/update(customer:for:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock6updateFT8customerVS_15CustomerRequest3forSS10completionFFzT_VS_8CustomerT__T_">update(customer:for:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>updates the customer&rsquo;s detail</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.update(customer: CustomerRequest, for: {{id}}) { (customerResponse) in
+            do {
+                let updatedCustomer = try customerResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="nv">customer</span><span class="p">:</span> <span class="kt"><a href="../Structs/CustomerRequest.html">CustomerRequest</a></span><span class="p">,</span> <span class="k">for</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">customerResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Customer.html">Customer</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>customer request instance</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>for</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>customer id</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>returns a clouser which returns customer or throws error</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customerResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a Customer filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock15archiveCustomerFT4withSS10completionFFzT_VS_8CustomerT__T_"></a>
+                    <a name="//apple_ref/swift/Method/archiveCustomer(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock15archiveCustomerFT4withSS10completionFFzT_VS_8CustomerT__T_">archiveCustomer(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>archive a customer</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.archiveCustomer(with: {{id}}) { (chargeResponse) in
+            do {
+                let archivedCharge = try chargeResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">archiveCustomer</span><span class="p">(</span><span class="n">with</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">customerResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Customer.html">Customer</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>customer id</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>returns a clouser which returns customer or throws error</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a Customer filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock3addFT12subscriptionVS_19SubscriptionRequest10completionFFzT_VS_12SubscriptionT__T_"></a>
+                    <a name="//apple_ref/swift/Method/add(subscription:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock3addFT12subscriptionVS_19SubscriptionRequest10completionFFzT_VS_12SubscriptionT__T_">add(subscription:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Subscriptions are recurring billing events. These can be set up to take scheduled payments from a customer without having to re-enter the billing details.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>subscription: SubscriptionRequest object</li>
+<li>completion: result on creating Subscription</li>
+<li>subscriptionResponse: a throwable clouser which returns an instance of a Subscription filled with server returned inforamation</li>
+</ul></li>
+</ul>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.add(subscription: SubscriptionRequest) { (subscriptionResponse) in
+            do {
+                let createdSubscription = try subscriptionResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">subscription</span><span class="p">:</span> <span class="kt"><a href="../Structs/SubscriptionRequest.html">SubscriptionRequest</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">subscriptionResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Subscription.html">Subscription</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subscription</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SubscriptionRequest object</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>result on creating Subscription</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subscriptionResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a Subscription filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock15getSubscriptionFT4withSS10completionFFzT_VS_12SubscriptionT__T_"></a>
+                    <a name="//apple_ref/swift/Method/getSubscription(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock15getSubscriptionFT4withSS10completionFFzT_VS_12SubscriptionT__T_">getSubscription(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves data on subscription with specified ID.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>with: subscription identifier</li>
+<li>completion: result on getting a specified Subscription</li>
+<li>subscriptionResponse: a throwable clouser which returns an instance of a Subscription filled with server returned inforamation</li>
+</ul></li>
+</ul>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.getSubscription(with: {{id}}) { (subscriptionResponse) in
+            do {
+                let subscription = try subscriptionResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getSubscription</span><span class="p">(</span><span class="n">with</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">subscriptionResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Subscription.html">Subscription</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>subscription identifier</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>result on getting a specified Subscription</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subscriptionResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a Subscription filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock16getsubscriptionsFT4withGSqVS_14ListParameters_10completionFFzT_GSaVS_12Subscription_T__T_"></a>
+                    <a name="//apple_ref/swift/Method/getsubscriptions(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock16getsubscriptionsFT4withGSqVS_14ListParameters_10completionFFzT_GSaVS_12Subscription_T__T_">getsubscriptions(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns all subscriptions for the account, limited to 100 records Or retrieving data on existing subscriptions can be driven by number of action parameters set in URI path.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>parameters: ListParameters Object to get list of subscriptions</li>
+<li>completion: result on getting list of Subscription</li>
+<li>subscriptionsResponse: a throwable clouser which returns an array instance of Subscriptions filled with server returned inforamation</li>
+</ul></li>
+</ul>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.getsubscriptions(with: ListParameters) { (subscriptionsResponse) in
+            do {
+                let subscriptinList = try subscriptionsResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getsubscriptions</span><span class="p">(</span><span class="n">with</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt"><a href="../Structs/ListParameters.html">ListParameters</a></span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">subscriptionsResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/Subscription.html">Subscription</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ListParameters Object to get list of subscriptions</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>result on getting list of Subscription</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subscriptionsResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an array instance of Subscriptions filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock6updateFT12subscriptionVS_19SubscriptionRequest3forSS10completionFFzT_VS_12SubscriptionT__T_"></a>
+                    <a name="//apple_ref/swift/Method/update(subscription:for:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock6updateFT12subscriptionVS_19SubscriptionRequest3forSS10completionFFzT_VS_12SubscriptionT__T_">update(subscription:for:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates an existing subscription to adjust payment schedule or end conditions.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>subscription: SubscriptionRequest object</li>
+<li>for: subsctiprion identifier</li>
+<li>completion: result on updateing Subscription</li>
+<li>subscriptionResponse: a throwable clouser which returns an instance of a Subscription filled with server returned inforamation</li>
+</ul></li>
+</ul>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.update(subscription: SubscriptionRequest, for: {{id}}) { (subscriptionResponse) in
+            do {
+                let updatedSubscription = try subscriptionResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="nv">subscription</span><span class="p">:</span> <span class="kt"><a href="../Structs/SubscriptionRequest.html">SubscriptionRequest</a></span><span class="p">,</span> <span class="k">for</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">subscriptionResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Subscription.html">Subscription</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subscription</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SubscriptionRequest object</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>for</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>subsctiprion identifier</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>result on updateing Subscription</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subscriptionResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a Subscription filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock18deleteSubscriptionFT4withSS10completionFFzT_VS_12SubscriptionT__T_"></a>
+                    <a name="//apple_ref/swift/Method/deleteSubscription(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock18deleteSubscriptionFT4withSS10completionFFzT_VS_12SubscriptionT__T_">deleteSubscription(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes a subscription with specified ID.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>with: Subscription identifier</li>
+<li>completion: result on deleting Subscription</li>
+<li>subscriptionResponse: a throwable clouser which returns an instance of a Subscription filled with server returned inforamation</li>
+</ul></li>
+</ul>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.deleteSubscription(with: {{id}}) { (subscriptionResponse) in
+            do {
+                let deletedSubscription = try subscriptionResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteSubscription</span><span class="p">(</span><span class="n">with</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">subscriptionResponse</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Subscription.html">Subscription</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Subscription identifier</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>result on deleting Subscription</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subscriptionResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns an instance of a Subscription filled with server returned inforamation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7PayDock7PayDock6createFT5tokenVS_12TokenRequest10completionFFzT_SST__T_"></a>
+                    <a name="//apple_ref/swift/Method/create(token:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7PayDock7PayDock6createFT5tokenVS_12TokenRequest10completionFFzT_SST__T_">create(token:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create One-time token request. It is a disposable token for creating charges/subscriptions/customers or updating customers.</p>
+
+<pre class="highlight plaintext"><code>        PayDock.shared.create(token: TokenRequest) { (tokenResponse) in
+            do {
+                let tokenString = try tokenResponse()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="nv">token</span><span class="p">:</span> <span class="kt"><a href="../Structs/TokenRequest.html">TokenRequest</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>TokenRequest which is including customer details and paymentSource details</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result on creating token</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a throwable clouser which returns a one-time token from server</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="http://roundtableapps.com" target="_blank" rel="external">RoundTableApps</a>. All rights reserved. (Last updated: 2017-05-07)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

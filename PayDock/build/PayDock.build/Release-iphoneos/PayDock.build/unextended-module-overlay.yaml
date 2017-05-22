@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/admin/Documents/bitbucket/PayDock/PayDock/build/Release-iphoneos/PayDock.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/admin/Documents/bitbucket/PayDock/PayDock/build/PayDock.build/Release-iphoneos/PayDock.build/unextended-module.modulemap',
+    }]
+  }]
+}
