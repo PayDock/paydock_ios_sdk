@@ -3,7 +3,7 @@
 //  PayDock
 //
 //  Created by RTA on 22/4/17.
-//  Copyright © 2017 RoundTableApps. All rights reserved.
+//  Copyright © 2017 PayDock. All rights reserved.
 //
 
 import Foundation
