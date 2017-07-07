@@ -76,7 +76,7 @@ extension PayDockSession: PayDockNetwork {
         guard error == nil else {
             throw error!
         }
-        guard let httpResponse = response as? HTTPURLResponse else {
+        guard (response as? HTTPURLResponse) != nil else {
             throw Errors.networkError(reason: .noResponse)
         }
         guard let data = data else {
