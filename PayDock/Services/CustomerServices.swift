@@ -19,8 +19,8 @@ class CustomerServices {
     /// add a customer with defualt payment source
     ///
     /// - parameter customer: customer request instance
-    /// - parameter completion: returns a clouser which returns customer or throws error
-    /// - paramter customer: customer item from sever
+    /// - parameter completion: returns a closure which returns customer or throws error
+    /// - paramter customer: customer item from server
     func add(customer: CustomerRequest, completion: @escaping (_ result: @escaping () throws -> Customer) -> Void ) {
         network?.post(to: Constants.customers , with: customer.toDictionary(), completion: { (result) in
             do {
@@ -37,8 +37,8 @@ class CustomerServices {
     /// get details for a customer
     ///
     /// - parameter with: customer's id
-    /// - parameter completion: returns a clouser which returns customer or throws error
-    /// - paramter customer: customer item from sever
+    /// - parameter completion: returns a closure which returns customer or throws error
+    /// - paramter customer: customer item from server
     func getCustomer(with id: String, completion: @escaping (_ result: @escaping () throws -> Customer) -> Void) {
           let param: [String: Any] = [ "_id" : id]
         network?.get(from: Constants.customers, with: param, completion: { (result) in
@@ -56,8 +56,8 @@ class CustomerServices {
     /// get list of customers from server
     ///
     /// - parameter with: filter properties
-    /// - parameter completion: returns a clouser which returns customers or throws error
-    /// - paramter customer: customers item from sever
+    /// - parameter completion: returns a closure which returns customers or throws error
+    /// - paramter customer: customers item from server
     func getCustomers(with parameters: ListParameters?, completion: @escaping (_ charges: @escaping () throws -> [Customer]) -> Void) {
         network?.get(from: Constants.customers, with: parameters?.toDictionary(), completion: { (result) in
             do {
@@ -78,8 +78,8 @@ class CustomerServices {
     ///
     /// - parameter with: customer id
     /// - parameter customer: customer request instance
-    /// - parameter completion: returns a clouser which returns customer or throws error
-    /// - paramter customer: customer item from sever
+    /// - parameter completion: returns a closure which returns customer or throws error
+    /// - paramter customer: customer item from server
     func updateCustomer(with id: String, customer: CustomerRequest, completion: @escaping (_ subscription: @escaping () throws -> Customer) -> Void) {
         let url = Constants.customers + "/" + id
         network?.put(to: url, with: customer.toDictionary(), completion: { (result) in
@@ -97,8 +97,8 @@ class CustomerServices {
     /// archive a customer
     ///
     /// - parameter with: customer id
-    /// - parameter completion: returns a clouser which returns customer or throws error
-    /// - paramter customer: customer item from sever
+    /// - parameter completion: returns a closure which returns customer or throws error
+    /// - paramter customer: customer item from server
     func archiveCustomer(with id: String, completion: @escaping (_ result: @escaping () throws -> Customer) -> Void) {
         let param: [String: Any] = [ "_id" : id]
         network?.delete(from: Constants.customers, with: param, completion: { (result) in

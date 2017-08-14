@@ -1,5 +1,5 @@
 module: PayDock
-author: RoundTableApps
+author: PayDock
 min_acl: public
 hide_documentation_coverage: true
 skip_undocumented: true

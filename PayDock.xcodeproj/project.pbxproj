@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4483320D1F40401300F87FF7 /* ExternalCheckoutServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4483320C1F40401300F87FF7 /* ExternalCheckoutServices.swift */; };
+		448332121F40449600F87FF7 /* ExternalCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448332111F40449600F87FF7 /* ExternalCheckout.swift */; };
+		448332141F40598E00F87FF7 /* ExternalCheckoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448332131F40598E00F87FF7 /* ExternalCheckoutRequest.swift */; };
+		448332161F405E2F00F87FF7 /* ExternalCheckoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448332151F405E2F00F87FF7 /* ExternalCheckoutTests.swift */; };
+		448332181F405EA300F87FF7 /* externalCheckoutAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 448332171F405EA300F87FF7 /* externalCheckoutAdd.json */; };
 		8400093C1EAE1C6000877866 /* chargeList.json in Resources */ = {isa = PBXBuildFile; fileRef = 840009391EAE1C6000877866 /* chargeList.json */; };
 		8400093D1EAE1C6000877866 /* chargeInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093A1EAE1C6000877866 /* chargeInfo.json */; };
 		8400093E1EAE1C6000877866 /* chargeAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093B1EAE1C6000877866 /* chargeAdd.json */; };
@@ -66,6 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4483320C1F40401300F87FF7 /* ExternalCheckoutServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalCheckoutServices.swift; path = Services/ExternalCheckoutServices.swift; sourceTree = "<group>"; };
+		448332111F40449600F87FF7 /* ExternalCheckout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalCheckout.swift; sourceTree = "<group>"; };
+		448332131F40598E00F87FF7 /* ExternalCheckoutRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalCheckoutRequest.swift; path = Models/Parameters/ExternalCheckoutRequest.swift; sourceTree = "<group>"; };
+		448332151F405E2F00F87FF7 /* ExternalCheckoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalCheckoutTests.swift; sourceTree = "<group>"; };
+		448332171F405EA300F87FF7 /* externalCheckoutAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = externalCheckoutAdd.json; sourceTree = "<group>"; };
 		840009391EAE1C6000877866 /* chargeList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeList.json; sourceTree = "<group>"; };
 		8400093A1EAE1C6000877866 /* chargeInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeInfo.json; sourceTree = "<group>"; };
 		8400093B1EAE1C6000877866 /* chargeAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeAdd.json; sourceTree = "<group>"; };
@@ -136,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		448332101F40445100F87FF7 /* ExternalCheckout */ = {
+			isa = PBXGroup;
+			children = (
+				448332111F40449600F87FF7 /* ExternalCheckout.swift */,
+			);
+			name = ExternalCheckout;
+			sourceTree = "<group>";
+		};
 		840009381EAE1C4700877866 /* Jsons */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +167,7 @@
 				8400094A1EB08C4600877866 /* subscriptionItem.json */,
 				8400094B1EB08C4600877866 /* subscriptionList.json */,
 				8400094C1EB08C4600877866 /* subscriptionUpdate.json */,
+				448332171F405EA300F87FF7 /* externalCheckoutAdd.json */,
 			);
 			name = Jsons;
 			sourceTree = "<group>";
@@ -170,6 +189,7 @@
 				A5FEF55C1EAB659C00AD1B44 /* SubscriptionRequest.swift */,
 				A5FEF5571EAB28AB00AD1B44 /* TokenRequest.swift */,
 				8426B8881EA7483A0038AC39 /* ListParameters.swift */,
+				448332131F40598E00F87FF7 /* ExternalCheckoutRequest.swift */,
 			);
 			name = Parameters;
 			sourceTree = "<group>";
@@ -181,6 +201,7 @@
 				A553C8C01EA77CD100E3E872 /* SubscriptionServices.swift */,
 				8418A44C1EAB42F6007FBC13 /* CustomerServices.swift */,
 				A5FEF5591EAB3FB400AD1B44 /* TokenServices.swift */,
+				4483320C1F40401300F87FF7 /* ExternalCheckoutServices.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -251,6 +272,7 @@
 				84F3DC431EB46767001101C7 /* PayDockSessionTests.swift */,
 				84F3DC411EB46140001101C7 /* ModelMapTests.swift */,
 				8435D0821E9B49E300AE0BAA /* Info.plist */,
+				448332151F405E2F00F87FF7 /* ExternalCheckoutTests.swift */,
 			);
 			path = PayDockTests;
 			sourceTree = "<group>";
@@ -274,6 +296,7 @@
 		84A457EE1E9B5A3C00F32CB5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				448332101F40445100F87FF7 /* ExternalCheckout */,
 				844419851EB4922D00CD572C /* Charge */,
 				844419861EB4923A00CD572C /* Customer */,
 				A5226A3E1EA79730004F1EF1 /* Subscription */,
@@ -361,7 +384,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = RoundTableApps;
+				ORGANIZATIONNAME = PayDock;
 				TargetAttributes = {
 					8435D0711E9B49E200AE0BAA = {
 						CreatedOnToolsVersion = 8.3;
@@ -413,6 +436,7 @@
 				8400093D1EAE1C6000877866 /* chargeInfo.json in Resources */,
 				840009441EAE226F00877866 /* customerList.json in Resources */,
 				840009421EAE226F00877866 /* customerItem.json in Resources */,
+				448332181F405EA300F87FF7 /* externalCheckoutAdd.json in Resources */,
 				8400094D1EB08C4600877866 /* subscriptionAdd.json in Resources */,
 				8400093E1EAE1C6000877866 /* chargeAdd.json in Resources */,
 				8400094F1EB08C4600877866 /* subscriptionList.json in Resources */,
@@ -431,6 +455,7 @@
 				8426B8841EA61CAD0038AC39 /* Customer.swift in Sources */,
 				A553C8C11EA77CD100E3E872 /* SubscriptionServices.swift in Sources */,
 				8418A44F1EAB5372007FBC13 /* CustomerRequest.swift in Sources */,
+				448332121F40449600F87FF7 /* ExternalCheckout.swift in Sources */,
 				8426B8981EA77D970038AC39 /* Transaction.swift in Sources */,
 				8426B89A1EA77DB30038AC39 /* Sale.swift in Sources */,
 				84D4B61E1EA206F2003433F0 /* PayDockSession.swift in Sources */,
@@ -443,12 +468,14 @@
 				A5FEF55D1EAB659C00AD1B44 /* SubscriptionRequest.swift in Sources */,
 				8426B87A1EA606A80038AC39 /* ChargeServices.swift in Sources */,
 				8426B8911EA75F450038AC39 /* BankAccount.swift in Sources */,
+				4483320D1F40401300F87FF7 /* ExternalCheckoutServices.swift in Sources */,
 				84D4B61C1EA20456003433F0 /* PayDockNetwork.swift in Sources */,
 				8426B88F1EA75F200038AC39 /* Card.swift in Sources */,
 				8426B8891EA7483A0038AC39 /* ListParameters.swift in Sources */,
 				8426B8951EA763200038AC39 /* Address.swift in Sources */,
 				847745FC1E9B4B0400435EFD /* PayDock.swift in Sources */,
 				8426B8861EA737380038AC39 /* Charge.swift in Sources */,
+				448332141F40598E00F87FF7 /* ExternalCheckoutRequest.swift in Sources */,
 				8426B89C1EA77DD80038AC39 /* Refund.swift in Sources */,
 				8418A44D1EAB42F6007FBC13 /* CustomerServices.swift in Sources */,
 				84DEA9CD1EAB21EA00A001E8 /* ChargeRequest.swift in Sources */,
@@ -466,6 +493,7 @@
 				8435D0811E9B49E300AE0BAA /* ChargeIntergrationTests.swift in Sources */,
 				84F3DC441EB46767001101C7 /* PayDockSessionTests.swift in Sources */,
 				84F3DC421EB46140001101C7 /* ModelMapTests.swift in Sources */,
+				448332161F405E2F00F87FF7 /* ExternalCheckoutTests.swift in Sources */,
 				840009461EB0748100877866 /* TokenIntegrationTest.swift in Sources */,
 				8418A45B1EADC012007FBC13 /* CustomerIntegrationTests.swift in Sources */,
 			);

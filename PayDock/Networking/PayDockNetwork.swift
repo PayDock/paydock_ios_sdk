@@ -21,7 +21,7 @@ public protocol PayDockNetwork: class {
     ///
     /// - parameter from: url string
     /// - parameter with: parameters for request
-    /// - parameter completion: a clouser which returns a throwable clouser which returns data
+    /// - parameter completion: a closure which returns a throwable closure which returns data
     ///
     /// - parameter data : Data from http response
     ///
@@ -37,7 +37,7 @@ public protocol PayDockNetwork: class {
     ///
     /// - parameter from: url string
     /// - parameter with: parameters for request
-    /// - parameter completion: a clouser which returns a throwable clouser which returns data
+    /// - parameter completion: a closure which returns a throwable closure which returns data
     ///
     /// - parameter data : Data from http response
     ///
@@ -53,7 +53,7 @@ public protocol PayDockNetwork: class {
     ///
     /// - parameter from: url string
     /// - parameter with: parameters for request
-    /// - parameter completion: a clouser which returns a throwable clouser which returns data
+    /// - parameter completion: a closure which returns a throwable closure which returns data
     ///
     /// - parameter data : Data from http response
     ///
@@ -70,7 +70,7 @@ public protocol PayDockNetwork: class {
     ///
     /// - parameter from: url string
     /// - parameter with: parameters for request
-    /// - parameter completion: a clouser which returns a throwable clouser which returns data
+    /// - parameter completion: a closure which returns a throwable closure which returns data
     ///
     /// - parameter data : Data from http response
     ///
