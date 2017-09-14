@@ -32,9 +32,13 @@ class PayDockExternalCheckoutTest: XCTestCase {
             do {
                 let checkout = try checkout()
                 debugPrint(checkout)
+            } catch Errors.serverError(let message, let details, let httpStatus){
+                var statusString  = String(httpStatus)
+                XCTFail("Api error http status: \(statusString)  \n Error message: \(message) ")
+                
             } catch let error {
                 debugPrint(error)
-                debugPrint(error.localizedDescription)
+                
                 XCTFail(error.localizedDescription)
                 
             }

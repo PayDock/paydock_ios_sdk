@@ -18,21 +18,42 @@ import Foundation
 public enum Errors: Error {
     case urlInitFailed(reason: urlInitFailedReason)
     case networkError(reason: networkErrorReason)
-    case serverError(message: String, details: AnyObject?, status: Int?)
+    case serverError(message: String, details: AnyObject?, status: Int)
     case parsingFailed
     case invalidJsonFormat
+    
+    var details: AnyObject? {
+        switch self {
+        case .serverError( _,let details, _): return details
+        default: return nil
+        }
+    }
+    var status: Int {
+        switch self {
+        case .serverError( _, _, let status): return status
+        default: return 0
+        }
+    }
+    var message: String? {
+        switch self {
+        case .serverError(let message, _, _): return message
+        default: return nil
+        }
+    }
 }
 
 extension Errors: LocalizedError {
     public var errorDescription: String? {
         switch self {
-        case .serverError(let message,let details, let status):
+        case .serverError(let message, _, _):
             return NSLocalizedString(message , comment: "")
         default:
             return NSLocalizedString("\(self)", comment: "")
         }
     }
 }
+
+
 
 
 

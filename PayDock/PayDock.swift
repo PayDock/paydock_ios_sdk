@@ -615,12 +615,12 @@ extension Data {
             throw Errors.invalidJsonFormat
         }
         if let errorObject = json["error"] as? Dictionary<String,Any>,  let errorMessage: String = try? errorObject.value(for: "message") {
-            throw Errors.serverError(message: errorMessage, details: AnyObject?.self as AnyObject, status: (json["status"] as! Int))
+            throw Errors.serverError(message: errorMessage, details: errorObject as AnyObject, status: (json["status"] as! Int))
         }
         if let errorObject = json["error"] as? Dictionary<String,Any>,
             let errorComplexMessage: Any = try? errorObject.value(for: "message"),
             let errorMessage: String = try? (errorComplexMessage as! Dictionary).value(for: "message") {
-            throw Errors.serverError(message: errorMessage, details: AnyObject?.self as AnyObject, status: (json["status"] as! Int))
+            throw Errors.serverError(message: errorMessage, details: errorObject as AnyObject, status: (json["status"] as! Int))
         }
         if let resourceObject = json["resource"] as? Dictionary<String, Any>, let dataObject: T = try? resourceObject.value(for: "data") {
             return dataObject
