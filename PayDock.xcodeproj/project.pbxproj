@@ -12,6 +12,8 @@
 		448332141F40598E00F87FF7 /* ExternalCheckoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448332131F40598E00F87FF7 /* ExternalCheckoutRequest.swift */; };
 		448332161F405E2F00F87FF7 /* ExternalCheckoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448332151F405E2F00F87FF7 /* ExternalCheckoutTests.swift */; };
 		448332181F405EA300F87FF7 /* externalCheckoutAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 448332171F405EA300F87FF7 /* externalCheckoutAdd.json */; };
+		44F0E08F1F917494003898B1 /* cardForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F0E08E1F917494003898B1 /* cardForm.storyboard */; };
+		44F0E0911F91802F003898B1 /* CardFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0E0901F91802F003898B1 /* CardFormViewController.swift */; };
 		8400093C1EAE1C6000877866 /* chargeList.json in Resources */ = {isa = PBXBuildFile; fileRef = 840009391EAE1C6000877866 /* chargeList.json */; };
 		8400093D1EAE1C6000877866 /* chargeInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093A1EAE1C6000877866 /* chargeInfo.json */; };
 		8400093E1EAE1C6000877866 /* chargeAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093B1EAE1C6000877866 /* chargeAdd.json */; };
@@ -76,6 +78,8 @@
 		448332131F40598E00F87FF7 /* ExternalCheckoutRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalCheckoutRequest.swift; path = Models/Parameters/ExternalCheckoutRequest.swift; sourceTree = "<group>"; };
 		448332151F405E2F00F87FF7 /* ExternalCheckoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalCheckoutTests.swift; sourceTree = "<group>"; };
 		448332171F405EA300F87FF7 /* externalCheckoutAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = externalCheckoutAdd.json; sourceTree = "<group>"; };
+		44F0E08E1F917494003898B1 /* cardForm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = cardForm.storyboard; sourceTree = "<group>"; };
+		44F0E0901F91802F003898B1 /* CardFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFormViewController.swift; sourceTree = "<group>"; };
 		840009391EAE1C6000877866 /* chargeList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeList.json; sourceTree = "<group>"; };
 		8400093A1EAE1C6000877866 /* chargeInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeInfo.json; sourceTree = "<group>"; };
 		8400093B1EAE1C6000877866 /* chargeAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeAdd.json; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 				8418A4571EACA751007FBC13 /* Mapper */,
 				8426B88A1EA7501F0038AC39 /* Services */,
 				8435D0761E9B49E300AE0BAA /* Info.plist */,
+				44F0E08E1F917494003898B1 /* cardForm.storyboard */,
+				44F0E0901F91802F003898B1 /* CardFormViewController.swift */,
 			);
 			path = PayDock;
 			sourceTree = "<group>";
@@ -423,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F0E08F1F917494003898B1 /* cardForm.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +462,7 @@
 				8426B8841EA61CAD0038AC39 /* Customer.swift in Sources */,
 				A553C8C11EA77CD100E3E872 /* SubscriptionServices.swift in Sources */,
 				8418A44F1EAB5372007FBC13 /* CustomerRequest.swift in Sources */,
+				44F0E0911F91802F003898B1 /* CardFormViewController.swift in Sources */,
 				448332121F40449600F87FF7 /* ExternalCheckout.swift in Sources */,
 				8426B8981EA77D970038AC39 /* Transaction.swift in Sources */,
 				8426B89A1EA77DB30038AC39 /* Sale.swift in Sources */,

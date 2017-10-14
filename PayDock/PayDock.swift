@@ -78,7 +78,8 @@ public class PayDock {
         self.network.headerDictionary = [
             "content-type" : "application/json",
             "x-user-secret-key" : "\(self.secretKey)"
-        ]
+            ]
+        
     }
     /// set secret key for all instance of the PayDock
     ///
