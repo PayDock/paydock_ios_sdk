@@ -14,6 +14,7 @@
 		448332181F405EA300F87FF7 /* externalCheckoutAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 448332171F405EA300F87FF7 /* externalCheckoutAdd.json */; };
 		44F0E08F1F917494003898B1 /* cardForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F0E08E1F917494003898B1 /* cardForm.storyboard */; };
 		44F0E0911F91802F003898B1 /* CardFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0E0901F91802F003898B1 /* CardFormViewController.swift */; };
+		44F0E0931F975B42003898B1 /* bassentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F0E0921F975B42003898B1 /* bassentStoryboard.storyboard */; };
 		8400093C1EAE1C6000877866 /* chargeList.json in Resources */ = {isa = PBXBuildFile; fileRef = 840009391EAE1C6000877866 /* chargeList.json */; };
 		8400093D1EAE1C6000877866 /* chargeInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093A1EAE1C6000877866 /* chargeInfo.json */; };
 		8400093E1EAE1C6000877866 /* chargeAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093B1EAE1C6000877866 /* chargeAdd.json */; };
@@ -63,6 +64,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		44F0E0BA1F976D40003898B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44F0E0B61F976D3F003898B1 /* Demo_app_swift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 44F0E0A11F976D3F003898B1;
+			remoteInfo = Demo_app_swift;
+		};
 		8435D07D1E9B49E300AE0BAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8435D0691E9B49E200AE0BAA /* Project object */;
@@ -80,6 +88,8 @@
 		448332171F405EA300F87FF7 /* externalCheckoutAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = externalCheckoutAdd.json; sourceTree = "<group>"; };
 		44F0E08E1F917494003898B1 /* cardForm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = cardForm.storyboard; sourceTree = "<group>"; };
 		44F0E0901F91802F003898B1 /* CardFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFormViewController.swift; sourceTree = "<group>"; };
+		44F0E0921F975B42003898B1 /* bassentStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = bassentStoryboard.storyboard; sourceTree = "<group>"; };
+		44F0E0B61F976D3F003898B1 /* Demo_app_swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Demo_app_swift.xcodeproj; path = Demo_app_swift/Demo_app_swift.xcodeproj; sourceTree = "<group>"; };
 		840009391EAE1C6000877866 /* chargeList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeList.json; sourceTree = "<group>"; };
 		8400093A1EAE1C6000877866 /* chargeInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeInfo.json; sourceTree = "<group>"; };
 		8400093B1EAE1C6000877866 /* chargeAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeAdd.json; sourceTree = "<group>"; };
@@ -156,6 +166,14 @@
 				448332111F40449600F87FF7 /* ExternalCheckout.swift */,
 			);
 			name = ExternalCheckout;
+			sourceTree = "<group>";
+		};
+		44F0E0B71F976D3F003898B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44F0E0BB1F976D40003898B1 /* Demo_app_swift.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		840009381EAE1C4700877866 /* Jsons */ = {
@@ -270,6 +288,7 @@
 		8435D07F1E9B49E300AE0BAA /* PayDockTests */ = {
 			isa = PBXGroup;
 			children = (
+				44F0E0B61F976D3F003898B1 /* Demo_app_swift.xcodeproj */,
 				840009381EAE1C4700877866 /* Jsons */,
 				8435D0801E9B49E300AE0BAA /* ChargeIntergrationTests.swift */,
 				8418A45A1EADC012007FBC13 /* CustomerIntegrationTests.swift */,
@@ -279,6 +298,7 @@
 				84F3DC411EB46140001101C7 /* ModelMapTests.swift */,
 				8435D0821E9B49E300AE0BAA /* Info.plist */,
 				448332151F405E2F00F87FF7 /* ExternalCheckoutTests.swift */,
+				44F0E0921F975B42003898B1 /* bassentStoryboard.storyboard */,
 			);
 			path = PayDockTests;
 			sourceTree = "<group>";
@@ -416,6 +436,12 @@
 			mainGroup = 8435D0681E9B49E200AE0BAA;
 			productRefGroup = 8435D0731E9B49E300AE0BAA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 44F0E0B71F976D3F003898B1 /* Products */;
+					ProjectRef = 44F0E0B61F976D3F003898B1 /* Demo_app_swift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8435D0711E9B49E200AE0BAA /* PayDock */,
@@ -423,6 +449,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		44F0E0BB1F976D40003898B1 /* Demo_app_swift.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Demo_app_swift.app;
+			remoteRef = 44F0E0BA1F976D40003898B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8435D0701E9B49E200AE0BAA /* Resources */ = {
@@ -437,6 +473,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F0E0931F975B42003898B1 /* bassentStoryboard.storyboard in Resources */,
 				840009431EAE226F00877866 /* customerAdd.json in Resources */,
 				8400094E1EB08C4600877866 /* subscriptionItem.json in Resources */,
 				8400093C1EAE1C6000877866 /* chargeList.json in Resources */,

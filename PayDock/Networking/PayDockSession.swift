@@ -127,6 +127,7 @@ extension PayDockSession: PayDockNetwork {
         if let parameters = parameters {
             urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
         }
+        
         let dataTask = payDockSession.dataTask(with: urlRequest) { (data, repsonse, error) in
             defer {
                 self.dataTasks.removeValue(forKey: url)
