@@ -34,10 +34,10 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
 //        let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
 //        let storyboard = UIStoryboard(name: "cardForm", bundle: frameworkBundle)
-//        let controller = storyboard.instantiateViewController(withIdentifier: "TestVC") as UIViewController
+//        let CardFormVC = storyboard.instantiateViewController(withIdentifier: "CardFormViewController") as UIViewController
 //
-//        self.present(controller, animated: true, completion: nil)
- 
+//        self.present(CardFormVC, animated: true, completion: nil)
+//
         //Demo-app-swift
         
     }

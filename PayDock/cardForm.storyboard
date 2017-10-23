@@ -41,6 +41,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="cardNumberField:" destination="AtH-eo-ZKD" eventType="editingDidEnd" id="EZd-Fc-7d3"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUT-wW-aKI" userLabel="Card Number Validation Label">
                                 <rect key="frame" x="16" y="247" width="251" height="21"/>
@@ -64,22 +67,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sh-eO-GaF" userLabel="Card Holder Name Validation Lavel">
-                                <rect key="frame" x="180" y="359" width="87" height="21"/>
+                                <rect key="frame" x="180" y="357" width="87" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKX-e4-SOD">
-                                <rect key="frame" x="89" y="388" width="104" height="30"/>
+                                <rect key="frame" x="89" y="436" width="104" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Submit"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IF-T6-uXl" userLabel="Gateway Error Label">
+                                <rect key="frame" x="44" y="389" width="172" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="5jn-js-eEq"/>
                     </view>
+                    <connections>
+                        <outlet property="cardHolderNameField" destination="2Vo-wa-xAv" id="d9W-u2-mex"/>
+                        <outlet property="cardNumberField" destination="d5x-8t-dux" id="Sde-x6-oZa"/>
+                        <outlet property="ccvField" destination="VaT-Ue-wWJ" id="hl3-u1-Sti"/>
+                        <outlet property="expirationDateField" destination="rCA-rl-Qjx" id="fPk-ec-Hu2"/>
+                        <outlet property="lblVExp" destination="mNU-Xf-hS7" id="3FJ-9L-EU6"/>
+                        <outlet property="lblVGError" destination="4IF-T6-uXl" id="hXz-f4-BLQ"/>
+                        <outlet property="lblVName" destination="Xzu-0e-mij" id="Ktg-gN-K5p"/>
+                        <outlet property="lblVNumber" destination="uUT-wW-aKI" id="Twd-ps-i5i"/>
+                        <outlet property="lblVccv" destination="0sh-eO-GaF" id="ozB-py-RB6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Cj-Pv-rzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
