@@ -65,7 +65,7 @@
 		A5FEF55D1EAB659C00AD1B44 /* SubscriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF55C1EAB659C00AD1B44 /* SubscriptionRequest.swift */; };
 		CE1C54AD1FB0545B009A8C74 /* CardFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0E0901F91802F003898B1 /* CardFormViewController.swift */; };
 		CE7BCF861FB2FA01001D4D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */; };
-		CE7BCF881FB32DF2001D4D83 /* ConstantUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7BCF871FB32DF2001D4D83 /* ConstantUi.swift */; };
+		CE7BCF881FB32DF2001D4D83 /* ConstantsUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7BCF871FB32DF2001D4D83 /* ConstantsUi.swift */; };
 		CE8280C41FB1A5CC007C08D3 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8280C31FB1A5CC007C08D3 /* CardType.swift */; };
 /* End PBXBuildFile section */
 
@@ -146,7 +146,7 @@
 		A5FEF5591EAB3FB400AD1B44 /* TokenServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenServices.swift; path = Services/TokenServices.swift; sourceTree = "<group>"; };
 		A5FEF55C1EAB659C00AD1B44 /* SubscriptionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionRequest.swift; path = Models/Parameters/SubscriptionRequest.swift; sourceTree = "<group>"; };
 		CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE7BCF871FB32DF2001D4D83 /* ConstantUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantUi.swift; sourceTree = "<group>"; };
+		CE7BCF871FB32DF2001D4D83 /* ConstantsUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUi.swift; sourceTree = "<group>"; };
 		CE8280C31FB1A5CC007C08D3 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,7 +293,7 @@
 				443942321FAD17C100B9AB2A /* BSBFormViewController.swift */,
 				CE8280C31FB1A5CC007C08D3 /* CardType.swift */,
 				CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */,
-				CE7BCF871FB32DF2001D4D83 /* ConstantUi.swift */,
+				CE7BCF871FB32DF2001D4D83 /* ConstantsUi.swift */,
 			);
 			path = PayDock;
 			sourceTree = "<group>";
@@ -508,7 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D4B6201EA2219E003433F0 /* Errors.swift in Sources */,
-				CE7BCF881FB32DF2001D4D83 /* ConstantUi.swift in Sources */,
+				CE7BCF881FB32DF2001D4D83 /* ConstantsUi.swift in Sources */,
 				8426B8841EA61CAD0038AC39 /* Customer.swift in Sources */,
 				A553C8C11EA77CD100E3E872 /* SubscriptionServices.swift in Sources */,
 				8418A44F1EAB5372007FBC13 /* CustomerRequest.swift in Sources */,
