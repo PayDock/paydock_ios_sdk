@@ -17,6 +17,7 @@ class ViewController: UIViewController  {
     let address = Address(line1: "one", line2: "two", city: "city", postcode: "1234", state: "state", country: "AU")
     let gatewayId: String = "5819a158cd38a5b21a56a099"
     let customerRequest = CustomerRequest(firstName: "Test_first_name", lastName: "Test_last_name", email: "Test@test.com", reference: "customer Refrence", phone: nil)
+    let queryToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4NTk1OGFlMjRhMDJmMzAyOTQzNjYzYiIsImxpbWl0IjpudWxsLCJza2lwIjpudWxsLCJpYXQiOjE1MTA0Mjg3Nzd9.A-ygj62jY2aoXN7TmHkHfy5L6tsLUOTXCwaXgZsrrGI"
     
     var completionHandler :(_
         restult: @escaping () throws -> String) -> Void = {_ in
@@ -74,7 +75,18 @@ class ViewController: UIViewController  {
     
     
     @IBAction func btn3Pressed(_ sender: Any) {
+        let listParams = ListParameters(
+            skip: nil, limit: nil, subscription_id: nil, gateway_id: nil, company_id: nil, createdAtFrom: nil, createdAtTo: nil, search: nil, status: nil, isArchived: nil, queryToken: queryToken)
         
+                PayDock.shared.getCustomerPaymentSources(with: listParams) { (customersPaymentSourcesResponse) in
+                    do {
+                        let paymentSourceList = try customersPaymentSourcesResponse()
+                        print(paymentSourceList)
+                    } catch let error {
+                        print(error.localizedDescription)
+                    }
+                }
+
         
     }
     override func viewWillAppear(_ animated: Bool) {

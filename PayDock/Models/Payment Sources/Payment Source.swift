@@ -35,7 +35,7 @@ public enum PaymentSource: Parameterable, Mapable {
     
     
     init(json: Dictionary<String, Any>) throws {
-        if let _: String? = try? json.value(for: "card_name") {
+        if let _: String? = (try? json.value(for: "card_name")) {
             let card: Card = try Card(json: json)
             self = PaymentSource.card(value: card)
             return

@@ -23,6 +23,9 @@ struct Constants {
     /// customer url
     static let customers = "v1/customers"
     
+    /// customer url
+    static let paymentSources = "v1/customers/payment_sources"
+    
     /// external checkout url
     static let externalCheckout = "v1/payment_sources/external_checkout"
 

@@ -157,10 +157,8 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
        
             if textField.tag == 0{
             if textField.text != ""{
-                let textWithoutSpace =  textField.text!.removingWhitespaces() // remove space
-                print(textWithoutSpace)
-                var num = Int(textWithoutSpace)
-                if num != nil { //number
+                let textWithoutSpace =  textField.text!.removeWhitespaces() // remove space
+                if Int(textWithoutSpace) != nil { //number
                     print("Valid Integer")
                     validateMessage(textfield: cardNumberField)
                     updateCardType(creditCardNumber : textField.text!)
@@ -170,7 +168,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
                     spaceIndics = normal_Card_Spaces
                 }
                 addSpaceToCardField(creditCardTextFieldNumber: textField.text!,spaceArray: spaceIndics!)
-                  var maxflag =  cardType?.greaterThanMax(creditCardNumber: textWithoutSpace)
+                    let maxflag =  cardType?.greaterThanMax(creditCardNumber: textWithoutSpace)
                    if maxflag == true { //greater than max
                       invalideMessage(textfield:  cardNumberField)
                       //   lblCardType.text = ""
@@ -189,7 +187,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
             }
         }else if textField.tag == 1{
             var flag = true
-            for chr in textField.text!.characters {
+            for chr in textField.text! {
                 if (!(chr >= "a" && chr <= "z" ) && !(chr >= "A" && chr <= "Z") && !(chr == " ")) {
                     flag = false
                 }
@@ -198,9 +196,6 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
                  invalideMessage(textfield: cardHolderNameField)
              }else{
                 validateMessage(textfield: cardHolderNameField )
-//                if textField.text! == ""{
-//                    validateMessage(textfield: <#T##UITextField#>)
-//                }
             }
             
             
@@ -223,10 +218,9 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
         switch textField.tag {
         case 0:
             
-            let textWithoutSpace =  textField.text!.removingWhitespaces() // remove space
-            var str = textWithoutSpace.characters.count
-            var num = Int(textWithoutSpace)
-            if num != nil {
+            let textWithoutSpace =  textField.text!.removeWhitespaces() // remove space
+            let str = textWithoutSpace.count
+            if Int(textWithoutSpace) != nil {
                 print("Valid Integer")
                 validateMessage(textfield: cardNumberField)
                if (cardType!.mMinCardLength)! > str ||  (cardType!.mMaxCardLength)! < str{
@@ -244,7 +238,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
                 }
             }
         case 1:
-            for chr in textField.text!.characters {
+            for chr in textField.text! {
                 if (!(chr >= "a" && chr <= "z" ) && !(chr >= "A" && chr <= "Z") && !(chr == " ")) {
                    flag = false
                     
@@ -261,15 +255,15 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
             }
             
         case 2 :
-            var str = textField.text!
-            var date = str.removingslash()
-            if date.characters.count == 4 {
+            let str = textField.text!
+            var date = str.removeSlash()
+            if date.count == 4 {
                       let dateFormatterGet = DateFormatter()
                      dateFormatterGet.dateFormat = "MM/YY"
                     if let date = dateFormatterGet.date(from: textField.text!) as? Date {
                         validateMessage(textfield:expirationDateField)
-                        var valide =  validationOfDate()
-                                 if valide == true {
+                        
+                                 if validationOfDate() {
                                         validateMessage(textfield: expirationDateField)
                                     
                                  }else{ //not valid
@@ -279,7 +273,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
                       // invalid format
                       invalideMessage(textfield: expirationDateField)
                  }
-            }else if date.characters.count == 0  { // smaller than 4
+            }else if date.count == 0  { // smaller than 4
                 requireMessage(textfield:expirationDateField )
             }else{   // not 4 not zero
                 invalideMessage(textfield: expirationDateField)
@@ -299,7 +293,6 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
         let char = string.cString(using: String.Encoding.utf8)
         let isBackSpace: Int = Int(strcmp(char, "\u{8}"))
         if isBackSpace == -8 {
-            print("Backspace was pressed")
             backspace = true
             backspaceForSlash = true
         }else{
@@ -321,9 +314,9 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
         }
     func addSpaceToCardField(creditCardTextFieldNumber : String , spaceArray : [Int]){
         var str = creditCardTextFieldNumber
-        let textWithoutSpace =  str.removingWhitespaces()
+        let textWithoutSpace =  str.removeWhitespaces()
         for item in spaceArray{
-            if (item == textWithoutSpace.characters.count && backspace == false) {
+            if (item == textWithoutSpace.count && backspace == false) {
                   str.insert(" ", at: str.index(str.startIndex, offsetBy: item))
                 break
             }
@@ -331,19 +324,19 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
         cardNumberField.text = str
     }
     func testValiditeOfCCV(str:String){
-          var num = Int(str)
+         let num = Int(str)
          if num != nil { //number
             if cardType?.mCardScheme == "AMEX" {
                 
            
-                 if str.characters.count > 4{
+                 if str.count > 4{
                      invalideMessage(textfield:ccvField)
                  } else{
                      validateMessage(textfield: ccvField)
                  }
             
           }else{ //notamex
-                if str.characters.count > 3{
+                if str.count > 3{
                       invalideMessage(textfield: ccvField)
                 } else{
                     validateMessage(textfield: ccvField)
@@ -361,27 +354,26 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
         formatter.dateFormat = "MM/yy"
         let result = formatter.string(from: date)
         print(result)
-        var r = "02/" +  result
+        
+        
+        let r = "02/" +  result
+        print(r)
         let dateFormatter1 = DateFormatter()
         dateFormatter1.dateFormat = "dd/MM/yy"
         let currentdate = dateFormatter1.date(from:r)
-        print("current date \(currentdate)")
         let dateString = "02/" + expirationDateField.text!
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yy"
         let s = dateFormatter.date(from:dateString)
-        print(s)
-        if s! >= currentdate!{
-            print("greaterthan or equal")
+         if s! >= currentdate!{
             return true
         }else{
-            print("smaller")
             return false
         }
     }
     // function for datewhen typing
     func detectvalidateDateWhenTyping(str:String){
-           var date = str.removingslash()
+        let date = str.removeSlash()
          guard   str != "" else{  //empty
               validateMessage(textfield:expirationDateField)
          return
@@ -390,16 +382,15 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
              invalideMessage(textfield:expirationDateField)
         return
         }
-         var numdate = Int(date)
-        guard numdate != nil else{ // not number
+        guard Int(date) != nil else{ // not number
               invalideMessage(textfield: expirationDateField)
-          return
+        return
         }
         validateMessage(textfield:expirationDateField)
-        if str.characters.count == 2 && str[1] != "/" && backspaceForSlash == false{
+        if str.count == 2 && str[1] != "/" && backspaceForSlash == false{
             expirationDateField.text = str + "/"
         }
-        if date.characters.count > 4 {
+        if date.count > 4 {
             invalideMessage(textfield:expirationDateField)
         }
     }
@@ -462,11 +453,12 @@ extension String {
     
     subscript (i: Int) -> Character {
         return self[index(startIndex, offsetBy: i)]
-}
-    func removingWhitespaces() -> String {
-        return components(separatedBy: .whitespaces).joined()
     }
-    func removingslash() -> String {
+    func removeWhitespaces() -> String {
+        return components(separatedBy: .whitespaces).joined()
+        
+    }
+    func removeSlash() -> String {
         return components(separatedBy: "/").joined()
     }
 }

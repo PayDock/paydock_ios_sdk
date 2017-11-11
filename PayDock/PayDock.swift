@@ -72,7 +72,7 @@ public class PayDock {
         self.network.url = self.url
         self.chargeServices = ChargeServices(network: self.network)
         self.subscriptionServices = SubscriptionServices(network: self.network)
-        self.customerServices = CustomerServices(network: self.network)
+        self.customerServices = CustomerServices(network: self.network, publicKey: publicKey)
         self.externalCheckoutServices = ExternalCheckoutServices(network: self.network)
         self.tokenServices = TokenServices(network: self.network, publicKey: publicKey)
         self.network.headerDictionary = [
@@ -295,6 +295,31 @@ public extension PayDock {
     func getCustomers(with parameters: ListParameters?, completion: @escaping (_ customersResponse: @escaping () throws -> [Customer]) -> Void) {
         DispatchQueue.global(qos: .userInitiated).async {
             self.customerServices.getCustomers(with: parameters) { (result) in
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            }
+        }
+    }
+    
+    /// get list of payment sources for cutomer from server
+    ///
+    /// - parameter with: filter properties
+    /// - parameter completion: returns a closure which returns payment sources or throws error
+    /// - parameter customersPaymentSourcesResponse: a throwable closure which returns an array instance of PaymentSource filled with server returned inforamation
+    ///
+    ///```
+    ///        PayDock.shared.getCustomerPaymentSources(with: ListParameters) { (customersPaymentSourcesResponse) in
+    ///            do {
+    ///                let paymentSourceList = try customersPaymentSourcesResponse()
+    ///            } catch let error {
+    ///                print(error.localizedDescription)
+    ///            }
+    ///        }
+    ///```
+    func getCustomerPaymentSources(with parameters: ListParameters?, completion: @escaping (_ customersResponse: @escaping () throws -> [PaymentSource]) -> Void) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.customerServices.getCustomerPaymentSources(with: parameters) { (result) in
                 DispatchQueue.main.async {
                     completion(result)
                 }

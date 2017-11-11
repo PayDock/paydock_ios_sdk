@@ -59,8 +59,7 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate {
     func textFieldDidChange(textField: UITextField){
         switch textField.tag{
         case 0 :
-            var num = Int(textField.text!)
-            if num != nil { //number
+            if Int(textField.text!) != nil { //number
                validateMessage(textfield:AccountNumber)
             }else{//notnumber
                 if textField.text != ""{
@@ -71,7 +70,7 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate {
             }
         case 1:
              var flag = true
-            for chr in textField.text!.characters {
+            for chr in textField.text! {
                 if (!(chr >= "a" && chr <= "z" ) && !(chr >= "A" && chr <= "Z") && !(chr == " ")) {
                     flag = false
                     
@@ -85,7 +84,7 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate {
                 
             }
         case 2:
-            var num1 = Int(textField.text!)
+            let num1 = Int(textField.text!)
             if num1 != nil { //number
                 validateMessage(textfield: BSBNumber)
             }else{//notnumber
@@ -104,8 +103,7 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate {
         
         switch textField.tag{
         case 0 :
-            var num = Int(textField.text!)
-            if num != nil {
+            if Int(textField.text!) != nil {
                 validateMessage(textfield: AccountNumber)
             }else{ //notnumber
                 if textField.text != ""{
@@ -116,7 +114,7 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate {
             }
         case 1 :
             var flag = true
-            for chr in textField.text!.characters {
+            for chr in textField.text! {
                 if (!(chr >= "a" && chr <= "z" ) && !(chr >= "A" && chr <= "Z") && !(chr == " ")) {
                     flag = false
                     
@@ -132,7 +130,7 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate {
                 }
             }
         case 2:
-            var num1 = Int(textField.text!)
+            let num1 = Int(textField.text!)
             if num1 != nil {
                 validateMessage(textfield: BSBNumber)
             }else{ //notnumber

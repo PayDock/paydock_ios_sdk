@@ -11,9 +11,15 @@ import Foundation
 /// Customer Services
 class CustomerServices {
     weak var network: PayDockNetwork?
+    var publicKey: String = ""
     
     init(network: PayDockNetwork) {
         self.network = network
+    }
+    
+    init(network: PayDockNetwork, publicKey: String) {
+        self.network = network
+        self.publicKey = publicKey
     }
 
     /// add a customer with defualt payment source
@@ -68,6 +74,28 @@ class CustomerServices {
                     customers.append( try Customer(json: object))
                 }
                 completion {return customers }
+            } catch let error {
+                completion { throw error }
+            }
+        })
+    }
+    
+    /// get list of cusomers Payment sources
+    ///
+    /// - parameter with: filter properties
+    /// - parameter completion: returns a closure which returns customers or throws error
+    /// - paramter customer: customers item from server
+    func getCustomerPaymentSources(with parameters: ListParameters?, completion: @escaping (_ paymentSources: @escaping () throws -> [PaymentSource]) -> Void) {
+        let relativeUrl = Constants.paymentSources + "?public_key=\(publicKey)"
+        network?.get(from: relativeUrl, with: parameters?.toDictionary(), completion: { (result) in
+            do {
+                let data = try result()
+                var paymentSources: [PaymentSource] = []
+                let json: [Dictionary<String, Any>] = try data.getResource()
+                for object in json {
+                    paymentSources.append( try PaymentSource(json: object))
+                }
+                completion {return paymentSources }
             } catch let error {
                 completion { throw error }
             }
