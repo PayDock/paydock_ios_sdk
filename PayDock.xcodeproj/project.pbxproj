@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0024F15E1F9E337D00BC2A38 /* PayDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847745FB1E9B4B0400435EFD /* PayDock.swift */; };
+		0024F1601F9E398A00BC2A38 /* cardForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F0E08E1F917494003898B1 /* cardForm.storyboard */; };
+		443942331FAD17C100B9AB2A /* BSBFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443942321FAD17C100B9AB2A /* BSBFormViewController.swift */; };
 		4483320D1F40401300F87FF7 /* ExternalCheckoutServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4483320C1F40401300F87FF7 /* ExternalCheckoutServices.swift */; };
 		448332121F40449600F87FF7 /* ExternalCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448332111F40449600F87FF7 /* ExternalCheckout.swift */; };
 		448332141F40598E00F87FF7 /* ExternalCheckoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448332131F40598E00F87FF7 /* ExternalCheckoutRequest.swift */; };
@@ -14,7 +17,6 @@
 		448332181F405EA300F87FF7 /* externalCheckoutAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 448332171F405EA300F87FF7 /* externalCheckoutAdd.json */; };
 		44F0E08F1F917494003898B1 /* cardForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F0E08E1F917494003898B1 /* cardForm.storyboard */; };
 		44F0E0911F91802F003898B1 /* CardFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0E0901F91802F003898B1 /* CardFormViewController.swift */; };
-		44F0E0931F975B42003898B1 /* bassentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F0E0921F975B42003898B1 /* bassentStoryboard.storyboard */; };
 		8400093C1EAE1C6000877866 /* chargeList.json in Resources */ = {isa = PBXBuildFile; fileRef = 840009391EAE1C6000877866 /* chargeList.json */; };
 		8400093D1EAE1C6000877866 /* chargeInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093A1EAE1C6000877866 /* chargeInfo.json */; };
 		8400093E1EAE1C6000877866 /* chargeAdd.json in Resources */ = {isa = PBXBuildFile; fileRef = 8400093B1EAE1C6000877866 /* chargeAdd.json */; };
@@ -61,6 +63,10 @@
 		A5FEF5581EAB28AB00AD1B44 /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF5571EAB28AB00AD1B44 /* TokenRequest.swift */; };
 		A5FEF55A1EAB3FB400AD1B44 /* TokenServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF5591EAB3FB400AD1B44 /* TokenServices.swift */; };
 		A5FEF55D1EAB659C00AD1B44 /* SubscriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF55C1EAB659C00AD1B44 /* SubscriptionRequest.swift */; };
+		CE1C54AD1FB0545B009A8C74 /* CardFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0E0901F91802F003898B1 /* CardFormViewController.swift */; };
+		CE7BCF861FB2FA01001D4D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */; };
+		CE7BCF881FB32DF2001D4D83 /* ConstantUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7BCF871FB32DF2001D4D83 /* ConstantUi.swift */; };
+		CE8280C41FB1A5CC007C08D3 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8280C31FB1A5CC007C08D3 /* CardType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		443942321FAD17C100B9AB2A /* BSBFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBFormViewController.swift; sourceTree = "<group>"; };
 		4483320C1F40401300F87FF7 /* ExternalCheckoutServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalCheckoutServices.swift; path = Services/ExternalCheckoutServices.swift; sourceTree = "<group>"; };
 		448332111F40449600F87FF7 /* ExternalCheckout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalCheckout.swift; sourceTree = "<group>"; };
 		448332131F40598E00F87FF7 /* ExternalCheckoutRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalCheckoutRequest.swift; path = Models/Parameters/ExternalCheckoutRequest.swift; sourceTree = "<group>"; };
@@ -88,7 +95,6 @@
 		448332171F405EA300F87FF7 /* externalCheckoutAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = externalCheckoutAdd.json; sourceTree = "<group>"; };
 		44F0E08E1F917494003898B1 /* cardForm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = cardForm.storyboard; sourceTree = "<group>"; };
 		44F0E0901F91802F003898B1 /* CardFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFormViewController.swift; sourceTree = "<group>"; };
-		44F0E0921F975B42003898B1 /* bassentStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = bassentStoryboard.storyboard; sourceTree = "<group>"; };
 		44F0E0B61F976D3F003898B1 /* Demo_app_swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Demo_app_swift.xcodeproj; path = Demo_app_swift/Demo_app_swift.xcodeproj; sourceTree = "<group>"; };
 		840009391EAE1C6000877866 /* chargeList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeList.json; sourceTree = "<group>"; };
 		8400093A1EAE1C6000877866 /* chargeInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeInfo.json; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 		A5FEF5571EAB28AB00AD1B44 /* TokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenRequest.swift; path = Models/Parameters/TokenRequest.swift; sourceTree = "<group>"; };
 		A5FEF5591EAB3FB400AD1B44 /* TokenServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenServices.swift; path = Services/TokenServices.swift; sourceTree = "<group>"; };
 		A5FEF55C1EAB659C00AD1B44 /* SubscriptionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionRequest.swift; path = Models/Parameters/SubscriptionRequest.swift; sourceTree = "<group>"; };
+		CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE7BCF871FB32DF2001D4D83 /* ConstantUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantUi.swift; sourceTree = "<group>"; };
+		CE8280C31FB1A5CC007C08D3 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +290,10 @@
 				8435D0761E9B49E300AE0BAA /* Info.plist */,
 				44F0E08E1F917494003898B1 /* cardForm.storyboard */,
 				44F0E0901F91802F003898B1 /* CardFormViewController.swift */,
+				443942321FAD17C100B9AB2A /* BSBFormViewController.swift */,
+				CE8280C31FB1A5CC007C08D3 /* CardType.swift */,
+				CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */,
+				CE7BCF871FB32DF2001D4D83 /* ConstantUi.swift */,
 			);
 			path = PayDock;
 			sourceTree = "<group>";
@@ -298,7 +311,6 @@
 				84F3DC411EB46140001101C7 /* ModelMapTests.swift */,
 				8435D0821E9B49E300AE0BAA /* Info.plist */,
 				448332151F405E2F00F87FF7 /* ExternalCheckoutTests.swift */,
-				44F0E0921F975B42003898B1 /* bassentStoryboard.storyboard */,
 			);
 			path = PayDockTests;
 			sourceTree = "<group>";
@@ -414,9 +426,8 @@
 				TargetAttributes = {
 					8435D0711E9B49E200AE0BAA = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 2W4U2P3K99;
 						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					8435D07A1E9B49E300AE0BAA = {
 						CreatedOnToolsVersion = 8.3;
@@ -465,6 +476,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7BCF861FB2FA01001D4D83 /* Assets.xcassets in Resources */,
 				44F0E08F1F917494003898B1 /* cardForm.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,13 +485,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44F0E0931F975B42003898B1 /* bassentStoryboard.storyboard in Resources */,
 				840009431EAE226F00877866 /* customerAdd.json in Resources */,
 				8400094E1EB08C4600877866 /* subscriptionItem.json in Resources */,
 				8400093C1EAE1C6000877866 /* chargeList.json in Resources */,
 				8400093D1EAE1C6000877866 /* chargeInfo.json in Resources */,
 				840009441EAE226F00877866 /* customerList.json in Resources */,
 				840009421EAE226F00877866 /* customerItem.json in Resources */,
+				0024F1601F9E398A00BC2A38 /* cardForm.storyboard in Resources */,
 				448332181F405EA300F87FF7 /* externalCheckoutAdd.json in Resources */,
 				8400094D1EB08C4600877866 /* subscriptionAdd.json in Resources */,
 				8400093E1EAE1C6000877866 /* chargeAdd.json in Resources */,
@@ -496,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D4B6201EA2219E003433F0 /* Errors.swift in Sources */,
+				CE7BCF881FB32DF2001D4D83 /* ConstantUi.swift in Sources */,
 				8426B8841EA61CAD0038AC39 /* Customer.swift in Sources */,
 				A553C8C11EA77CD100E3E872 /* SubscriptionServices.swift in Sources */,
 				8418A44F1EAB5372007FBC13 /* CustomerRequest.swift in Sources */,
@@ -504,6 +517,7 @@
 				8426B8981EA77D970038AC39 /* Transaction.swift in Sources */,
 				8426B89A1EA77DB30038AC39 /* Sale.swift in Sources */,
 				84D4B61E1EA206F2003433F0 /* PayDockSession.swift in Sources */,
+				443942331FAD17C100B9AB2A /* BSBFormViewController.swift in Sources */,
 				8426B8761EA5F85A0038AC39 /* Parameterable.swift in Sources */,
 				A5FEF5581EAB28AB00AD1B44 /* TokenRequest.swift in Sources */,
 				A553C8BB1EA75BF500E3E872 /* Subscription.swift in Sources */,
@@ -511,6 +525,7 @@
 				8426B8781EA601870038AC39 /* Constants.swift in Sources */,
 				A5FEF55A1EAB3FB400AD1B44 /* TokenServices.swift in Sources */,
 				A5FEF55D1EAB659C00AD1B44 /* SubscriptionRequest.swift in Sources */,
+				CE8280C41FB1A5CC007C08D3 /* CardType.swift in Sources */,
 				8426B87A1EA606A80038AC39 /* ChargeServices.swift in Sources */,
 				8426B8911EA75F450038AC39 /* BankAccount.swift in Sources */,
 				4483320D1F40401300F87FF7 /* ExternalCheckoutServices.swift in Sources */,
@@ -537,9 +552,11 @@
 				840009481EB0768D00877866 /* SubscriptionIntegrationTest.swift in Sources */,
 				8435D0811E9B49E300AE0BAA /* ChargeIntergrationTests.swift in Sources */,
 				84F3DC441EB46767001101C7 /* PayDockSessionTests.swift in Sources */,
+				0024F15E1F9E337D00BC2A38 /* PayDock.swift in Sources */,
 				84F3DC421EB46140001101C7 /* ModelMapTests.swift in Sources */,
 				448332161F405E2F00F87FF7 /* ExternalCheckoutTests.swift in Sources */,
 				840009461EB0748100877866 /* TokenIntegrationTest.swift in Sources */,
+				CE1C54AD1FB0545B009A8C74 /* CardFormViewController.swift in Sources */,
 				8418A45B1EADC012007FBC13 /* CustomerIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,8 +678,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2W4U2P3K99;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -672,6 +690,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roundtableapps.PayDock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -683,8 +702,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2W4U2P3K99;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -694,6 +714,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roundtableapps.PayDock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};

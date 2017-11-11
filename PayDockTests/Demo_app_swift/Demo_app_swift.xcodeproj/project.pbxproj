@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4484AAAC1F9FAEF100BDD410 /* PayDock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4484AAAD1F9FAEF100BDD410 /* PayDock.framework */; };
 		44F0E0A51F976D3F003898B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0E0A41F976D3F003898B1 /* AppDelegate.swift */; };
 		44F0E0A71F976D3F003898B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0E0A61F976D3F003898B1 /* ViewController.swift */; };
 		44F0E0AA1F976D3F003898B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F0E0A81F976D3F003898B1 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4484AAAD1F9FAEF100BDD410 /* PayDock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PayDock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F0E0A11F976D3F003898B1 /* Demo_app_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_app_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F0E0A41F976D3F003898B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44F0E0A61F976D3F003898B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +31,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4484AAAC1F9FAEF100BDD410 /* PayDock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4484AAAB1F9FAEF100BDD410 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4484AAAD1F9FAEF100BDD410 /* PayDock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		44F0E0981F976D3F003898B1 = {
 			isa = PBXGroup;
 			children = (
 				44F0E0A31F976D3F003898B1 /* Demo_app_swift */,
 				44F0E0A21F976D3F003898B1 /* Products */,
+				4484AAAB1F9FAEF100BDD410 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,12 +286,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EJLZQJQJWV;
 				INFOPLIST_FILE = Demo_app_swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PayDock.Demo-app-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,12 +303,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EJLZQJQJWV;
 				INFOPLIST_FILE = Demo_app_swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PayDock.Demo-app-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

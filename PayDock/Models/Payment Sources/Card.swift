@@ -46,6 +46,7 @@ public struct Card: Parameterable, Mapable {
         self.expireMonth = expireMonth
         self.expireYear = expireYear
         self.address = address
+        self.ccv = ccv
     }
     
     init(json: Dictionary<String, Any>) throws {

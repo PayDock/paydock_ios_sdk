@@ -49,13 +49,21 @@ public struct Customer: Parameterable, Mapable {
     /// JSON response
     public var rawJson: [String: Any]?
     
-    init(firstName: String?, lastName: String?, email: String?, reference: String?, phone: String?, paymentSource: PaymentSource) {
+    init(firstName: String?, lastName: String?, email: String?, reference: String?, phone: String?, paymentSource: PaymentSource?) {
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
         self.reference = reference
         self.phone = phone
         self.paymentSource = paymentSource
+    }
+    
+    init(firstName: String?, lastName: String?, email: String?, reference: String?, phone: String?) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.reference = reference
+        self.phone = phone
     }
     
     init(firstName: String?, lastName: String?, email: String?, reference: String?, phone: String?, token: String) {

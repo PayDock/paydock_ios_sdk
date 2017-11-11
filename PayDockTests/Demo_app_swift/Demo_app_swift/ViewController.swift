@@ -8,112 +8,99 @@
 
 import UIKit
 @testable import PayDock
-class ViewController: UIViewController {
 
-    @IBOutlet weak var cardNumberField: UITextField!
-    @IBOutlet weak var cardHolderNameField: UITextField!
-    @IBOutlet weak var expirationDateField: UITextField!
-    @IBOutlet weak var ccvField: UITextField!
-    @IBOutlet weak var lblVCardH: UILabel!
-    @IBOutlet weak var lblVNo: UILabel!
-    @IBOutlet weak var lblVdate: UILabel!
-    @IBOutlet weak var lblVccv: UILabel!
-    @IBOutlet weak var lblerr: UILabel!
+class ViewController: UIViewController  {
 
+    @IBOutlet weak var containerView: UIView!
+    var delegateError : delegateError? = nil
     
-   
-    let gatewayId: String = "5620de31361b787230cb7d74"
+    let address = Address(line1: "one", line2: "two", city: "city", postcode: "1234", state: "state", country: "AU")
+    let gatewayId: String = "5819a158cd38a5b21a56a099"
+    let customerRequest = CustomerRequest(firstName: "Test_first_name", lastName: "Test_last_name", email: "Test@test.com", reference: "customer Refrence", phone: nil)
     
+    var completionHandler :(_
+        restult: @escaping () throws -> String) -> Void = {_ in
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-       
-       
+        PayDock.setSecretKey(key: "")
+        PayDock.setPublicKey(key: "774bda747d01571b8efb0b5a102bc945787b1cdb")
+        PayDock.shared.isSandbox = true
         
     }
+    
+    @IBAction func btn1Pressed(_ sender: Any) {
+        
+        let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+        let storyboard = UIStoryboard(name: "cardForm", bundle: frameworkBundle)
+        let controller = storyboard.instantiateViewController(withIdentifier: "CardFormViewController") as! CardFormViewController
+        
+        controller.address = address
+        controller.gatewayId = gatewayId
+        controller.customerRequest = customerRequest
+        
+        controller.completionHandler = completionHandler
+        
+        delegateError = controller
+        
+        containerView.subviews.forEach {
+            $0.removeFromSuperview()
+        }
+        addChildViewController(controller)
+        
+        containerView.addSubview(controller.view)
+        
+        controller.didMove(toParentViewController: self)
+        
+    }
+    
+    @IBAction func btn2Pressed(_ sender: Any) {
+        
+        let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+        let storyboard = UIStoryboard(name: "cardForm", bundle: frameworkBundle)
+        let controller = storyboard.instantiateViewController(withIdentifier: "BSBFormViewController")
+        
+       
+       // containerView.removeFromSuperview()
+        
+        containerView.subviews.forEach { $0.removeFromSuperview()
+        }
+        //view.addSubview(containerView)
+         addChildViewController(controller)
+        
+        containerView.addSubview(controller.view)
+        controller.didMove(toParentViewController: self)
+    }
+    
+    
+    @IBAction func btn3Pressed(_ sender: Any) {
+        
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        completionHandler = { (token) in
+                do {
+                    let token: String = try token()
+                    debugPrint(token)
+                     self.delegateError?.errormessage(error: token)
+                } catch let error {
+                    debugPrint(error)
+                    self.delegateError?.errormessage(error: error.localizedDescription)
+                }
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-//        let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
-//        let storyboard = UIStoryboard(name: "cardForm", bundle: frameworkBundle)
-//        let CardFormVC = storyboard.instantiateViewController(withIdentifier: "CardFormViewController") as UIViewController
-//
-//        self.present(CardFormVC, animated: true, completion: nil)
-//
-        //Demo-app-swift
+
         
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //MARK:- function
 
-
-    @IBAction func cardSubmitPressed(_ sender: Any) {
-        
-        var valid = true
-        if (cardNumberField.text == "")
-        {
-            valid = false
-            lblVNo.text="card no is required";
-        }
-        if (cardHolderNameField.text == "")
-        {
-            valid = false
-            lblVCardH.text="Name is required";
-        }
-        
-        if (ccvField.text == "")
-        {
-            valid = false
-            lblVccv.text="CCV is required";
-        }
-        if (expirationDateField.text == "")
-        {
-            valid = false
-            lblVdate.text="expiration Date Field value is required";
-        }
-        
-        
-        if(valid ){
-            var date = expirationDateField.text!
-            var dateArr = date.characters.split{$0 == "/"}.map(String.init)
-            let month: String = dateArr[0]
-            let year: String? = dateArr.count > 1 ? dateArr[1] : nil
-            
-            PayDock.setSecretKey(key: "")
-            PayDock.setPublicKey(key: "1b0496942b784d96b660d01542aa0ceba45dd9e9")
-            PayDock.shared.isSandbox = true
-            
-            let address = Address(line1: "one", line2: "two", city: "city", postcode: "1234", state: "state", country: "AU")
-            let card = Card(gatewayId: gatewayId,
-                            name: cardHolderNameField.text!,
-                            number: cardNumberField.text!,
-                            expireMonth: Int(month)!,
-                            expireYear: Int(year!)!,
-                            ccv: ccvField.text,
-                            address: address)
-            let paymentSource = PaymentSource.card(value: card)
-            let customerRequest = CustomerRequest(firstName: "Test_first_name",
-                                                  lastName: "Test_last_name",
-                                                  email: "Test@test.com",
-                                                  reference: "customer Refrence",
-                                                  phone: nil,
-                                                  paymentSource: paymentSource)
-            
-            let tokenRequest = TokenRequest(customer: customerRequest,
-                                            address: address,
-                                            paymentSource: paymentSource)
-            PayDock.shared.create(token: tokenRequest) { (token) in
-                
-                do {
-                    let token: String = try token()
-                    print(token)
-                } catch let error {
-                    debugPrint(error)
-                    self.lblerr.text = error.localizedDescription
-                }
-            }
-        }
-    }
+  
     
 }
 
