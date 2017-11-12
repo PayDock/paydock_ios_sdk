@@ -38,6 +38,8 @@ public struct Card: Parameterable, Mapable {
     public var updatedAt: Date?
     /// raw json response from server
     public var rawJson: [String: Any]?
+    // primary
+    public var primary :Bool?
     
     public init(gatewayId: String, name: String, number: String, expireMonth: Int, expireYear: Int, ccv: String?, address: Address?) {
         self.gatewayId = gatewayId
@@ -50,6 +52,7 @@ public struct Card: Parameterable, Mapable {
     }
     
     init(json: Dictionary<String, Any>) throws {
+        self.primary = try? json.value(for: "primary")
         self.id = try? json.value(for: "_id")
         self.name = try? json.value(for: "card_name")
         self.number = try? json.value(for: "card_number")
@@ -64,6 +67,7 @@ public struct Card: Parameterable, Mapable {
         self.updatedAt  = try? json.value(for: "updated_at")
         self.address = try? Address(json: json)
         self.rawJson = json
+     
     }
     public func toDictionary() -> [String : Any] {
         var param: [String: Any] = ["type": "card"]
@@ -76,6 +80,11 @@ public struct Card: Parameterable, Mapable {
         param.appendNonNilable(key: "card_number", item: number)
         param.appendNonNilable(key: "card_ccv", item: ccv)
         param.appendNonNilable(key: "gateway_id", item: gatewayId)
+        param.appendNonNilable(key: "card_scheme", item: scheme)
+        param.appendNonNilable(key: "id", item: id)
+        param.appendNonNilable(key: "card_number_last4", item: last4Number)
+       // param.appendNonNilable(key: "rawJson", item: rawJson)
+        param.appendNonNilable(key: "primary", item: primary)
         return param
     }
     

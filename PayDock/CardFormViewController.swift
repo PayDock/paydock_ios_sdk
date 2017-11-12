@@ -11,7 +11,7 @@ import UIKit
 protocol delegateError : class{
     func errormessage(error : String)->Void
 }
-class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateError{
+class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateError{
     
 
     @IBOutlet weak var imgCard: UIImageView!
@@ -314,10 +314,12 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate ,delegateErr
         }
     func addSpaceToCardField(creditCardTextFieldNumber : String , spaceArray : [Int]){
         var str = creditCardTextFieldNumber
-        let textWithoutSpace =  str.removeWhitespaces()
+      //  let textWithoutSpace =  str.removeWhitespaces()
         for item in spaceArray{
-            if (item == textWithoutSpace.count && backspace == false) {
+             let textWithoutSpace =  str.removeWhitespaces()
+            if (item == str.count && backspace == false) {
                   str.insert(" ", at: str.index(str.startIndex, offsetBy: item))
+                
                 break
             }
         }

@@ -12,32 +12,30 @@ import UIKit
 class ViewController: UIViewController  {
 
     @IBOutlet weak var containerView: UIView!
+    // MARK:- variable
     var delegateError : delegateError? = nil
     
     let address = Address(line1: "one", line2: "two", city: "city", postcode: "1234", state: "state", country: "AU")
-    let gatewayId: String = "5819a158cd38a5b21a56a099"
+    let cardGatewayId: String = "5819a158cd38a5b21a56a099"
+    let bsbGatewayId: String = "5819a158cd38a5b21a56a099"
     let customerRequest = CustomerRequest(firstName: "Test_first_name", lastName: "Test_last_name", email: "Test@test.com", reference: "customer Refrence", phone: nil)
+    let customerRequest2 = CustomerRequest(firstName: "Promise name", lastName: "Promise last name", email: "Test@test.com", reference: "AUS", phone: nil)
     let queryToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4NTk1OGFlMjRhMDJmMzAyOTQzNjYzYiIsImxpbWl0IjpudWxsLCJza2lwIjpudWxsLCJpYXQiOjE1MTA0Mjg3Nzd9.A-ygj62jY2aoXN7TmHkHfy5L6tsLUOTXCwaXgZsrrGI"
     
     var completionHandler :(_
         restult: @escaping () throws -> String) -> Void = {_ in
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        PayDock.setSecretKey(key: "")
-        PayDock.setPublicKey(key: "774bda747d01571b8efb0b5a102bc945787b1cdb")
-        PayDock.shared.isSandbox = true
-        
-    }
     
-    @IBAction func btn1Pressed(_ sender: Any) {
+
+    //MARK:- IBAction
+        @IBAction func btn1Pressed(_ sender: Any) {
         
         let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
         let storyboard = UIStoryboard(name: "cardForm", bundle: frameworkBundle)
         let controller = storyboard.instantiateViewController(withIdentifier: "CardFormViewController") as! CardFormViewController
         
         controller.address = address
-        controller.gatewayId = gatewayId
+        controller.gatewayId = cardGatewayId
         controller.customerRequest = customerRequest
         
         controller.completionHandler = completionHandler
@@ -59,11 +57,12 @@ class ViewController: UIViewController  {
         
         let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
         let storyboard = UIStoryboard(name: "cardForm", bundle: frameworkBundle)
-        let controller = storyboard.instantiateViewController(withIdentifier: "BSBFormViewController")
-        
-       
-       // containerView.removeFromSuperview()
-        
+        let controller = storyboard.instantiateViewController(withIdentifier: "BSBFormViewController") as! BSBFormViewController
+        controller.address = address
+        controller.gatewayId = bsbGatewayId
+       controller.completionHandler = completionHandler
+        delegateError = controller
+        controller.customerRequest = customerRequest2
         containerView.subviews.forEach { $0.removeFromSuperview()
         }
         //view.addSubview(containerView)
@@ -75,18 +74,69 @@ class ViewController: UIViewController  {
     
     
     @IBAction func btn3Pressed(_ sender: Any) {
+        
         let listParams = ListParameters(
             skip: nil, limit: nil, subscription_id: nil, gateway_id: nil, company_id: nil, createdAtFrom: nil, createdAtTo: nil, search: nil, status: nil, isArchived: nil, queryToken: queryToken)
         
                 PayDock.shared.getCustomerPaymentSources(with: listParams) { (customersPaymentSourcesResponse) in
                     do {
                         let paymentSourceList = try customersPaymentSourcesResponse()
-                        print(paymentSourceList)
+                        print("*************************************")
+                        
+                        let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                        let storyboard = UIStoryboard(name: "cardForm", bundle: frameworkBundle)
+                        let controller = storyboard.instantiateViewController(withIdentifier: "ValtFormViewController") as! ValtFormViewController
+                        controller.paymentSource = paymentSourceList
+                        
+                        
+                        for item in paymentSourceList{
+                            print("item\(item)")
+                            var itemDictionary = item.toDictionary()
+                            
+                            if itemDictionary != nil{
+                                   var primary = itemDictionary["primary"] as! Bool
+                                 print("primary \(primary)")
+                            
+                            
+                                 if itemDictionary["type"] as!String == "bsb"{
+                                      var accountNumber = itemDictionary["account_number"] as! String
+                                     print("Accountnumber\(accountNumber)")
+                                     var accountName = itemDictionary["account_name"] as! String
+                                     print("accountname\(accountName)")
+                                }else{ //account
+                                     if let scheme = itemDictionary["card_scheme"] as? String
+                                      {
+                                       print("scheme\(scheme)")
+                                     }
+                                    if let last4number = itemDictionary["card_number_last4"] as? String{
+                                      print("last4number\(last4number)")
+                                    }
+                                   if let accountName = itemDictionary["card_name"] as? String{
+                                      print("accountname\(accountName)")
+                                   }
+                                
+                                
+                            }
+                            print("&&&\(itemDictionary)")
+                            }
+                              print("****************************")
+                        }
+                        //print(paymentSourceList)
+                        
+                        
                     } catch let error {
                         print(error.localizedDescription)
                     }
                 }
 
+      
+    }
+    // MARK:- lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        PayDock.setSecretKey(key: "")
+        PayDock.setPublicKey(key: "774bda747d01571b8efb0b5a102bc945787b1cdb")
+        PayDock.shared.isSandbox = true
         
     }
     override func viewWillAppear(_ animated: Bool) {

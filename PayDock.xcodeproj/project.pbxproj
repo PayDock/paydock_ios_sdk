@@ -67,6 +67,8 @@
 		CE7BCF861FB2FA01001D4D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */; };
 		CE7BCF881FB32DF2001D4D83 /* ConstantsUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7BCF871FB32DF2001D4D83 /* ConstantsUi.swift */; };
 		CE8280C41FB1A5CC007C08D3 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8280C31FB1A5CC007C08D3 /* CardType.swift */; };
+		CE879A1C1FB8728D00833A2E /* VaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE879A1B1FB8728D00833A2E /* VaultViewController.swift */; };
+		CE879A201FB89F3600833A2E /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE879A1F1FB89F3600833A2E /* CustomCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,9 @@
 		CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7BCF871FB32DF2001D4D83 /* ConstantsUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUi.swift; sourceTree = "<group>"; };
 		CE8280C31FB1A5CC007C08D3 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		CE879A191FB8525900833A2E /* PayDock.build */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PayDock.build; path = "build/PayDock.build/Release-iphoneos/PayDock.build"; sourceTree = "<group>"; };
+		CE879A1B1FB8728D00833A2E /* VaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultViewController.swift; sourceTree = "<group>"; };
+		CE879A1F1FB89F3600833A2E /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +269,7 @@
 				8435D0741E9B49E300AE0BAA /* PayDock */,
 				8435D07F1E9B49E300AE0BAA /* PayDockTests */,
 				8435D0731E9B49E300AE0BAA /* Products */,
+				CE879A171FB8525800833A2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -294,6 +300,8 @@
 				CE8280C31FB1A5CC007C08D3 /* CardType.swift */,
 				CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */,
 				CE7BCF871FB32DF2001D4D83 /* ConstantsUi.swift */,
+				CE879A1B1FB8728D00833A2E /* VaultViewController.swift */,
+				CE879A1F1FB89F3600833A2E /* CustomCellTableViewCell.swift */,
 			);
 			path = PayDock;
 			sourceTree = "<group>";
@@ -362,6 +370,14 @@
 				A553C8BE1EA75D1700E3E872 /* Schedule.swift */,
 			);
 			name = Subscription;
+			sourceTree = "<group>";
+		};
+		CE879A171FB8525800833A2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE879A191FB8525900833A2E /* PayDock.build */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,6 +527,7 @@
 				CE7BCF881FB32DF2001D4D83 /* ConstantsUi.swift in Sources */,
 				8426B8841EA61CAD0038AC39 /* Customer.swift in Sources */,
 				A553C8C11EA77CD100E3E872 /* SubscriptionServices.swift in Sources */,
+				CE879A201FB89F3600833A2E /* CustomCellTableViewCell.swift in Sources */,
 				8418A44F1EAB5372007FBC13 /* CustomerRequest.swift in Sources */,
 				44F0E0911F91802F003898B1 /* CardFormViewController.swift in Sources */,
 				448332121F40449600F87FF7 /* ExternalCheckout.swift in Sources */,
@@ -536,6 +553,7 @@
 				847745FC1E9B4B0400435EFD /* PayDock.swift in Sources */,
 				8426B8861EA737380038AC39 /* Charge.swift in Sources */,
 				448332141F40598E00F87FF7 /* ExternalCheckoutRequest.swift in Sources */,
+				CE879A1C1FB8728D00833A2E /* VaultViewController.swift in Sources */,
 				8426B89C1EA77DD80038AC39 /* Refund.swift in Sources */,
 				8418A44D1EAB42F6007FBC13 /* CustomerServices.swift in Sources */,
 				84DEA9CD1EAB21EA00A001E8 /* ChargeRequest.swift in Sources */,

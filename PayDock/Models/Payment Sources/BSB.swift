@@ -39,8 +39,10 @@ public struct BSB: Parameterable,Mapable {
     public var updatedAt: Date?
     /// Raw Json Response from server
     public var rawJson: [String: Any]?
-    
+    // primary
+    public var primary :Bool?
     init(json: Dictionary<String, Any>) throws {
+        self.primary = try? json.value(for: "primary")
         self.id = try? json.value(for: "_id")
         self.gatewayId = try? json.value(for: "gateway_id")
         self.gatewayName = try? json.value(for: "gateway_name")
@@ -66,6 +68,7 @@ public struct BSB: Parameterable,Mapable {
     public func toDictionary() -> [String : Any] {
         var param: [String: Any] = ["type": "bsb"]
         address?.toDictionary().forEach({ param[$0] = $1 })
+        param.appendNonNilable(key: "id", item: self.id)
         param.appendNonNilable(key: "gateway_id", item: gatewayId)
         param.appendNonNilable(key: "gateway_name", item: gatewayName)
         param.appendNonNilable(key: "gateway_type", item: gatewayType)
@@ -73,6 +76,8 @@ public struct BSB: Parameterable,Mapable {
         param.appendNonNilable(key: "account_number", item: accountNumber)
         param.appendNonNilable(key: "account_bsb", item: accountBSB)
         param.appendNonNilable(key: "account_name", item: accountName)
+        // param.appendNonNilable(key: "rawJson", item: rawJson)
+         param.appendNonNilable(key: "primary", item: primary)
         return param
     }
     

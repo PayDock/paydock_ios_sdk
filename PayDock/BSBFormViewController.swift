@@ -7,8 +7,10 @@
 //
 
 import UIKit
-
-class BSBFormViewController: UIViewController,UITextFieldDelegate {
+//protocol delegateError : class{
+//    func errormessage(error : String)->Void
+//}
+class BSBFormViewController: UIViewController,UITextFieldDelegate, delegateError {
 
     //MARK:- Outlet
     
@@ -30,12 +32,44 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate {
     
     // MARK:- variable
      var constantsUi = ConstantsUi()
-    
-    
+     var address :Address? = nil
+     var gatewayId: String = ""
+    var completionHandler : (_ result: @escaping () throws -> String) -> Void = {_ in
+        
+    }
+     var customerRequest: CustomerRequest? = nil
     
     //MARK:IBAction
     
     @IBAction func pressSubmit(_ sender: Any) {
+        var valid = true
+        if (AccountNumber.text == "")
+        {
+            valid = false
+            requireMessage(textfield: AccountNumber)
+        }
+        if (AccountName.text == "")
+        {
+            valid = false
+            requireMessage(textfield: AccountName )
+        }
+        
+        if (BSBNumber.text == "")
+        {
+            valid = false
+            requireMessage(textfield: BSBNumber)
+        }
+        if(valid ){
+            //  let expect = expectation(description: "PayDockSDK.TokenTest")
+            
+            let account = BSB(gatewayId: gatewayId, accountNumber: AccountNumber.text!, accountName: AccountName.text!, accountBSB: BSBNumber.text!)
+            let paymentSource = PaymentSource.bsb(value: account)
+            let tokenRequest = TokenRequest(customer: customerRequest, address: address, paymentSource: paymentSource)
+//            print("secondcompletion\(completionHandlerForSecondButton)")
+            PayDock.shared.create(token: tokenRequest,completion: completionHandler)
+//            // self.waitForExpectations(timeout: 1000, handler: nil)
+            
+        }
     }
     //MARK:-lifecycle
     override func viewDidLoad() {
@@ -193,5 +227,9 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate {
         default:
             print("")
         }
+    }
+    // MARK:- delegatefunction
+    func errormessage(error : String)->Void{
+        GatewayErrorLabel.text = error
     }
 }
