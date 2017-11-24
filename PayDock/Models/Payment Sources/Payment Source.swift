@@ -2,7 +2,7 @@
 //  Payment Source.swift
 //  PayDock
 //
-//  Created by RTA on 19/4/17.
+//  Created by Round Table Apps on 19/4/17.
 //  Copyright © 2017 PayDock. All rights reserved.
 //
 

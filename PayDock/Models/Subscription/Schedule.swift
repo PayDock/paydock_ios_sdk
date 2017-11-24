@@ -2,7 +2,7 @@
 //  Schedule.swift
 //  PayDock
 //
-//  Created by RTA on 4/19/17.
+//  Created by Round Table Apps on 4/19/17.
 //  Copyright © 2017 PayDock. All rights reserved.
 //
 

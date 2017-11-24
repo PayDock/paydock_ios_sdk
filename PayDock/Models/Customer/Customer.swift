@@ -2,7 +2,7 @@
 //  Customer.swift
 //  PayDock
 //
-//  Created by RTA on 18/4/17.
+//  Created by Round Table Apps on 18/4/17.
 //  Copyright © 2017 PayDock. All rights reserved.
 //
 
