@@ -10,10 +10,18 @@ import UIKit
 
 protocol delegateError : class{
     func errormessage(error : String)->Void
-}
-class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateError{
     
-
+}
+protocol delegatefillCamera : class{
+    func fillField(Number:String,Name:String,Date:String,Ccv:String,CardType:Int)->Void
+}
+protocol delegateCamera : class{
+    func carmeraFunction()->Void
+    func loadFunction()
+}
+class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateError,delegatefillCamera{
+    
+    //MARK:- IBoutlet
     @IBOutlet weak var imgCard: UIImageView!
     
     @IBOutlet weak var cardNumberField: UITextField!
@@ -37,7 +45,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
     var gatewayId: String = ""
     var address :Address? = nil
     var customerRequest: CustomerRequest? = nil
-    
+      var delegateCamera : delegateCamera? = nil
     var completionHandler :(_
         result: @escaping () throws -> String) -> Void = {_ in
         
@@ -57,8 +65,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
         cardHolderNameField.delegate = self
         expirationDateField.delegate = self
         ccvField.delegate = self
-        
-            // Do any additional setup after loading the view, typically from a nib.
+        delegateCamera?.loadFunction()
         cardHolderNameField.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
         ccvField.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
         cardNumberField.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
@@ -66,30 +73,13 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
         
     }
     
-    
-    
-    
-    func GetDateFromString(DateStr: String)-> Date
-    {
-        let calendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
-        let DateArray = DateStr.components(separatedBy: "/")
-        let components = NSDateComponents()
-        components.year = Int(DateArray[2])!
-        components.month = Int(DateArray[1])!
-        components.timeZone = TimeZone(abbreviation: "GMT+0:00")
-        let date = calendar?.date(from: components as DateComponents)
-        
-        return date!
-    }
-
     override func viewDidAppear(_ animated: Bool) {
       
        expirationDateField.delegate = self
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+     }
   
     //MARK:- IBoutlet
     
@@ -106,7 +96,6 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
             valid = false
             requireMessage(textfield: cardHolderNameField )
        }
-        
         if (ccvField.text == "")
         {
             valid = false
@@ -117,27 +106,26 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
             valid = false
             requireMessage(textfield: expirationDateField)
         }
-       
         if(valid ){
             let date = expirationDateField.text!
             var dateArr = date.split{$0 == "/"}.map(String.init)
             let month: String = dateArr[0]
             let year: String? = dateArr.count > 1 ? dateArr[1] : nil
-           
             let cardNumber = cardNumberField.text!.replacingOccurrences(of: " ", with: "")
-            
-           
             let card = Card(gatewayId: gatewayId, name: cardHolderNameField.text!, number: cardNumber, expireMonth: Int(month)!, expireYear: Int(year!)!, ccv: ccvField.text!, address: address)
-        
             let paymentSource = PaymentSource.card(value: card)
             let tokenRequest = TokenRequest(customer: customerRequest, address: address, paymentSource: paymentSource)
             PayDock.shared.create(token: tokenRequest, completion: completionHandler)
-   
-        }
-        
+           }
+      }
+    
+    
+    @IBAction func CameraAction(_ sender: Any) {
+        delegateCamera?.carmeraFunction()
     }
     // MARK:- Textfield function
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.lblVGError.text = ""
         switch  textField.tag {
         case 0:
             validateMessage(textfield: cardNumberField)
@@ -153,55 +141,55 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
     }
 
     func textFieldDidChange(textField: UITextField){
-      
-       
-            if textField.tag == 0{
+        
+      if textField.tag == 0{//card number field
             if textField.text != ""{
                 let textWithoutSpace =  textField.text!.removeWhitespaces() // remove space
-                if Int(textWithoutSpace) != nil { //number
-                    print("Valid Integer")
-                    validateMessage(textfield: cardNumberField)
-                    updateCardType(creditCardNumber : textField.text!)
-                if cardType?.mMaxCardLength! == 15{
-                    spaceIndics = SHORT_CARD_SPACES
-                }else{
-                    spaceIndics = normal_Card_Spaces
-                }
-                addSpaceToCardField(creditCardTextFieldNumber: textField.text!,spaceArray: spaceIndics!)
-                    let maxflag =  cardType?.greaterThanMax(creditCardNumber: textWithoutSpace)
-                   if maxflag == true { //greater than max
-                      invalideMessage(textfield:  cardNumberField)
-                      //   lblCardType.text = ""
-                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
-                    let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
-                    imgCard.image = image
-                    }else{
-                     lblVNumber.text = ""
-                 }
-                }else{//notnumber
+                 guard   Int(textWithoutSpace) != nil  else{ // not number
                     invalideMessage(textfield: cardNumberField)
                     let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
                     let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
                     imgCard.image = image
+                    return
+                    
                 }
+                    print("Valid Integer")
+                    validateMessage(textfield: cardNumberField)
+                    updateCardType(creditCardNumber : textField.text!)
+                    if cardType?.mMaxCardLength! == 15{
+                       spaceIndics = SHORT_CARD_SPACES
+                    }else{
+                       spaceIndics = normal_Card_Spaces
+                    }
+                    addSpaceToCardField(creditCardTextFieldNumber: textField.text!,spaceArray: spaceIndics!)
+                    let maxflag =  cardType?.greaterThanMax(creditCardNumber: textWithoutSpace)
+                    if maxflag == true { //greater than max
+                      invalideMessage(textfield:  cardNumberField)
+                      let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                      let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
+                      imgCard.image = image
+                    }else{
+                     lblVNumber.text = ""
+                    }
+                
             }
-        }else if textField.tag == 1{
+        }else if textField.tag == 1{//card name field
             var flag = true
             for chr in textField.text! {
-                if (!(chr >= "a" && chr <= "z" ) && !(chr >= "A" && chr <= "Z") && !(chr == " ")) {
+                if (!(chr >= "a" && chr <= "z" ) && !(chr >= "A" && chr <= "Z") && !(chr == " ")) { //check whether is it character
                     flag = false
                 }
             }
-            if flag == false {
+            if flag == false {  //not character
                  invalideMessage(textfield: cardHolderNameField)
              }else{
                 validateMessage(textfield: cardHolderNameField )
             }
             
             
-        }else if textField.tag == 2{
+        }else if textField.tag == 2{ //date field
                 detectvalidateDateWhenTyping(str: textField.text!)
-        }else if textField.tag == 3{
+        }else if textField.tag == 3{ //ccv
                 validateMessage(textfield: ccvField)
              if textField.text != ""{
                 testValiditeOfCCV(str: textField.text!)
@@ -216,35 +204,37 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
         var flag = true
         print("textfieldtag\(textField.tag)")
         switch textField.tag {
-        case 0:
+        case 0://card number
             
             let textWithoutSpace =  textField.text!.removeWhitespaces() // remove space
             let str = textWithoutSpace.count
-            if Int(textWithoutSpace) != nil {
-                print("Valid Integer")
-                validateMessage(textfield: cardNumberField)
-               if (cardType!.mMinCardLength)! > str ||  (cardType!.mMaxCardLength)! < str{
-                    invalideMessage(textfield: cardNumberField)
-                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
-                    let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
-                    imgCard.image = image
-                }
-            }
-            else {
+            guard   Int(textWithoutSpace) != nil else{ // not number
                 if (textField.text != ""){
                     invalideMessage(textfield: cardNumberField)
                 }else{
                     requireMessage(textfield: cardNumberField)
                 }
+                return
             }
-        case 1:
+                      print("Valid Integer")
+                validateMessage(textfield: cardNumberField)
+             if cardType != nil{
+               if (cardType?.mMinCardLength)! > str ||  (cardType?.mMaxCardLength)! < str{
+                    invalideMessage(textfield: cardNumberField)
+                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                    let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
+                    imgCard.image = image
+                }
+             }
+            
+        case 1: //card name
             for chr in textField.text! {
                 if (!(chr >= "a" && chr <= "z" ) && !(chr >= "A" && chr <= "Z") && !(chr == " ")) {
                    flag = false
                     
                 }
             }
-            if flag == false {
+            if flag == false { //not character
                 invalideMessage(textfield: cardHolderNameField )
                 
             }else{
@@ -254,13 +244,13 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
                 }
             }
             
-        case 2 :
+        case 2 : //date
             let str = textField.text!
-            var date = str.removeSlash()
+            let date = str.removeSlash()
             if date.count == 4 {
                       let dateFormatterGet = DateFormatter()
                      dateFormatterGet.dateFormat = "MM/YY"
-                    if let date = dateFormatterGet.date(from: textField.text!) as? Date {
+                if dateFormatterGet.date(from: textField.text!) != nil {
                         validateMessage(textfield:expirationDateField)
                         
                                  if validationOfDate() {
@@ -278,7 +268,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
             }else{   // not 4 not zero
                 invalideMessage(textfield: expirationDateField)
             }
-        case 3 :
+        case 3 :  // ccv
             if textField.text != ""{
                 testValiditeOfCCV(str: textField.text!)
             }else{
@@ -292,7 +282,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let char = string.cString(using: String.Encoding.utf8)
         let isBackSpace: Int = Int(strcmp(char, "\u{8}"))
-        if isBackSpace == -8 {
+        if isBackSpace == -8 { // press backspace
             backspace = true
             backspaceForSlash = true
         }else{
@@ -304,9 +294,16 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
     func errormessage(error : String)->Void{
         self.lblVGError.text = error
     }
+     func fillField(Number:String,Name:String,Date:String,Ccv:String,CardType:Int){
+          updateCardType(creditCardNumber : Number)
+          cardNumberField.text = Number
+          cardHolderNameField.text = Name
+          expirationDateField.text = Date
+          ccvField.text = Ccv
+     }
     
     //MARK:- function for cardNumber
-    func updateCardType(creditCardNumber : String){
+    func updateCardType(creditCardNumber : String){  //get type of card 
          cardType  = CardType.getCreditCardType(creditCardNumber: creditCardNumber)
          let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
          let image = UIImage(named: cardType!.mImageResource!, in: frameworkBundle , compatibleWith: nil)
@@ -314,52 +311,44 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
         }
     func addSpaceToCardField(creditCardTextFieldNumber : String , spaceArray : [Int]){
         var str = creditCardTextFieldNumber
-      //  let textWithoutSpace =  str.removeWhitespaces()
-        for item in spaceArray{
-             let textWithoutSpace =  str.removeWhitespaces()
-            if (item == str.count && backspace == false) {
+       for item in spaceArray{
+             if (item == str.count && backspace == false) {
                   str.insert(" ", at: str.index(str.startIndex, offsetBy: item))
-                
-                break
+                  break
             }
         }
         cardNumberField.text = str
     }
     func testValiditeOfCCV(str:String){
          let num = Int(str)
-         if num != nil { //number
-            if cardType?.mCardScheme == "AMEX" {
-                
-           
+        guard   num != nil else{ // not number
+            invalideMessage(textfield: ccvField)
+            return
+        }
+         if cardType?.mCardScheme == "AMEX" {
                  if str.count > 4{
                      invalideMessage(textfield:ccvField)
                  } else{
                      validateMessage(textfield: ccvField)
                  }
             
-          }else{ //notamex
+            }else{ //notamex
                 if str.count > 3{
                       invalideMessage(textfield: ccvField)
                 } else{
                     validateMessage(textfield: ccvField)
                }
-          }
-        }else{//notnumber
-            invalideMessage(textfield: ccvField)
-        }
+           }
+       
         
     }
-   //
+   //validate of date after typing
     func validationOfDate()->Bool{
         let date = Date() //current date
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/yy"
         let result = formatter.string(from: date)
-        print(result)
-        
-        
         let r = "02/" +  result
-        print(r)
         let dateFormatter1 = DateFormatter()
         dateFormatter1.dateFormat = "dd/MM/yy"
         let currentdate = dateFormatter1.date(from:r)
@@ -367,15 +356,15 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yy"
         let s = dateFormatter.date(from:dateString)
-         if s! >= currentdate!{
+         if s! >= currentdate!{ //compare date with current date
             return true
         }else{
             return false
         }
     }
-    // function for datewhen typing
+    // function for date when typing
     func detectvalidateDateWhenTyping(str:String){
-        let date = str.removeSlash()
+        let date = str.removeSlash()//date with no slash
          guard   str != "" else{  //empty
               validateMessage(textfield:expirationDateField)
          return
@@ -390,7 +379,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
         }
         validateMessage(textfield:expirationDateField)
         if str.count == 2 && str[1] != "/" && backspaceForSlash == false{
-            expirationDateField.text = str + "/"
+            expirationDateField.text = str + "/" // add slash after 2 digit
         }
         if date.count > 4 {
             invalideMessage(textfield:expirationDateField)

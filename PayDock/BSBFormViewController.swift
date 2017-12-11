@@ -60,15 +60,11 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate, delegateError
             requireMessage(textfield: BSBNumber)
         }
         if(valid ){
-            //  let expect = expectation(description: "PayDockSDK.TokenTest")
-            
             let account = BSB(gatewayId: gatewayId, accountNumber: AccountNumber.text!, accountName: AccountName.text!, accountBSB: BSBNumber.text!)
             let paymentSource = PaymentSource.bsb(value: account)
             let tokenRequest = TokenRequest(customer: customerRequest, address: address, paymentSource: paymentSource)
-//            print("secondcompletion\(completionHandlerForSecondButton)")
             PayDock.shared.create(token: tokenRequest,completion: completionHandler)
-//            // self.waitForExpectations(timeout: 1000, handler: nil)
-            
+          
         }
     }
     //MARK:-lifecycle
@@ -80,15 +76,12 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate, delegateError
         AccountNumber.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
         AccountName.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
         BSBNumber.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
-        // Do any additional setup after loading the view.
-    }
+       }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     //MARK:- Function for textfield
     func textFieldDidChange(textField: UITextField){
         switch textField.tag{
@@ -154,10 +147,9 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate, delegateError
                     
                 }
             }
-            if flag == false {
+            if flag == false { // not character
                 invalideMessage(textfield: AccountName)
-                
-            }else{
+             }else{
                 validateMessage(textfield: AccountName)
                 if textField.text! == ""{
                     requireMessage(textfield: AccountName)
@@ -168,7 +160,7 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate, delegateError
             if num1 != nil {
                 validateMessage(textfield: BSBNumber)
             }else{ //notnumber
-                if textField.text != ""{
+                if textField.text != ""{ //not empty and not number
                     invalideMessage(textfield: BSBNumber)
                 }else{
                     requireMessage(textfield: BSBNumber)
@@ -177,10 +169,7 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate, delegateError
         default :
             print("error")
         }
-        
-        
-        
-    }
+     }
     func validateMessage(textfield:UITextField){
         let myColor = UIColor.clear
         textfield.layer.borderColor = myColor.cgColor

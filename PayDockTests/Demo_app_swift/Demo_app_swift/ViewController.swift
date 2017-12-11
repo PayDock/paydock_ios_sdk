@@ -1,3 +1,4 @@
+
 //
 //  ViewController.swift
 //  Demo_app_swift
@@ -9,12 +10,12 @@
 import UIKit
 @testable import PayDock
 
-class ViewController: UIViewController  {
+class ViewController: UIViewController ,delegateCamera,CardIOPaymentViewControllerDelegate {
 
     @IBOutlet weak var containerView: UIView!
     // MARK:- variable
     var delegateError : delegateError? = nil
-    
+    var delegatefillCamera :delegatefillCamera? = nil
     let address = Address(line1: "one", line2: "two", city: "city", postcode: "1234", state: "state", country: "AU")
     let cardGatewayId: String = "5819a158cd38a5b21a56a099"
     let bsbGatewayId: String = "5819a158cd38a5b21a56a099"
@@ -37,11 +38,11 @@ class ViewController: UIViewController  {
         controller.address = address
         controller.gatewayId = cardGatewayId
         controller.customerRequest = customerRequest
-        
+        controller.delegateCamera = self
         controller.completionHandler = completionHandler
         
         delegateError = controller
-        
+        delegatefillCamera = controller
         containerView.subviews.forEach {
             $0.removeFromSuperview()
         }
@@ -85,43 +86,13 @@ class ViewController: UIViewController  {
                         
                         let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
                         let storyboard = UIStoryboard(name: "cardForm", bundle: frameworkBundle)
-                        let controller = storyboard.instantiateViewController(withIdentifier: "ValtFormViewController") as! ValtFormViewController
+                        let controller = storyboard.instantiateViewController(withIdentifier: "VaultViewController") as! VaultViewController
                         controller.paymentSource = paymentSourceList
-                        
-                        
-                        for item in paymentSourceList{
-                            print("item\(item)")
-                            var itemDictionary = item.toDictionary()
-                            
-                            if itemDictionary != nil{
-                                   var primary = itemDictionary["primary"] as! Bool
-                                 print("primary \(primary)")
-                            
-                            
-                                 if itemDictionary["type"] as!String == "bsb"{
-                                      var accountNumber = itemDictionary["account_number"] as! String
-                                     print("Accountnumber\(accountNumber)")
-                                     var accountName = itemDictionary["account_name"] as! String
-                                     print("accountname\(accountName)")
-                                }else{ //account
-                                     if let scheme = itemDictionary["card_scheme"] as? String
-                                      {
-                                       print("scheme\(scheme)")
-                                     }
-                                    if let last4number = itemDictionary["card_number_last4"] as? String{
-                                      print("last4number\(last4number)")
-                                    }
-                                   if let accountName = itemDictionary["card_name"] as? String{
-                                      print("accountname\(accountName)")
-                                   }
-                                
-                                
-                            }
-                            print("&&&\(itemDictionary)")
-                            }
-                              print("****************************")
+                        self.containerView.subviews.forEach { $0.removeFromSuperview()
                         }
-                        //print(paymentSourceList)
+                        self.addChildViewController(controller)
+                        self.containerView.addSubview(controller.view)
+                        controller.didMove(toParentViewController: self)
                         
                         
                     } catch let error {
@@ -137,6 +108,7 @@ class ViewController: UIViewController  {
         PayDock.setSecretKey(key: "")
         PayDock.setPublicKey(key: "774bda747d01571b8efb0b5a102bc945787b1cdb")
         PayDock.shared.isSandbox = true
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -162,7 +134,40 @@ class ViewController: UIViewController  {
     }
     //MARK:- function
 
-  
+    func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
+
+        if let info = cardInfo {
+            let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
+           // self.resultLabel.text = str as String
+          //  print("result\(self.resultLabel.text)")
+         print("cardtype\(info.cardType.rawValue)")
+           print("cardInfo.cardType\(cardInfo.cardType)")
+            print("creditcardnumber \(info.redactedCardNumber)")
+            var date = "\(info.expiryMonth)/\( info.expiryYear)"
+        delegatefillCamera?.fillField(Number:info.redactedCardNumber,Name:"",Date:date,Ccv:info.cvv,CardType:info.cardType.rawValue)
+            
+        }else{
+            print("result")
+        }
+        paymentViewController?.dismiss(animated: true, completion: nil)
+    }
     
+    func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
+
+      //  resultLabel.text = "user canceled"
+        paymentViewController?.dismiss(animated: true, completion: nil)
+    }
+    func carmeraFunction(){
+        let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
+        cardIOVC?.modalPresentationStyle = .formSheet
+        present(cardIOVC!, animated: true, completion: nil)
+//
+    }
+    func loadFunction(){
+        CardIOUtilities.preload()
+        if( !CardIOUtilities.canReadCardWithCamera()){
+            print("hello")
+        }
+    }
 }
 

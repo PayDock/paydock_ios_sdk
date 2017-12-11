@@ -72,13 +72,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		44F0E0BA1F976D40003898B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 44F0E0B61F976D3F003898B1 /* Demo_app_swift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 44F0E0A11F976D3F003898B1;
-			remoteInfo = Demo_app_swift;
-		};
 		8435D07D1E9B49E300AE0BAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8435D0691E9B49E200AE0BAA /* Project object */;
@@ -97,7 +90,6 @@
 		448332171F405EA300F87FF7 /* externalCheckoutAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = externalCheckoutAdd.json; sourceTree = "<group>"; };
 		44F0E08E1F917494003898B1 /* cardForm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = cardForm.storyboard; sourceTree = "<group>"; };
 		44F0E0901F91802F003898B1 /* CardFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFormViewController.swift; sourceTree = "<group>"; };
-		44F0E0B61F976D3F003898B1 /* Demo_app_swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Demo_app_swift.xcodeproj; path = Demo_app_swift/Demo_app_swift.xcodeproj; sourceTree = "<group>"; };
 		840009391EAE1C6000877866 /* chargeList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeList.json; sourceTree = "<group>"; };
 		8400093A1EAE1C6000877866 /* chargeInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeInfo.json; sourceTree = "<group>"; };
 		8400093B1EAE1C6000877866 /* chargeAdd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeAdd.json; sourceTree = "<group>"; };
@@ -150,7 +142,6 @@
 		CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7BCF871FB32DF2001D4D83 /* ConstantsUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUi.swift; sourceTree = "<group>"; };
 		CE8280C31FB1A5CC007C08D3 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
-		CE879A191FB8525900833A2E /* PayDock.build */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PayDock.build; path = "build/PayDock.build/Release-iphoneos/PayDock.build"; sourceTree = "<group>"; };
 		CE879A1B1FB8728D00833A2E /* VaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultViewController.swift; sourceTree = "<group>"; };
 		CE879A1F1FB89F3600833A2E /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,14 +171,6 @@
 				448332111F40449600F87FF7 /* ExternalCheckout.swift */,
 			);
 			name = ExternalCheckout;
-			sourceTree = "<group>";
-		};
-		44F0E0B71F976D3F003898B1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				44F0E0BB1F976D40003898B1 /* Demo_app_swift.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		840009381EAE1C4700877866 /* Jsons */ = {
@@ -269,7 +252,6 @@
 				8435D0741E9B49E300AE0BAA /* PayDock */,
 				8435D07F1E9B49E300AE0BAA /* PayDockTests */,
 				8435D0731E9B49E300AE0BAA /* Products */,
-				CE879A171FB8525800833A2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -309,7 +291,6 @@
 		8435D07F1E9B49E300AE0BAA /* PayDockTests */ = {
 			isa = PBXGroup;
 			children = (
-				44F0E0B61F976D3F003898B1 /* Demo_app_swift.xcodeproj */,
 				840009381EAE1C4700877866 /* Jsons */,
 				8435D0801E9B49E300AE0BAA /* ChargeIntergrationTests.swift */,
 				8418A45A1EADC012007FBC13 /* CustomerIntegrationTests.swift */,
@@ -372,14 +353,6 @@
 			name = Subscription;
 			sourceTree = "<group>";
 		};
-		CE879A171FB8525800833A2E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CE879A191FB8525900833A2E /* PayDock.build */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -416,9 +389,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8435D0891E9B49E300AE0BAA /* Build configuration list for PBXNativeTarget "PayDockTests" */;
 			buildPhases = (
+				BF84C9C90A4D064DC9E6B7D9 /* [CP] Check Pods Manifest.lock */,
 				8435D0771E9B49E300AE0BAA /* Sources */,
 				8435D0781E9B49E300AE0BAA /* Frameworks */,
 				8435D0791E9B49E300AE0BAA /* Resources */,
+				E858742B3CA49C5480759AC6 /* [CP] Embed Pods Frameworks */,
+				E7B2160FF98B15D78593FAD9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -463,12 +439,6 @@
 			mainGroup = 8435D0681E9B49E200AE0BAA;
 			productRefGroup = 8435D0731E9B49E300AE0BAA /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 44F0E0B71F976D3F003898B1 /* Products */;
-					ProjectRef = 44F0E0B61F976D3F003898B1 /* Demo_app_swift.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8435D0711E9B49E200AE0BAA /* PayDock */,
@@ -476,16 +446,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		44F0E0BB1F976D40003898B1 /* Demo_app_swift.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Demo_app_swift.app;
-			remoteRef = 44F0E0BA1F976D40003898B1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8435D0701E9B49E200AE0BAA /* Resources */ = {
@@ -517,6 +477,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF84C9C90A4D064DC9E6B7D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PayDockTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7B2160FF98B15D78593FAD9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayDockTests/Pods-PayDockTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E858742B3CA49C5480759AC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayDockTests/Pods-PayDockTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8435D06D1E9B49E200AE0BAA /* Sources */ = {
@@ -632,7 +643,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -680,7 +691,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -712,6 +723,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -735,6 +747,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

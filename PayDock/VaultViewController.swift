@@ -15,11 +15,11 @@ class VaultViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     // MARK:- variable
     var paymentSource :[PaymentSource]?
     
-    
+    //MARK:-lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self as! UITableViewDelegate
-        tableView.dataSource = self as! UITableViewDelegate as! UITableViewDataSource
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
 
@@ -27,70 +27,79 @@ class VaultViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //MARK:- Table function
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "CustomCellTableViewCell") as! CustomCellTableViewCell
-        var itemDictionary = paymentSource![indexPath.row].toDictionary()
-            
-            if itemDictionary != nil{
-                var primary = itemDictionary["primary"] as! Bool
-                print("primary \(primary)")
+        var itemDictionary = paymentSource?[indexPath.row].toDictionary()
+        if itemDictionary != nil{
+             if let primary = itemDictionary!["primary"] as? Bool{
                 if primary == true {
                     let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
                     let image = UIImage(named: "icTick", in: frameworkBundle , compatibleWith: nil)
-                  cell.primaryImg.image = image
+                    cell.primaryImg.image = image
+                }else{
+                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                    let image = UIImage(named: "", in: frameworkBundle , compatibleWith: nil)
+                    cell.primaryImg.image = image
                 }
-                if itemDictionary["type"] as!String == "bsb"{
-                    var accountNumber = itemDictionary["account_number"] as! String
-                    print("Accountnumber\(accountNumber)")
-                    cell.numberLabel.text = accountNumber
-                    var accountName = itemDictionary["account_name"] as! String
+            }
+            if itemDictionary!["type"] as!String == "bsb"{
+                if let accountNumber = itemDictionary!["account_number"] as? String
+                {
+                     cell.numberLabel.text = accountNumber
+                }
+                if let accountName = itemDictionary!["account_name"] as? String {
                     print("accountname\(accountName)")
                     cell.nameLabel.text = accountName
-                    
-                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
-                    let image = UIImage(named: "icBank" , in: frameworkBundle , compatibleWith: nil)
-                    cell.typeImg.image = image
-                }else{ //account
-                    if let scheme = itemDictionary["card_scheme"] as? String
-                    {
-                        let cardName = ["visa","MasterCard","AMEX","Diners Club" ,"China Union Pay"]
-                        let cardimg = ["icvisa","icmastercard","icamex","icdiners","iccup"]
-                        print("scheme\(scheme)")
-                        
-                        let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
-                        for i in 0 ..< cardName.count{
-                            if scheme == cardName[i]  {
-                                let image = UIImage(named: cardimg[i], in: frameworkBundle , compatibleWith: nil)
-                                cell.typeImg.image = image
-                            }
-                        }
-                        
-                    }
-                    if let last4number = itemDictionary["card_number_last4"] as? String{
-                        print("last4number\(last4number)")
-                        cell.numberLabel.text = last4number
-                    }
-                    if let accountName = itemDictionary["card_name"] as? String{
-                        print("accountname\(accountName)")
-                        cell.nameLabel.text = accountName
-                    }
-                    
-                    
                 }
-                print("&&&\(itemDictionary)")
-            
-            print("****************************")
+                let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                let image = UIImage(named: "icBank" , in: frameworkBundle , compatibleWith: nil)
+                cell.typeImg.image = image
+            }else{ //card
+                if let scheme = itemDictionary!["card_scheme"] as? String
+                {
+                    let cardName = ["visa","mastercard","amex","diners" ,"cup"]
+                    let cardimg = ["icvisa","icmastercard","icamex","icdiners","iccup"]
+                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                    var flag = false
+                    for i in 0 ..< cardName.count{
+                        if scheme == cardName[i]  { //fill imageview with suitable card
+                            let image = UIImage(named: cardimg[i], in: frameworkBundle , compatibleWith: nil)
+                            cell.typeImg.image = image
+                            flag = true
+                        }
+                    }
+                    if flag == false{
+                        let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
+                        cell.typeImg.image = image
+                    }
+                }
+                if let last4number = itemDictionary!["card_number_last4"] as? String{
+                        cell.numberLabel.text = last4number
+                }
+                if let accountName = itemDictionary!["card_name"] as? String{
+                    cell.nameLabel.text = accountName
+                }
+         }
         }
-        
-        
-        
         return cell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-   
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (paymentSource?.count)!
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var itemDictionary = paymentSource?[indexPath.row].toDictionary()
+        
+        if itemDictionary != nil{
+            if let gateway = itemDictionary!["gateway_id"] as? String{
+                print("gateway\(gateway)")
+            }
+        }
     }
 }
