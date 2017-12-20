@@ -97,8 +97,8 @@ class VaultViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         var itemDictionary = paymentSource?[indexPath.row].toDictionary()
         
         if itemDictionary != nil{
-            if let gateway = itemDictionary!["gateway_id"] as? String{
-                print("gateway\(gateway)")
+            if let paymentSourceId = itemDictionary!["id"] as? String{
+                print("payment_source_id \(paymentSourceId)")
             }
         }
     }
