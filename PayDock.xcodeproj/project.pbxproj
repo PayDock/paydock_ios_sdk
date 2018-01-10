@@ -57,6 +57,7 @@
 		84DEA9CD1EAB21EA00A001E8 /* ChargeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEA9CC1EAB21EA00A001E8 /* ChargeRequest.swift */; };
 		84F3DC421EB46140001101C7 /* ModelMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3DC411EB46140001101C7 /* ModelMapTests.swift */; };
 		84F3DC441EB46767001101C7 /* PayDockSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3DC431EB46767001101C7 /* PayDockSessionTests.swift */; };
+		995F61BE2005D0D100DAD7F3 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F61BD2005D0D100DAD7F3 /* Checkout.swift */; };
 		A553C8BB1EA75BF500E3E872 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8BA1EA75BF500E3E872 /* Subscription.swift */; };
 		A553C8BF1EA75D1700E3E872 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8BE1EA75D1700E3E872 /* Schedule.swift */; };
 		A553C8C11EA77CD100E3E872 /* SubscriptionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8C01EA77CD100E3E872 /* SubscriptionServices.swift */; };
@@ -133,6 +134,7 @@
 		84DEA9CC1EAB21EA00A001E8 /* ChargeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChargeRequest.swift; path = Models/Parameters/ChargeRequest.swift; sourceTree = "<group>"; };
 		84F3DC411EB46140001101C7 /* ModelMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMapTests.swift; sourceTree = "<group>"; };
 		84F3DC431EB46767001101C7 /* PayDockSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayDockSessionTests.swift; sourceTree = "<group>"; };
+		995F61BD2005D0D100DAD7F3 /* Checkout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
 		A553C8BA1EA75BF500E3E872 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = Models/Subscription/Subscription.swift; sourceTree = "<group>"; };
 		A553C8BE1EA75D1700E3E872 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Schedule.swift; path = Models/Subscription/Schedule.swift; sourceTree = "<group>"; };
 		A553C8C01EA77CD100E3E872 /* SubscriptionServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionServices.swift; path = Services/SubscriptionServices.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				8426B88E1EA75F200038AC39 /* Card.swift */,
 				8426B8901EA75F450038AC39 /* BankAccount.swift */,
 				8426B8921EA75F590038AC39 /* BSB.swift */,
+				995F61BD2005D0D100DAD7F3 /* Checkout.swift */,
 			);
 			name = "Payment Sources";
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D4B6201EA2219E003433F0 /* Errors.swift in Sources */,
+				995F61BE2005D0D100DAD7F3 /* Checkout.swift in Sources */,
 				CE7BCF881FB32DF2001D4D83 /* ConstantsUi.swift in Sources */,
 				8426B8841EA61CAD0038AC39 /* Customer.swift in Sources */,
 				A553C8C11EA77CD100E3E872 /* SubscriptionServices.swift in Sources */,
