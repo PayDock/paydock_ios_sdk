@@ -19,6 +19,7 @@ public enum PaymentSource: Parameterable, Mapable {
     case card(value: Card)
     case bankAccount(value: BankAccount)
     case bsb(value: BSB)
+    case checkout(value: Checkout)
     
     typealias Kind = PaymentSource
     
@@ -30,6 +31,8 @@ public enum PaymentSource: Parameterable, Mapable {
             return bankAccount.toDictionary()
         case .bsb(let bsb):
             return bsb.toDictionary()
+        case .checkout(let checkout):
+            return checkout.toDictionary()
         }
     }
     
@@ -49,10 +52,9 @@ public enum PaymentSource: Parameterable, Mapable {
             return
         } else if let type: String? = try? json.value(for: "type") {
             if type == "card" {
-            let card: Card = try Card(json: json)
-            self = PaymentSource.card(value: card)
-                return
-                
+                let card: Card = try Card(json: json)
+                self = PaymentSource.card(value: card)
+            return
             } else if type == "bsb" {
                 let bsb: BSB = try BSB(json: json)
                 self = PaymentSource.bsb(value: bsb)
@@ -60,6 +62,11 @@ public enum PaymentSource: Parameterable, Mapable {
             } else if type == "bank_account" {
                 let account: BankAccount = try BankAccount(json: json)
                 self = PaymentSource.bankAccount(value: account)
+            return
+            } else if type == "checkout" {
+                let checkout: Checkout = try Checkout(json: json)
+                self = PaymentSource.checkout(value: checkout)
+                
             return
             }
         }
