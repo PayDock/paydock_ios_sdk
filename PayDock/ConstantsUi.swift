@@ -22,5 +22,5 @@ class ConstantsUi {
     let bSBNumberIsRequired = "BSB number is required"
     let bSBNumberIsInvalid = "BSB number is invalid"
     let bankAccountNameIsRequired = "Bank account name is required"
-    let bankAccountNameIsInvalide = "Bank account name is invalide"
+    let bankAccountNameIsInvalide = "Bank account name is invalid"
 }

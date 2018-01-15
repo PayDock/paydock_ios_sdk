@@ -19,7 +19,7 @@ protocol delegateCamera : class{
     func carmeraFunction()->Void
     func loadFunction()
 }
-class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateError,delegatefillCamera{
+class CardFormViewController: UIViewController ,UITextFieldDelegate, delegateError, delegatefillCamera{
     
     //MARK:- IBoutlet
     @IBOutlet weak var imgCard: UIImageView!
@@ -83,7 +83,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
   
     //MARK:- IBoutlet
     
-    @IBAction func cardSubmitPressed(_ sender: Any) {
+    @IBAction func pressSubmit(_ sender: Any) {
         
         var valid = true
         if (cardNumberField.text == "")
@@ -163,14 +163,17 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
                     }
                     addSpaceToCardField(creditCardTextFieldNumber: textField.text!,spaceArray: spaceIndics!)
                     let maxflag =  cardType?.greaterThanMax(creditCardNumber: textWithoutSpace)
-                    if maxflag == true { //greater than max
-                      invalideMessage(textfield:  cardNumberField)
-                      let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
-                      let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
-                      imgCard.image = image
-                    }else{
-                     lblVNumber.text = ""
-                    }
+//                    if maxflag == true { //greater than max
+//                      invalideMessage(textfield:  cardNumberField)
+//                      let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+//                      let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
+//                      imgCard.image = image
+//                    }else{
+//                     lblVNumber.text = ""
+//                    }
+                if maxflag == true {
+                    textField.deleteBackward()
+                }
                 
             }
         }else if textField.tag == 1{//card name field
@@ -327,14 +330,16 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
         }
          if cardType?.mCardScheme == "AMEX" {
                  if str.count > 4{
-                     invalideMessage(textfield:ccvField)
+//                     invalideMessage(textfield: ccvField)
+                    ccvField.deleteBackward()
                  } else{
                      validateMessage(textfield: ccvField)
                  }
             
             }else{ //notamex
                 if str.count > 3{
-                      invalideMessage(textfield: ccvField)
+//                      invalideMessage(textfield: ccvField)
+                    ccvField.deleteBackward()
                 } else{
                     validateMessage(textfield: ccvField)
                }

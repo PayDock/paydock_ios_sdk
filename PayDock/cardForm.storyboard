@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AtH-eo-ZKD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AtH-eo-ZKD">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -83,18 +83,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKX-e4-SOD">
-                                <rect key="frame" x="108" y="436" width="104" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7rv-m4-pps"/>
-                                    <constraint firstAttribute="width" constant="104" id="yT7-rR-qh7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="cardSubmitPressed:" destination="AtH-eo-ZKD" eventType="touchUpInside" id="lbB-k2-gRM"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IF-T6-uXl" userLabel="Gateway Error Label">
                                 <rect key="frame" x="32" y="389" width="268" height="28"/>
                                 <constraints>
@@ -140,7 +128,6 @@
                             <constraint firstItem="uUT-wW-aKI" firstAttribute="top" secondItem="d5x-8t-dux" secondAttribute="bottom" id="RmN-jY-z1u"/>
                             <constraint firstItem="d5x-8t-dux" firstAttribute="top" secondItem="orV-jw-6M7" secondAttribute="bottom" constant="197" id="VQQ-zC-3VA"/>
                             <constraint firstItem="VaT-Ue-wWJ" firstAttribute="centerY" secondItem="rCA-rl-Qjx" secondAttribute="centerY" id="W7a-FI-AKC"/>
-                            <constraint firstItem="EKX-e4-SOD" firstAttribute="centerX" secondItem="qIg-AO-zfE" secondAttribute="centerX" id="YDC-0V-veT"/>
                             <constraint firstItem="4IF-T6-uXl" firstAttribute="top" secondItem="rCA-rl-Qjx" secondAttribute="bottom" constant="29" id="Zq8-uz-TXt"/>
                             <constraint firstItem="2Vo-wa-xAv" firstAttribute="leading" secondItem="d5x-8t-dux" secondAttribute="leading" id="b9I-Gd-T6r"/>
                             <constraint firstItem="rpU-Ay-Vrt" firstAttribute="top" secondItem="2Vo-wa-xAv" secondAttribute="bottom" constant="-30" id="dHm-63-mrD"/>
@@ -153,7 +140,6 @@
                             <constraint firstItem="mNU-Xf-hS7" firstAttribute="top" secondItem="rCA-rl-Qjx" secondAttribute="bottom" constant="1" id="trV-4n-5FC"/>
                             <constraint firstItem="2Vo-wa-xAv" firstAttribute="top" secondItem="uUT-wW-aKI" secondAttribute="bottom" constant="5" id="uvI-n8-wrm"/>
                             <constraint firstItem="rCA-rl-Qjx" firstAttribute="top" secondItem="Xzu-0e-mij" secondAttribute="bottom" constant="5" id="vWw-Xu-vv0"/>
-                            <constraint firstItem="EKX-e4-SOD" firstAttribute="top" secondItem="mNU-Xf-hS7" secondAttribute="bottom" constant="54" id="x6J-a6-fsJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -221,18 +207,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMx-KH-sni">
-                                <rect key="frame" x="108" y="436" width="104" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="104" id="He7-SC-clL"/>
-                                    <constraint firstAttribute="height" constant="30" id="TmK-Gv-uaI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="pressSubmit:" destination="mhU-TG-OA1" eventType="touchUpInside" id="2Ih-EY-cuF"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYd-jw-MEK" userLabel="Gateway Error Label">
                                 <rect key="frame" x="32" y="389" width="268" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -248,8 +222,6 @@
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="DMx-KH-sni" firstAttribute="centerX" secondItem="peh-WP-aik" secondAttribute="centerX" id="0XV-dM-wdn"/>
-                            <constraint firstItem="DMx-KH-sni" firstAttribute="top" secondItem="KYd-jw-MEK" secondAttribute="bottom" constant="47" id="1yT-TF-eZq"/>
                             <constraint firstAttribute="trailing" secondItem="KYd-jw-MEK" secondAttribute="trailing" constant="20" id="2fk-uy-0Ay"/>
                             <constraint firstItem="Di5-IE-4cJ" firstAttribute="top" secondItem="57z-sH-y8F" secondAttribute="bottom" constant="197" id="2tS-g5-4nm"/>
                             <constraint firstItem="Di5-IE-4cJ" firstAttribute="leading" secondItem="peh-WP-aik" secondAttribute="leading" constant="16" id="64Y-MN-Is0"/>

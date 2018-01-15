@@ -114,6 +114,9 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate, delegateError
             let num1 = Int(textField.text!)
             if num1 != nil { //number
                 validateMessage(textfield: BSBNumber)
+                if (textField.text!.count > 6){
+                    textField.deleteBackward();
+                }
             }else{//notnumber
                 if textField.text != ""{
                     invalideMessage(textfield:BSBNumber)
