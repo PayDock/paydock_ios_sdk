@@ -40,7 +40,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
     
     @IBOutlet weak var lblVccv: UILabel!
     
-    @IBOutlet weak var lblVGError: UILabel!
+    //@IBOutlet weak var lblVGError: UILabel!
     // MARK:- variable
     var gatewayId: String = ""
     var address :Address? = nil
@@ -81,9 +81,8 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
         super.didReceiveMemoryWarning()
      }
   
-    //MARK:- IBoutlet
     
-    @IBAction func cardSubmitPressed(_ sender: Any) {
+    public func getToken() {
         
         var valid = true
         if (cardNumberField.text == "")
@@ -125,7 +124,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
     }
     // MARK:- Textfield function
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.lblVGError.text = ""
+        //self.lblVGError.text = ""
         switch  textField.tag {
         case 0:
             validateMessage(textfield: cardNumberField)
@@ -292,7 +291,8 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate , delegateEr
         return true
     }
     func errormessage(error : String)->Void{
-        self.lblVGError.text = error
+        debugPrint(error)
+        //self.lblVGError.text = error
     }
      func fillField(Number:String,Name:String,Date:String,Ccv:String,CardType:Int){
           updateCardType(creditCardNumber : Number)

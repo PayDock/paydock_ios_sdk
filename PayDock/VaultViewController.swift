@@ -88,7 +88,7 @@ class VaultViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         return 1
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 100
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (paymentSource?.count)!
