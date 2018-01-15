@@ -10,8 +10,8 @@
 import UIKit
 @testable import PayDock
 
-class ViewController: UIViewController ,delegateCamera,CardIOPaymentViewControllerDelegate {
-
+class ViewController: UIViewController {
+ 
     @IBOutlet weak var containerView: UIView!
     // MARK:- variable
     var delegateError : delegateError? = nil
@@ -38,7 +38,6 @@ class ViewController: UIViewController ,delegateCamera,CardIOPaymentViewControll
         controller.address = address
         controller.gatewayId = cardGatewayId
         controller.customerRequest = customerRequest
-        controller.delegateCamera = self
         controller.completionHandler = completionHandler
         
         delegateError = controller
@@ -131,43 +130,6 @@ class ViewController: UIViewController ,delegateCamera,CardIOPaymentViewControll
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    //MARK:- function
-
-    func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
-
-        if let info = cardInfo {
-            let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
-           // self.resultLabel.text = str as String
-          //  print("result\(self.resultLabel.text)")
-         print("cardtype\(info.cardType.rawValue)")
-           print("cardInfo.cardType\(cardInfo.cardType)")
-            print("creditcardnumber \(info.redactedCardNumber)")
-            var date = "\(info.expiryMonth)/\( info.expiryYear)"
-        delegatefillCamera?.fillField(Number:info.redactedCardNumber,Name:"",Date:date,Ccv:info.cvv,CardType:info.cardType.rawValue)
-            
-        }else{
-            print("result")
-        }
-        paymentViewController?.dismiss(animated: true, completion: nil)
-    }
-    
-    func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
-
-      //  resultLabel.text = "user canceled"
-        paymentViewController?.dismiss(animated: true, completion: nil)
-    }
-    func carmeraFunction(){
-        let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
-        cardIOVC?.modalPresentationStyle = .formSheet
-        present(cardIOVC!, animated: true, completion: nil)
-//
-    }
-    func loadFunction(){
-        CardIOUtilities.preload()
-        if( !CardIOUtilities.canReadCardWithCamera()){
-            print("hello")
-        }
     }
 }
 

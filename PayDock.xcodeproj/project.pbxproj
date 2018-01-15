@@ -57,6 +57,7 @@
 		84DEA9CD1EAB21EA00A001E8 /* ChargeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEA9CC1EAB21EA00A001E8 /* ChargeRequest.swift */; };
 		84F3DC421EB46140001101C7 /* ModelMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3DC411EB46140001101C7 /* ModelMapTests.swift */; };
 		84F3DC441EB46767001101C7 /* PayDockSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3DC431EB46767001101C7 /* PayDockSessionTests.swift */; };
+		99011944200CA508002BB394 /* Demo_app_swift in Resources */ = {isa = PBXBuildFile; fileRef = 99011943200CA508002BB394 /* Demo_app_swift */; };
 		995F61BE2005D0D100DAD7F3 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F61BD2005D0D100DAD7F3 /* Checkout.swift */; };
 		A553C8BB1EA75BF500E3E872 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8BA1EA75BF500E3E872 /* Subscription.swift */; };
 		A553C8BF1EA75D1700E3E872 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8BE1EA75D1700E3E872 /* Schedule.swift */; };
@@ -79,6 +80,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8435D0711E9B49E200AE0BAA;
 			remoteInfo = PayDock;
+		};
+		99011969200CA581002BB394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99011965200CA580002BB394 /* SampleApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9901194E200CA57F002BB394;
+			remoteInfo = SampleApp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -134,6 +142,8 @@
 		84DEA9CC1EAB21EA00A001E8 /* ChargeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChargeRequest.swift; path = Models/Parameters/ChargeRequest.swift; sourceTree = "<group>"; };
 		84F3DC411EB46140001101C7 /* ModelMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMapTests.swift; sourceTree = "<group>"; };
 		84F3DC431EB46767001101C7 /* PayDockSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayDockSessionTests.swift; sourceTree = "<group>"; };
+		99011943200CA508002BB394 /* Demo_app_swift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Demo_app_swift; path = PayDockTests/Demo_app_swift; sourceTree = "<group>"; };
+		99011965200CA580002BB394 /* SampleApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SampleApp.xcodeproj; path = SampleApp/SampleApp.xcodeproj; sourceTree = "<group>"; };
 		995F61BD2005D0D100DAD7F3 /* Checkout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
 		A553C8BA1EA75BF500E3E872 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = Models/Subscription/Subscription.swift; sourceTree = "<group>"; };
 		A553C8BE1EA75D1700E3E872 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Schedule.swift; path = Models/Subscription/Schedule.swift; sourceTree = "<group>"; };
@@ -252,6 +262,8 @@
 		8435D0681E9B49E200AE0BAA = {
 			isa = PBXGroup;
 			children = (
+				99011965200CA580002BB394 /* SampleApp.xcodeproj */,
+				99011943200CA508002BB394 /* Demo_app_swift */,
 				8435D0741E9B49E300AE0BAA /* PayDock */,
 				8435D07F1E9B49E300AE0BAA /* PayDockTests */,
 				8435D0731E9B49E300AE0BAA /* Products */,
@@ -345,6 +357,14 @@
 				84D4B61D1EA206F2003433F0 /* PayDockSession.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		99011966200CA580002BB394 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9901196A200CA581002BB394 /* SampleApp.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A5226A3E1EA79730004F1EF1 /* Subscription */ = {
@@ -442,6 +462,12 @@
 			mainGroup = 8435D0681E9B49E200AE0BAA;
 			productRefGroup = 8435D0731E9B49E300AE0BAA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 99011966200CA580002BB394 /* Products */;
+					ProjectRef = 99011965200CA580002BB394 /* SampleApp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8435D0711E9B49E200AE0BAA /* PayDock */,
@@ -450,12 +476,23 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		9901196A200CA581002BB394 /* SampleApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SampleApp.app;
+			remoteRef = 99011969200CA581002BB394 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		8435D0701E9B49E200AE0BAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE7BCF861FB2FA01001D4D83 /* Assets.xcassets in Resources */,
+				99011944200CA508002BB394 /* Demo_app_swift in Resources */,
 				44F0E08F1F917494003898B1 /* cardForm.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
