@@ -15,7 +15,7 @@ class PayDockTokenTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        PayDock.setSecretKey(key: "73067bb83e485b1db4f376025c38ab103d477e66")
+        PayDock.setSecretKey(key: "")
         PayDock.setPublicKey(key: "1b0496942b784d96b660d01542aa0ceba45dd9e9")
         PayDock.shared.isSandbox = true
     }

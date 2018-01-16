@@ -66,6 +66,10 @@ public struct CustomerRequest: Parameterable {
     public init(firstName: String?, lastName: String?, email: String?, reference: String?, phone: String?, paymentSource: PaymentSource) {
         _customer = Customer(firstName: firstName, lastName: lastName, email: email, reference: reference, phone: phone, paymentSource: paymentSource)
     }
+    /// init CustomerRequest without Payment Source
+    public init(firstName: String?, lastName: String?, email: String?, reference: String?, phone: String?) {
+        _customer = Customer(firstName: firstName, lastName: lastName, email: email, reference: reference, phone: phone)
+    }
     /// init CustomerRequest with one-time Token
     public init(firstName: String?, lastName: String?, email: String?, reference: String?, phone: String?, token: String) {
         _customer = Customer(firstName: firstName, lastName: lastName, email: email, reference: reference, phone: phone, token: token)

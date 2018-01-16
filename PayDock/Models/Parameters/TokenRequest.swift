@@ -13,8 +13,8 @@ public struct TokenRequest: Parameterable {
     
     /// CustomerRequest instance
     public var customer: CustomerRequest?
-   /// Address instance
-   public  var address: Address?
+    /// Address instance
+    public  var address: Address?
     /// Payment Source Instance
     public var paymentSource: PaymentSource
     

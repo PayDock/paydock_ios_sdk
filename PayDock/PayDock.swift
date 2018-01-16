@@ -15,6 +15,7 @@ public class PayDock {
     fileprivate var customerServices: CustomerServices!
     fileprivate var subscriptionServices: SubscriptionServices!
     fileprivate var tokenServices: TokenServices!
+    fileprivate var externalCheckoutServices: ExternalCheckoutServices!
     
     /// paydock network protocol for handling requests
     var network: PayDockNetwork
@@ -60,6 +61,7 @@ public class PayDock {
         self.chargeServices = ChargeServices(network: self.network)
         self.subscriptionServices = SubscriptionServices(network: self.network)
         self.customerServices = CustomerServices(network: self.network)
+        self.externalCheckoutServices = ExternalCheckoutServices(network: self.network)
         self.tokenServices = TokenServices(network: self.network, publicKey: publicKey)
     }
     /// create a paydock class with default network class
@@ -70,12 +72,14 @@ public class PayDock {
         self.network.url = self.url
         self.chargeServices = ChargeServices(network: self.network)
         self.subscriptionServices = SubscriptionServices(network: self.network)
-        self.customerServices = CustomerServices(network: self.network)
+        self.customerServices = CustomerServices(network: self.network, publicKey: publicKey)
+        self.externalCheckoutServices = ExternalCheckoutServices(network: self.network)
         self.tokenServices = TokenServices(network: self.network, publicKey: publicKey)
         self.network.headerDictionary = [
             "content-type" : "application/json",
             "x-user-secret-key" : "\(self.secretKey)"
-        ]
+            ]
+        
     }
     /// set secret key for all instance of the PayDock
     ///
@@ -97,7 +101,7 @@ public extension PayDock {
     ///
     /// - parameter charge: ChargeRequest for charging
     /// - parameter completion: result on creating charge
-    /// - parameter chargeResponse: a throwable clouser which returns an instance of a charge filled with server returned inforamation
+    /// - parameter chargeResponse: a throwable closure which returns an instance of a charge filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.add(charge: ChargeRequest) { (chargeResponse) in
@@ -122,8 +126,8 @@ public extension PayDock {
     /// Get specific charge detail
     ///
     /// - parameter with: Charge identifier
-    /// - parameter completion: returns a clouser which returns charge or throws error
-    /// - parameter chargeResponse: a throwable clouser which returns an instance of a charge filled with server returned inforamation
+    /// - parameter completion: returns a closure which returns charge or throws error
+    /// - parameter chargeResponse: a throwable closure which returns an instance of a charge filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.getCharge(with: {{id}}) { (chargeResponse) in
@@ -147,8 +151,8 @@ public extension PayDock {
     /// Get list of charges with parameter options. nil parameters will returns all charges for the account, limited to 100 records.
     ///
     /// - parameter with: optional parameters for filtering result
-    /// - parameter completion: returns a clouser which returns charges or throws error
-    /// - parameter chargesResponse: a throwable clouser which returns an array instance of charges filled with server returned inforamation
+    /// - parameter completion: returns a closure which returns charges or throws error
+    /// - parameter chargesResponse: a throwable closure which returns an array instance of charges filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.getCharges(with: ListParameters) { (chargesResponse) in
@@ -174,8 +178,8 @@ public extension PayDock {
     ///
     /// - parameter with: Charge identifier
     /// - parameter amount: amount of money to refund
-    /// - parameter completion: returns a clouser which returns charge or throws error
-    /// - parameter chargeResponse: a throwable clouser which returns an instance of a charge filled with server returned inforamation
+    /// - parameter completion: returns a closure which returns charge or throws error
+    /// - parameter chargeResponse: a throwable closure which returns an instance of a charge filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.refundCharge(with: {{id}}, amount: Float) { (chargeResponse) in
@@ -199,8 +203,8 @@ public extension PayDock {
     /// Archive Charge to hide it it from charges list. You can still retrieve archived charges, see [Get charges list with parameters
     ///
     /// - parameter with: Charge identifier
-    /// - parameter completion: returns a clouser which returns charge or throws error
-    /// - parameter chargeResponse: a throwable clouser which returns an instance of a charge filled with server returned inforamation
+    /// - parameter completion: returns a closure which returns charge or throws error
+    /// - parameter chargeResponse: a throwable closure which returns an instance of a charge filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.archiveCharge(with: {{id}}) { (chargeResponse) in
@@ -227,8 +231,8 @@ public extension PayDock {
     /// add a customer with defualt payment source
     ///
     /// - parameter customer: customer request instance
-    /// - parameter completion: returns a clouser which returns customer or throws error
-    /// - parameter customerResponse: a throwable clouser which returns an instance of a Customer filled with server returned inforamation
+    /// - parameter completion: returns a closure which returns customer or throws error
+    /// - parameter customerResponse: a throwable closure which returns an instance of a Customer filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.add(customer: CustomerRequest) { (customerResponse) in
@@ -251,8 +255,8 @@ public extension PayDock {
     /// get details for a customer
     ///
     /// - parameter with: customer's id
-    /// - parameter completion: returns a clouser which returns customer or throws error
-    /// - parameter customerResponse: a throwable clouser which returns an instance of a Customer filled with server returned inforamation
+    /// - parameter completion: returns a closure which returns customer or throws error
+    /// - parameter customerResponse: a throwable closure which returns an instance of a Customer filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.getCustomer(with: {{id}}) { (customerResponse) in
@@ -276,8 +280,8 @@ public extension PayDock {
     /// get list of customers from server
     ///
     /// - parameter with: filter properties
-    /// - parameter completion: returns a clouser which returns customers or throws error
-    /// - parameter customersResponse: a throwable clouser which returns an array instance of Customers filled with server returned inforamation
+    /// - parameter completion: returns a closure which returns customers or throws error
+    /// - parameter customersResponse: a throwable closure which returns an array instance of Customers filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.getCustomers(with: ListParameters) { (customersResponse) in
@@ -298,12 +302,37 @@ public extension PayDock {
         }
     }
     
+    /// get list of payment sources for cutomer from server
+    ///
+    /// - parameter with: filter properties
+    /// - parameter completion: returns a closure which returns payment sources or throws error
+    /// - parameter customersPaymentSourcesResponse: a throwable closure which returns an array instance of PaymentSource filled with server returned inforamation
+    ///
+    ///```
+    ///        PayDock.shared.getCustomerPaymentSources(with: ListParameters) { (customersPaymentSourcesResponse) in
+    ///            do {
+    ///                let paymentSourceList = try customersPaymentSourcesResponse()
+    ///            } catch let error {
+    ///                print(error.localizedDescription)
+    ///            }
+    ///        }
+    ///```
+    func getCustomerPaymentSources(with parameters: ListParameters?, completion: @escaping (_ customersResponse: @escaping () throws -> [PaymentSource]) -> Void) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.customerServices.getCustomerPaymentSources(with: parameters) { (result) in
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            }
+        }
+    }
+    
     /// updates the customer's detail
     ///
     /// - parameter customer: customer request instance
     /// - parameter for: customer id
-    /// - parameter completion: returns a clouser which returns customer or throws error
-    /// - parameter customerResponse: a throwable clouser which returns an instance of a Customer filled with server returned inforamation
+    /// - parameter completion: returns a closure which returns customer or throws error
+    /// - parameter customerResponse: a throwable closure which returns an instance of a Customer filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.update(customer: CustomerRequest, for: {{id}}) { (customerResponse) in
@@ -327,8 +356,8 @@ public extension PayDock {
     /// archive a customer
     ///
     /// - parameter with: customer id
-    /// - parameter completion: returns a clouser which returns customer or throws error
-    /// - parameter customer: a throwable clouser which returns an instance of a Customer filled with server returned inforamation
+    /// - parameter completion: returns a closure which returns customer or throws error
+    /// - parameter customer: a throwable closure which returns an instance of a Customer filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.archiveCustomer(with: {{id}}) { (chargeResponse) in
@@ -358,7 +387,7 @@ public extension PayDock {
     /// - Parameters:
     ///   - subscription: SubscriptionRequest object
     ///   - completion: result on creating Subscription
-    ///   - subscriptionResponse: a throwable clouser which returns an instance of a Subscription filled with server returned inforamation
+    ///   - subscriptionResponse: a throwable closure which returns an instance of a Subscription filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.add(subscription: SubscriptionRequest) { (subscriptionResponse) in
@@ -384,7 +413,7 @@ public extension PayDock {
     /// - Parameters:
     ///   - with: subscription identifier
     ///   - completion: result on getting a specified Subscription
-    ///   - subscriptionResponse: a throwable clouser which returns an instance of a Subscription filled with server returned inforamation
+    ///   - subscriptionResponse: a throwable closure which returns an instance of a Subscription filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.getSubscription(with: {{id}}) { (subscriptionResponse) in
@@ -410,7 +439,7 @@ public extension PayDock {
     /// - Parameters:
     ///   - parameters: ListParameters Object to get list of subscriptions
     ///   - completion: result on getting list of Subscription
-    ///   - subscriptionsResponse: a throwable clouser which returns an array instance of Subscriptions filled with server returned inforamation
+    ///   - subscriptionsResponse: a throwable closure which returns an array instance of Subscriptions filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.getsubscriptions(with: ListParameters) { (subscriptionsResponse) in
@@ -437,7 +466,7 @@ public extension PayDock {
     ///   - subscription: SubscriptionRequest object
     ///   - for: subsctiprion identifier
     ///   - completion: result on updateing Subscription
-    ///   - subscriptionResponse: a throwable clouser which returns an instance of a Subscription filled with server returned inforamation
+    ///   - subscriptionResponse: a throwable closure which returns an instance of a Subscription filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.update(subscription: SubscriptionRequest, for: {{id}}) { (subscriptionResponse) in
@@ -463,7 +492,7 @@ public extension PayDock {
     /// - Parameters:
     ///   - with: Subscription identifier
     ///   - completion: result on deleting Subscription
-    ///   - subscriptionResponse: a throwable clouser which returns an instance of a Subscription filled with server returned inforamation
+    ///   - subscriptionResponse: a throwable closure which returns an instance of a Subscription filled with server returned inforamation
     ///
     ///```
     ///        PayDock.shared.deleteSubscription(with: {{id}}) { (subscriptionResponse) in
@@ -492,7 +521,7 @@ extension PayDock {
     ///
     /// - parameter token: TokenRequest which is including customer details and paymentSource details
     /// - parameter completion: Result on creating token
-    /// - parameter result: a throwable clouser which returns a one-time token from server
+    /// - parameter result: a throwable closure which returns a one-time token from server
     ///
     ///```
     ///        PayDock.shared.create(token: TokenRequest) { (tokenResponse) in
@@ -514,6 +543,35 @@ extension PayDock {
     }
 }
 
+// MARK:- External Checkout Services
+
+extension PayDock {
+    
+    
+    /// Create a checkout url object
+    ///
+    /// - parameter customer: External checkout request instance
+    /// - parameter completion: Result on creating external checkout
+    /// - parameter customer: a throwable closure which returns a checkout item from server
+    ///```
+    ///        PayDock.shared.create(externalCheckout: ExternalCheckoutRequest) { (externalCheckoutResponce) in
+    ///            do {
+    ///                let checkout = try externalCheckoutResponce()
+    ///            } catch let error {
+    ///                print(error.localizedDescription)
+    ///            }
+    ///        }
+    ///```
+    public func create(externalCheckout: ExternalCheckoutRequest, completion: @escaping (_ result: @escaping () throws -> ExternalCheckout) -> Void) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.externalCheckoutServices.create(externalCheckout: externalCheckout){ (result) in
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            }
+        }
+    }
+}
 
 
 // MARK:- extensions
@@ -583,7 +641,12 @@ extension Data {
             throw Errors.invalidJsonFormat
         }
         if let errorObject = json["error"] as? Dictionary<String,Any>,  let errorMessage: String = try? errorObject.value(for: "message") {
-            throw Errors.serverError(message: errorMessage, details: errorObject["details"] as? [String])
+            throw Errors.serverError(message: errorMessage, details: errorObject as AnyObject, status: (json["status"] as! Int))
+        }
+        if let errorObject = json["error"] as? Dictionary<String,Any>,
+            let errorComplexMessage: Any = try? errorObject.value(for: "message"),
+            let errorMessage: String = try? (errorComplexMessage as! Dictionary).value(for: "message") {
+            throw Errors.serverError(message: errorMessage, details: errorObject as AnyObject, status: (json["status"] as! Int))
         }
         if let resourceObject = json["resource"] as? Dictionary<String, Any>, let dataObject: T = try? resourceObject.value(for: "data") {
             return dataObject

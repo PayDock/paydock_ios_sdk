@@ -80,6 +80,12 @@ class ModelMapTests: XCTestCase {
         return try! JSONSerialization.jsonObject(with: data, options: []) as! [String : Any]
     }()
     
+    fileprivate lazy var externalCheckoutAddJson: [String: Any] = {
+        let path =  Bundle(for: type(of: self)).path(forResource: "externalCheckoutAdd", ofType: "json")
+        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
+        return try! JSONSerialization.jsonObject(with: data, options: []) as! [String : Any]
+    }()
+    
 }
 
 //MARK:- Charge Model Map
@@ -153,3 +159,18 @@ extension ModelMapTests {
         }
     }
 }
+
+//MARK:- External Checkout Model Map
+extension ModelMapTests {
+    
+    
+    func testMappingExternalCheckoutAdd() {
+        _ = externalCheckoutAddJson
+        self.measure {
+            let checkout =  try? ExternalCheckout(json: self.externalCheckoutAddJson)
+            XCTAssertNotNil(checkout, "could not map externalCheckoutAddJson")
+        }
+    }
+    
+}
+

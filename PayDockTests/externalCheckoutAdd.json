@@ -1,0 +1,10 @@
+{
+    "type": "payment_source",
+    "data": {
+        "checkout_type": "link",
+        "link": "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-12D76527BK035913Y",
+        "reference_id": "EC-12D76527BK035913Y",
+        "mode": "test",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoicGF5cGFsIiwiZ2F0ZXdheV9pZCI6IjU4M2JlYjViYTIzMjc3ZjYxOTExZjg2YiIsImdhdGV3YXlfdHlwZSI6IlBheXBhbENsYXNzaWMiLCJzcGVjaWZpY0RhdGEiOnsiY2hlY2tvdXRfdG9rZW4iOiJFQy0xMkQ3NjUyN0JLMDM1OTEzWSJ9LCJtb2RlIjoidGVzdCIsImlhdCI6MTQ4MDQ1MjI5MH0.DN5eLG-VyAIcQJlkBRX0NHav5svPQ4jrM_u0V9QRD1I"
+    }
+}

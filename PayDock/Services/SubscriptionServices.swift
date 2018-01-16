@@ -38,8 +38,8 @@ class SubscriptionServices {
     ///
     /// - parameter subscription: SubscriptionRequest parameter model
     /// - parameter with: subscription identifier
-    /// - parameter completion: returns a clouser which returns subscription or throws error
-    /// - paramter subscription: subscription item from sever
+    /// - parameter completion: returns a closure which returns subscription or throws error
+    /// - paramter subscription: subscription item from server
     func update(subscription: SubscriptionRequest, with id: String, completion: @escaping (_ subscription: @escaping () throws -> Subscription) -> Void) {
         let relativeUrl = Constants.subscription + "/\(id)"
         self.network?.post(to: relativeUrl, with: subscription.toDictionary(), completion: { (result) in
@@ -57,8 +57,8 @@ class SubscriptionServices {
     /// Get list of subscriptions with parameter options. nil parameters will returns all subscriptions for the account, limited to 100 records.
     ///
     /// - parameter with: optional parameters for filtering result
-    /// - parameter completion: returns a clouser which returns subscription or throws error
-    /// - paramter subscriptions: Subscription items from sever
+    /// - parameter completion: returns a closure which returns subscription or throws error
+    /// - paramter subscriptions: Subscription items from server
     func getSubscriptions(with parameters: ListParameters?, completion: @escaping (_ subscriptions: @escaping () throws -> [Subscription]) -> Void) {
         self.network?.get(from: Constants.subscription, with: parameters?.toDictionary(), completion: { (result) in
             do {
@@ -80,8 +80,8 @@ class SubscriptionServices {
     /// Get specific subscription detail
     ///
     /// - parameter with: Subscription identifier
-    /// - parameter completion: returns a clouser which returns subscription or throws error
-    /// - paramter subscription: subscription item from sever
+    /// - parameter completion: returns a closure which returns subscription or throws error
+    /// - paramter subscription: subscription item from server
     func getSubscription(with id: String, completion: @escaping (_ subscription: @escaping () throws -> Subscription) -> Void) {
         let parameter: [String: Any] = ["_id" : id]
         self.network?.get(from: Constants.subscription, with: parameter, completion: { (result) in
@@ -99,8 +99,8 @@ class SubscriptionServices {
     /// Delete specific subscription
     ///
     /// - parameter with: Subscription identifier
-    /// - parameter completion: returns a clouser which returns subscription or throws error
-    /// - paramter subscription: subscription item from sever
+    /// - parameter completion: returns a closure which returns subscription or throws error
+    /// - paramter subscription: subscription item from server
     func deleteSubscription(with id: String, completion: @escaping (_ subscription: @escaping () throws -> Subscription) -> Void) {
         let parameter: [String: Any] = ["_id" : id]
         self.network?.delete(from: Constants.subscription, with: parameter, completion: { (result) in

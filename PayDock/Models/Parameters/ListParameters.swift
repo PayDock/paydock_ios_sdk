@@ -30,8 +30,10 @@ public struct ListParameters: Parameterable {
     public var status: String?
     /// Set to true to show all the archived charges. Default: false
     public var isArchived: Bool?
+    /// Generated backend side jwt token with search query with public key
+    public var queryToken: String?
     
-    public init(skip: Int?, limit: Int?, subscription_id: String?, gateway_id: String?, company_id: String?, createdAtFrom: Date?, createdAtTo: Date?, search: String?, status: String?, isArchived: Bool?) {
+    public init(skip: Int?, limit: Int?, subscription_id: String?, gateway_id: String?, company_id: String?, createdAtFrom: Date?, createdAtTo: Date?, search: String?, status: String?, isArchived: Bool?, queryToken: String?) {
         self.skip = skip
         self.limit = limit
         self.subscription_id = subscription_id
@@ -42,6 +44,7 @@ public struct ListParameters: Parameterable {
         self.search = search
         self.status = status
         self.isArchived = isArchived
+        self.queryToken = queryToken
     }
 
     public func toDictionary() -> [String : Any] {
@@ -56,6 +59,7 @@ public struct ListParameters: Parameterable {
         param.appendNonNilable(key: "search", item: search)
         param.appendNonNilable(key: "status", item: status)
         param.appendNonNilable(key: "archived", item: isArchived)
+        param.appendNonNilable(key: "query_token", item: queryToken)
         return param
     }
 }
