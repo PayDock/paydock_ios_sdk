@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>urls</key>
+	<dict>
+		<key>production</key>
+		<string>https://api.paydock.com/</string>
+		<key>sandbox</key>
+		<string>https://api-sandbox.paydock.com/</string>
+	</dict>
+</dict>
+</plist>
