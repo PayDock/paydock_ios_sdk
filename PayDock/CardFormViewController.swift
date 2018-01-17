@@ -45,7 +45,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate, delegateErr
     var gatewayId: String = ""
     var address :Address? = nil
     var customerRequest: CustomerRequest? = nil
-      var delegateCamera : delegateCamera? = nil
+    var delegateCamera : delegateCamera? = nil
     var completionHandler :(_
         result: @escaping () throws -> String) -> Void = {_ in
         
