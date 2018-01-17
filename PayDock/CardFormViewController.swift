@@ -140,7 +140,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate, delegateErr
         }
     }
 
-    func textFieldDidChange(textField: UITextField){
+    @objc func textFieldDidChange(textField: UITextField){
         
       if textField.tag == 0{//card number field
             if textField.text != ""{

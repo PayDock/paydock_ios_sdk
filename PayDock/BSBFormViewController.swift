@@ -83,7 +83,7 @@ class BSBFormViewController: UIViewController,UITextFieldDelegate, delegateError
         // Dispose of any resources that can be recreated.
     }
     //MARK:- Function for textfield
-    func textFieldDidChange(textField: UITextField){
+    @objc func textFieldDidChange(textField: UITextField){
         switch textField.tag{
         case 0 :
             if Int(textField.text!) != nil { //number
