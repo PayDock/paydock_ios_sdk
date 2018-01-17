@@ -10,7 +10,7 @@
 import UIKit
 import PayDock
 
-class ViewController: UIViewController ,delegateCamera,CardIOPaymentViewControllerDelegate {
+class ViewController: UIViewController , delegateCamera, CardIOPaymentViewControllerDelegate {
     
     @IBAction func cardSubmit(_ sender: Any) {
         activeController?.pressSubmit(nil)
