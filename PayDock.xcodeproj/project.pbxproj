@@ -57,8 +57,47 @@
 		84DEA9CD1EAB21EA00A001E8 /* ChargeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEA9CC1EAB21EA00A001E8 /* ChargeRequest.swift */; };
 		84F3DC421EB46140001101C7 /* ModelMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3DC411EB46140001101C7 /* ModelMapTests.swift */; };
 		84F3DC441EB46767001101C7 /* PayDockSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3DC431EB46767001101C7 /* PayDockSessionTests.swift */; };
-		993B922D200EC47B00FD73B3 /* Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 993B922C200EC47B00FD73B3 /* Info1.plist */; };
 		995F61BE2005D0D100DAD7F3 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F61BD2005D0D100DAD7F3 /* Checkout.swift */; };
+		99778CEF200F86DD007508C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8771EA601870038AC39 /* Constants.swift */; };
+		99778CF0200F86DF007508C1 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4B61F1EA2219E003433F0 /* Errors.swift */; };
+		99778CF1200F86EB007508C1 /* ExternalCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448332111F40449600F87FF7 /* ExternalCheckout.swift */; };
+		99778CF2200F86EF007508C1 /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8851EA737380038AC39 /* Charge.swift */; };
+		99778CF3200F86F4007508C1 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8831EA61CAD0038AC39 /* Customer.swift */; };
+		99778CF4200F86F8007508C1 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8BA1EA75BF500E3E872 /* Subscription.swift */; };
+		99778CF5200F86FB007508C1 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8BE1EA75D1700E3E872 /* Schedule.swift */; };
+		99778CF6200F86FF007508C1 /* Payment Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B88C1EA75E930038AC39 /* Payment Source.swift */; };
+		99778CF7200F8702007508C1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B88E1EA75F200038AC39 /* Card.swift */; };
+		99778CF8200F8704007508C1 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8901EA75F450038AC39 /* BankAccount.swift */; };
+		99778CF9200F8707007508C1 /* BSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8921EA75F590038AC39 /* BSB.swift */; };
+		99778CFA200F8709007508C1 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F61BD2005D0D100DAD7F3 /* Checkout.swift */; };
+		99778CFB200F870D007508C1 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8971EA77D970038AC39 /* Transaction.swift */; };
+		99778CFC200F870F007508C1 /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8991EA77DB30038AC39 /* Sale.swift */; };
+		99778CFD200F8712007508C1 /* Refund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B89B1EA77DD80038AC39 /* Refund.swift */; };
+		99778CFE200F8717007508C1 /* Parameterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8751EA5F85A0038AC39 /* Parameterable.swift */; };
+		99778CFF200F8719007508C1 /* ChargeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEA9CC1EAB21EA00A001E8 /* ChargeRequest.swift */; };
+		99778D00200F871B007508C1 /* CustomerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A44E1EAB5372007FBC13 /* CustomerRequest.swift */; };
+		99778D01200F871E007508C1 /* SubscriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF55C1EAB659C00AD1B44 /* SubscriptionRequest.swift */; };
+		99778D02200F8720007508C1 /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF5571EAB28AB00AD1B44 /* TokenRequest.swift */; };
+		99778D03200F8723007508C1 /* ListParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8881EA7483A0038AC39 /* ListParameters.swift */; };
+		99778D04200F8726007508C1 /* ExternalCheckoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448332131F40598E00F87FF7 /* ExternalCheckoutRequest.swift */; };
+		99778D05200F872A007508C1 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8941EA763200038AC39 /* Address.swift */; };
+		99778D06200F872F007508C1 /* PayDockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4B61B1EA20456003433F0 /* PayDockNetwork.swift */; };
+		99778D07200F8731007508C1 /* PayDockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4B61D1EA206F2003433F0 /* PayDockSession.swift */; };
+		99778D08200F8736007508C1 /* Mapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A4581EACA766007FBC13 /* Mapable.swift */; };
+		99778D09200F873A007508C1 /* ChargeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B8791EA606A80038AC39 /* ChargeServices.swift */; };
+		99778D0A200F873C007508C1 /* SubscriptionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8C01EA77CD100E3E872 /* SubscriptionServices.swift */; };
+		99778D0B200F873F007508C1 /* CustomerServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A44C1EAB42F6007FBC13 /* CustomerServices.swift */; };
+		99778D0C200F8741007508C1 /* TokenServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEF5591EAB3FB400AD1B44 /* TokenServices.swift */; };
+		99778D0D200F8744007508C1 /* ExternalCheckoutServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4483320C1F40401300F87FF7 /* ExternalCheckoutServices.swift */; };
+		99778D0F200F874D007508C1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8435D0761E9B49E300AE0BAA /* Info.plist */; };
+		99778D11200F875C007508C1 /* BSBFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443942321FAD17C100B9AB2A /* BSBFormViewController.swift */; };
+		99778D12200F8765007508C1 /* Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 993B922C200EC47B00FD73B3 /* Info1.plist */; };
+		99778D13200F8766007508C1 /* Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 993B922C200EC47B00FD73B3 /* Info1.plist */; };
+		99778D14200F8770007508C1 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8280C31FB1A5CC007C08D3 /* CardType.swift */; };
+		99778D15200F8772007508C1 /* ConstantsUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7BCF871FB32DF2001D4D83 /* ConstantsUi.swift */; };
+		99778D16200F8775007508C1 /* VaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE879A1B1FB8728D00833A2E /* VaultViewController.swift */; };
+		99778D17200F8777007508C1 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE879A1F1FB89F3600833A2E /* CustomCellTableViewCell.swift */; };
+		99778D18200F877B007508C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7BCF851FB2FA01001D4D83 /* Assets.xcassets */; };
 		A553C8BB1EA75BF500E3E872 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8BA1EA75BF500E3E872 /* Subscription.swift */; };
 		A553C8BF1EA75D1700E3E872 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8BE1EA75D1700E3E872 /* Schedule.swift */; };
 		A553C8C11EA77CD100E3E872 /* SubscriptionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C8C01EA77CD100E3E872 /* SubscriptionServices.swift */; };
@@ -395,12 +434,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8435D0891E9B49E300AE0BAA /* Build configuration list for PBXNativeTarget "PayDockTests" */;
 			buildPhases = (
-				BF84C9C90A4D064DC9E6B7D9 /* [CP] Check Pods Manifest.lock */,
 				8435D0771E9B49E300AE0BAA /* Sources */,
 				8435D0781E9B49E300AE0BAA /* Frameworks */,
 				8435D0791E9B49E300AE0BAA /* Resources */,
-				E858742B3CA49C5480759AC6 /* [CP] Embed Pods Frameworks */,
-				E7B2160FF98B15D78593FAD9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -458,8 +494,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				993B922D200EC47B00FD73B3 /* Info1.plist in Resources */,
 				CE7BCF861FB2FA01001D4D83 /* Assets.xcassets in Resources */,
+				99778D12200F8765007508C1 /* Info1.plist in Resources */,
 				44F0E08F1F917494003898B1 /* cardForm.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,69 +508,21 @@
 				8400094E1EB08C4600877866 /* subscriptionItem.json in Resources */,
 				8400093C1EAE1C6000877866 /* chargeList.json in Resources */,
 				8400093D1EAE1C6000877866 /* chargeInfo.json in Resources */,
+				99778D18200F877B007508C1 /* Assets.xcassets in Resources */,
 				840009441EAE226F00877866 /* customerList.json in Resources */,
 				840009421EAE226F00877866 /* customerItem.json in Resources */,
 				0024F1601F9E398A00BC2A38 /* cardForm.storyboard in Resources */,
 				448332181F405EA300F87FF7 /* externalCheckoutAdd.json in Resources */,
 				8400094D1EB08C4600877866 /* subscriptionAdd.json in Resources */,
 				8400093E1EAE1C6000877866 /* chargeAdd.json in Resources */,
+				99778D13200F8766007508C1 /* Info1.plist in Resources */,
 				8400094F1EB08C4600877866 /* subscriptionList.json in Resources */,
 				840009501EB08C4600877866 /* subscriptionUpdate.json in Resources */,
+				99778D0F200F874D007508C1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		BF84C9C90A4D064DC9E6B7D9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PayDockTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7B2160FF98B15D78593FAD9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayDockTests/Pods-PayDockTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E858742B3CA49C5480759AC6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayDockTests/Pods-PayDockTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8435D06D1E9B49E200AE0BAA /* Sources */ = {
@@ -586,14 +574,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99778D00200F871B007508C1 /* CustomerRequest.swift in Sources */,
+				99778CFB200F870D007508C1 /* Transaction.swift in Sources */,
+				99778CFE200F8717007508C1 /* Parameterable.swift in Sources */,
 				840009481EB0768D00877866 /* SubscriptionIntegrationTest.swift in Sources */,
+				99778CF7200F8702007508C1 /* Card.swift in Sources */,
+				99778D11200F875C007508C1 /* BSBFormViewController.swift in Sources */,
+				99778D09200F873A007508C1 /* ChargeServices.swift in Sources */,
+				99778D0D200F8744007508C1 /* ExternalCheckoutServices.swift in Sources */,
+				99778D03200F8723007508C1 /* ListParameters.swift in Sources */,
+				99778CFD200F8712007508C1 /* Refund.swift in Sources */,
+				99778CF3200F86F4007508C1 /* Customer.swift in Sources */,
+				99778CFA200F8709007508C1 /* Checkout.swift in Sources */,
 				8435D0811E9B49E300AE0BAA /* ChargeIntergrationTests.swift in Sources */,
 				84F3DC441EB46767001101C7 /* PayDockSessionTests.swift in Sources */,
 				0024F15E1F9E337D00BC2A38 /* PayDock.swift in Sources */,
 				84F3DC421EB46140001101C7 /* ModelMapTests.swift in Sources */,
+				99778D02200F8720007508C1 /* TokenRequest.swift in Sources */,
+				99778D14200F8770007508C1 /* CardType.swift in Sources */,
+				99778D07200F8731007508C1 /* PayDockSession.swift in Sources */,
+				99778D05200F872A007508C1 /* Address.swift in Sources */,
+				99778CF5200F86FB007508C1 /* Schedule.swift in Sources */,
+				99778CEF200F86DD007508C1 /* Constants.swift in Sources */,
+				99778CFF200F8719007508C1 /* ChargeRequest.swift in Sources */,
+				99778D17200F8777007508C1 /* CustomCellTableViewCell.swift in Sources */,
+				99778D16200F8775007508C1 /* VaultViewController.swift in Sources */,
+				99778D0A200F873C007508C1 /* SubscriptionServices.swift in Sources */,
 				448332161F405E2F00F87FF7 /* ExternalCheckoutTests.swift in Sources */,
+				99778CF6200F86FF007508C1 /* Payment Source.swift in Sources */,
+				99778CF2200F86EF007508C1 /* Charge.swift in Sources */,
+				99778CF4200F86F8007508C1 /* Subscription.swift in Sources */,
+				99778CF0200F86DF007508C1 /* Errors.swift in Sources */,
 				840009461EB0748100877866 /* TokenIntegrationTest.swift in Sources */,
+				99778CFC200F870F007508C1 /* Sale.swift in Sources */,
+				99778D15200F8772007508C1 /* ConstantsUi.swift in Sources */,
+				99778D04200F8726007508C1 /* ExternalCheckoutRequest.swift in Sources */,
+				99778D0C200F8741007508C1 /* TokenServices.swift in Sources */,
+				99778CF9200F8707007508C1 /* BSB.swift in Sources */,
+				99778D08200F8736007508C1 /* Mapable.swift in Sources */,
+				99778CF8200F8704007508C1 /* BankAccount.swift in Sources */,
 				CE1C54AD1FB0545B009A8C74 /* CardFormViewController.swift in Sources */,
+				99778CF1200F86EB007508C1 /* ExternalCheckout.swift in Sources */,
+				99778D06200F872F007508C1 /* PayDockNetwork.swift in Sources */,
+				99778D0B200F873F007508C1 /* CustomerServices.swift in Sources */,
+				99778D01200F871E007508C1 /* SubscriptionRequest.swift in Sources */,
 				8418A45B1EADC012007FBC13 /* CustomerIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

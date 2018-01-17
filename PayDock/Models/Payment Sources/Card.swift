@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Card: Parameterable, Mapable {
-    typealias Kind = Card
+    public typealias Kind = Card
     /// card id
     public var id: String?
     /// Cardholder name (as on card)
