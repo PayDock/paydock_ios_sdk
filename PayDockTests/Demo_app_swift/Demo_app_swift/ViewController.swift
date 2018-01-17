@@ -8,12 +8,18 @@
 //
 
 import UIKit
-@testable import PayDock
+import PayDock
 
 class ViewController: UIViewController ,delegateCamera,CardIOPaymentViewControllerDelegate {
+    
+    @IBAction func cardSubmit(_ sender: Any) {
+        activeController?.pressSubmit(nil)
+    }
+    @IBOutlet weak var cardSubmit: UIButton!
 
     @IBOutlet weak var containerView: UIView!
     // MARK:- variable
+    var activeController: AnyObject? = nil;
     var delegateError : delegateError? = nil
     var delegatefillCamera :delegatefillCamera? = nil
     let address = Address(line1: "one", line2: "two", city: "city", postcode: "1234", state: "state", country: "AU")
@@ -51,6 +57,8 @@ class ViewController: UIViewController ,delegateCamera,CardIOPaymentViewControll
         containerView.addSubview(controller.view)
         
         controller.didMove(toParentViewController: self)
+            activeController = controller
+            cardSubmit.isHidden = false
         
     }
     
@@ -71,6 +79,8 @@ class ViewController: UIViewController ,delegateCamera,CardIOPaymentViewControll
         
         containerView.addSubview(controller.view)
         controller.didMove(toParentViewController: self)
+        activeController = controller
+        cardSubmit.isHidden = false
     }
     
     
@@ -100,7 +110,8 @@ class ViewController: UIViewController ,delegateCamera,CardIOPaymentViewControll
                     }
                 }
 
-      
+        activeController=nil
+        cardSubmit.isHidden = true
     }
     // MARK:- lifecycle
     override func viewDidLoad() {
