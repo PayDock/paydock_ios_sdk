@@ -34,11 +34,11 @@ class VaultViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         if itemDictionary != nil{
              if let primary = itemDictionary!["primary"] as? Bool{
                 if primary == true {
-                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                    let frameworkBundle = Bundle(for: type(of: self))
                     let image = UIImage(named: "icTick", in: frameworkBundle , compatibleWith: nil)
                     cell.primaryImg.image = image
                 }else{
-                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                    let frameworkBundle = Bundle(for: type(of: self))
                     let image = UIImage(named: "", in: frameworkBundle , compatibleWith: nil)
                     cell.primaryImg.image = image
                 }
@@ -52,7 +52,7 @@ class VaultViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                     print("accountname\(accountName)")
                     cell.nameLabel.text = accountName
                 }
-                let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                let frameworkBundle = Bundle(for: type(of: self))
                 let image = UIImage(named: "icBank" , in: frameworkBundle , compatibleWith: nil)
                 cell.typeImg.image = image
             }else{ //card
@@ -60,7 +60,7 @@ class VaultViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 {
                     let cardName = ["visa","mastercard","amex","diners" ,"cup"]
                     let cardimg = ["icvisa","icmastercard","icamex","icdiners","iccup"]
-                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                    let frameworkBundle = Bundle(for: type(of: self))
                     var flag = false
                     for i in 0 ..< cardName.count{
                         if scheme == cardName[i]  { //fill imageview with suitable card
@@ -88,7 +88,7 @@ class VaultViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         return 1
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 100
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (paymentSource?.count)!

@@ -147,7 +147,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate, delegateErr
                 let textWithoutSpace =  textField.text!.removeWhitespaces() // remove space
                  guard   Int(textWithoutSpace) != nil  else{ // not number
                     invalideMessage(textfield: cardNumberField)
-                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                    let frameworkBundle = Bundle(for: type(of: self))
                     let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
                     imgCard.image = image
                     return
@@ -163,14 +163,6 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate, delegateErr
                     }
                     addSpaceToCardField(creditCardTextFieldNumber: textField.text!,spaceArray: spaceIndics!)
                     let maxflag =  cardType?.greaterThanMax(creditCardNumber: textWithoutSpace)
-//                    if maxflag == true { //greater than max
-//                      invalideMessage(textfield:  cardNumberField)
-//                      let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
-//                      let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
-//                      imgCard.image = image
-//                    }else{
-//                     lblVNumber.text = ""
-//                    }
                 if maxflag == true {
                     textField.deleteBackward()
                 }
@@ -224,7 +216,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate, delegateErr
              if cardType != nil{
                if (cardType?.mMinCardLength)! > str ||  (cardType?.mMaxCardLength)! < str{
                     invalideMessage(textfield: cardNumberField)
-                    let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+                    let frameworkBundle = Bundle(for: type(of: self))
                     let image = UIImage(named: "icdefault", in: frameworkBundle , compatibleWith: nil)
                     imgCard.image = image
                 }
@@ -308,7 +300,7 @@ class CardFormViewController: UIViewController ,UITextFieldDelegate, delegateErr
     //MARK:- function for cardNumber
     func updateCardType(creditCardNumber : String){  //get type of card 
          cardType  = CardType.getCreditCardType(creditCardNumber: creditCardNumber)
-         let frameworkBundle = Bundle(identifier: "com.roundtableapps.PayDock")
+         let frameworkBundle = Bundle(for: type(of: self))
          let image = UIImage(named: cardType!.mImageResource!, in: frameworkBundle , compatibleWith: nil)
         imgCard.image = image
         }
