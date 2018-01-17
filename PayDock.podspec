@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
 	s.source_files = 'PayDock/**/*.{h,m}', 'PayDock/**/*.swift'
 	  s.resources = 'PayDock/Assets.xcassets', 'PayDock/**/*.storyboard', 'PayDock/Info1.plist'
 	  s.resource_bundles = {
-	      'FantasticViewMarkPayTesting' => [
-	          'FantasticView/**/*.{storyboard,xcassets,json,imageset,png,plist}'
+	      'PayDock' => [
+	          'PayDock/**/*.{storyboard,xcassets,json,imageset,png,plist}'
 	      ]
 	  }
 end
