@@ -84,20 +84,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icdefault" translatesAutoresizingMaskIntoConstraints="NO" id="cIm-Se-qQX">
-                                <rect key="frame" x="301" y="26.5" width="50" height="37"/>
+                                <rect key="frame" x="301" y="27" width="50" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="4ML-ec-dkg"/>
                                     <constraint firstAttribute="height" constant="37" id="K2G-Hi-1hH"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lk-iU-hlC" userLabel="Gateway Error Label">
+                                <rect key="frame" x="19" y="174" width="268" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="g8O-L4-WfM"/>
+                                    <constraint firstAttribute="height" constant="28" id="w9V-mZ-0Yf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="3Lk-iU-hlC" firstAttribute="leading" secondItem="mNU-Xf-hS7" secondAttribute="trailing" constant="8" symbolic="YES" id="0RC-wv-spT"/>
                             <constraint firstItem="2Vo-wa-xAv" firstAttribute="height" secondItem="d5x-8t-dux" secondAttribute="height" id="0jY-A1-jg4"/>
                             <constraint firstItem="rCA-rl-Qjx" firstAttribute="leading" secondItem="2Vo-wa-xAv" secondAttribute="leading" id="1uD-mx-SdU"/>
                             <constraint firstAttribute="trailing" secondItem="uUT-wW-aKI" secondAttribute="trailing" constant="104" id="2kr-Cr-7Kk"/>
                             <constraint firstItem="cIm-Se-qQX" firstAttribute="leading" secondItem="d5x-8t-dux" secondAttribute="trailing" constant="30" id="3zu-7w-4pI"/>
                             <constraint firstItem="2Vo-wa-xAv" firstAttribute="trailing" secondItem="d5x-8t-dux" secondAttribute="trailing" id="7XU-nB-TrX"/>
                             <constraint firstItem="d5x-8t-dux" firstAttribute="leading" secondItem="qIg-AO-zfE" secondAttribute="leading" constant="16" id="Bdh-vc-Cff"/>
+                            <constraint firstItem="3Lk-iU-hlC" firstAttribute="top" secondItem="mNU-Xf-hS7" secondAttribute="top" id="BjW-Pm-Sra"/>
                             <constraint firstAttribute="trailing" secondItem="0sh-eO-GaF" secondAttribute="trailing" constant="20" id="Hfc-fH-k8R"/>
                             <constraint firstItem="Xzu-0e-mij" firstAttribute="leading" secondItem="uUT-wW-aKI" secondAttribute="leading" id="Jfm-ER-dVM"/>
                             <constraint firstItem="Xzu-0e-mij" firstAttribute="height" secondItem="uUT-wW-aKI" secondAttribute="height" id="Kxv-NW-3E0"/>
@@ -124,6 +136,7 @@
                         <outlet property="expirationDateField" destination="rCA-rl-Qjx" id="fPk-ec-Hu2"/>
                         <outlet property="imgCard" destination="cIm-Se-qQX" id="vee-Ri-Cab"/>
                         <outlet property="lblVExp" destination="mNU-Xf-hS7" id="3FJ-9L-EU6"/>
+                        <outlet property="lblVGError" destination="3Lk-iU-hlC" id="vFn-yS-HwD"/>
                         <outlet property="lblVName" destination="Xzu-0e-mij" id="Ktg-gN-K5p"/>
                         <outlet property="lblVNumber" destination="uUT-wW-aKI" id="Twd-ps-i5i"/>
                         <outlet property="lblVccv" destination="0sh-eO-GaF" id="ozB-py-RB6"/>

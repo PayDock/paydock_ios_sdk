@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 	s.ios.deployment_target	= '9.0'
 	s.requires_arc = true
 	s.module_name = 'PayDock'
-	s.version = '1.0.7'
+	s.version = '1.0.8'
 
 	s.summary = 'PayDock is an open-source SDK for iOS and a solution for collecting and handling payment sources in secure way through PayDock.'
 	s.description = 'PayDock is a smart payments platform connecting to your e-commerce or online payments solution/gateway. We enable you to add multiple payment gateways instantly, access new payment methods and manage all payments data from one place.'
