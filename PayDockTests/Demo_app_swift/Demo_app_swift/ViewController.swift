@@ -8,7 +8,7 @@
 //
 
 import UIKit
-import PayDock
+
 
 class ViewController: UIViewController , delegateCamera, CardIOPaymentViewControllerDelegate {
     
