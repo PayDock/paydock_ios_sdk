@@ -11,7 +11,7 @@ import XCTest
 
 class PayDockExternalCheckoutTest: XCTestCase {
     
-    let gatewayId: String = "58fdaffc74bff7153082359d"
+    let gatewayId: String = "5620de31361b787230cb7d74"
     
     override func setUp() {
         super.setUp()
@@ -33,8 +33,9 @@ class PayDockExternalCheckoutTest: XCTestCase {
                 let checkout = try checkout()
                 debugPrint(checkout)
             } catch Errors.serverError(let message, let details, let httpStatus){
-                var statusString  = String(httpStatus)
-                XCTFail("Api error http status: \(statusString)  \n Error message: \(message) ")
+                let statusString  = String(httpStatus)
+                XCTFail("Api error http status: \(statusString)  \n Error message: \(message) \n Error details: \(String(describing: details))")
+                
                 
             } catch let error {
                 debugPrint(error)

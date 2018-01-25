@@ -13,8 +13,9 @@ class PayDockChargeTests: XCTestCase {
     
     
     let chargeId: String = "58fdc65674bff715308237be"
-    let archiveChargeId: String = "58fdc65674bff715308237be"
+    var archiveChargeId: String = "58fdc65674bff715308237be"
     let gatewayId: String = "58fdaffc74bff7153082359d"
+    let cardGatewayId: String = "5620de31361b787230cb7d74"
     let customerId: String = "58fde04c74bff71530823818"
    
     
@@ -28,21 +29,23 @@ class PayDockChargeTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
+
     
     
     ///add charge with credit card
     func testAddChargeWithCreditCard() {
-        let address = Address(line1: "one", line2: "two", city: "city", postcode: "1234", state: "state", country: "AU")
-        let card = Card(gatewayId: gatewayId, name: "Test User", number: "4200000000000000", expireMonth: 01, expireYear: 17, ccv: "123", address: address)
+        let address = Address(line1: "123 Forest Road", line2: nil, city: "Sydney", postcode: "1234", state: "NSW", country: "AUS")
+        let card = Card(gatewayId: cardGatewayId, name: "Robert Davies", number: "5520000000000000", expireMonth: 12, expireYear: 18, ccv: "123", address: address)
         let paymentSource = PaymentSource.card(value: card)
-        let customerRequest = CustomerRequest(firstName: "Test_first_name", lastName: "Test_last_name", email: "Test@test.com", reference: "customer Refrence", phone: nil, paymentSource: paymentSource)
-        let chargeRequest = ChargeRequest(amount: 10, currency: "AUD", reference: "some charge reference", description: "some charge description", customer: customerRequest)
+        let customerRequest = CustomerRequest(firstName: "Justin", lastName: "James", email: "Test@test.com", reference: nil, phone: nil, paymentSource: paymentSource)
+        let chargeRequest = ChargeRequest(amount: 10, currency: "AUD", reference: nil, description: "some charge description", customer: customerRequest)
         let expect = expectation(description: "PayDockSDK.ChargeTest")
         PayDock.shared.add(charge: chargeRequest, completion: { (charge) in
             defer { expect.fulfill() }
             do {
                 let charge = try charge()
                 debugPrint(charge)
+                self.archiveChargeId = charge.id!
             } catch let error {
                 debugPrint(error)
                 XCTFail(error.localizedDescription)
@@ -64,6 +67,7 @@ class PayDockChargeTests: XCTestCase {
             do {
                 let charge = try charge()
                 debugPrint(charge)
+                self.archiveChargeId = charge.id!
             } catch let error {
                 debugPrint(error)
                 XCTFail(error.localizedDescription)

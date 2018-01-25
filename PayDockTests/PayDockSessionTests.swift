@@ -35,7 +35,7 @@ class PayDockSessionTests: XCTestCase {
         ]
         let encodedUrl = payDockSession.encodeParametersToUrl(url: url, parameters: params)
         XCTAssertNotNil(encodedUrl, "result is nil")
-        debugPrint(encodedUrl)
+        debugPrint(encodedUrl ?? "encodedURLDefaultvalue")
         
     }
 
