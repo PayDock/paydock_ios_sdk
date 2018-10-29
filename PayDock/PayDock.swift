@@ -612,6 +612,18 @@ extension Collection where Iterator.Element == (key: String, value: Any) {
             }
             return value as! T
         }
+        
+        if let value = selfJson[key] as? NSNumber {
+            switch T.self {
+            case is Int.Type:
+                return value.intValue as! T
+            case is Float.Type:
+                return value.floatValue as! T
+            default:
+                throw Errors.parsingFailed
+            }
+        }
+        
         guard let value = selfJson[key] as? T else {
             throw Errors.parsingFailed
         }
