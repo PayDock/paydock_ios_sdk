@@ -1,4 +1,4 @@
-Deprecation Notice: paydock_ios_sdk is no longer supported or maintained.
+# Deprecation Notice: paydock_ios_sdk is no longer supported or maintained.
 
 We are deprecating the paydock_ios_sdk repository in favor of newer, better-maintained alternatives. This means that the code in this repository will not receive any updates, bug fixes, or security patches.
 
